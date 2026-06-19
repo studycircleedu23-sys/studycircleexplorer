@@ -255,16 +255,14 @@ h1,h2,h3 { font-family: 'Space Grotesk', sans-serif; }
   display: flex;
   white-space: nowrap;
   gap: 100px;
-  animation-name: tickerScroll !important;
-  animation-duration: 300s !important;
-  animation-timing-function: linear !important;
-  animation-iteration-count: infinite !important;
+  animation-name: tickerScroll;
+  animation-duration: 180s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   color: var(--gold);
-   color: red !important;
-font-size: 1.2rem !important;
 }
 
 @keyframes tickerScroll {

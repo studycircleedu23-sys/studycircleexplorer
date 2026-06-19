@@ -247,8 +247,9 @@ h1,h2,h3 { font-family: 'Space Grotesk', sans-serif; }
 .ticker-inner {
   display: flex;
   white-space: nowrap;
-  animation: tickerScroll 35s linear infinite;
-  font-size: 0.72rem;
+  animation: tickerScroll 90s linear infinite;
+  font-size: 0.85rem;
+   height: 40px;
   font-weight: 600;
   letter-spacing: 0.08em;
   color: var(--gold);

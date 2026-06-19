@@ -822,3 +822,11 @@ h1,h2,h3 { font-family: 'Space Grotesk', sans-serif; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }
+
+.site-logo {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+object-fit: cover;
+display: block;
+}

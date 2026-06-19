@@ -220,20 +220,21 @@ h1,h2,h3 { font-family: 'Space Grotesk', sans-serif; }
    ============================================================ */
 .ticker-wrap {
   position: fixed;
-  top: 64px; left: 0; right: 0;
+  top: 64px;
+  left: 0;
+  right: 0;
   z-index: 90;
   background: rgba(30,45,79,0.9);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
   overflow: hidden;
-  height: 36px;
+  height: 40px;
 }
 .ticker {
-display: flex;
-align-items: center;
-justify-content: flex-start;
-height: 100%;
-padding: 0 16px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 16px;
 }
 
 .ticker-dot {
@@ -251,17 +252,15 @@ padding: 0 16px;
 }
 
 .ticker-inner {
-display: flex;
-white-space: nowrap;
-gap: 100px;
-animation: tickerScroll 180s linear infinite;
-font-size: 0.85rem;
-font-weight: 600;
-letter-spacing: 0.08em;
-color: var(--gold);
-padding-left: 20px;
+  display: flex;
+  white-space: nowrap;
+  gap: 100px;
+  animation: tickerScroll 180s linear infinite;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--gold);
 }
-
 @keyframes tickerScroll {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }

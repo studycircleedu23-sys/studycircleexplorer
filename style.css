@@ -240,7 +240,7 @@ h1,h2,h3 { font-family: 'Space Grotesk', sans-serif; }
   border-radius: 50%;
   margin-right: 12px;
   flex-shrink: 0;
-  animation: blink 1.2s infinite;
+  animation: blink 4s infinite;
 }
 @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
 

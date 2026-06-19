@@ -247,14 +247,12 @@ h1,h2,h3 { font-family: 'Space Grotesk', sans-serif; }
 .ticker-inner {
   display: flex;
   white-space: nowrap;
-  animation: tickerScroll 90s linear infinite;
+  gap: 80px;
+  animation: tickerScroll 120s linear infinite;
   font-size: 0.85rem;
-  height: 40px;
   font-weight: 600;
   letter-spacing: 0.08em;
   color: var(--gold);
-}
-}
 }
 @keyframes tickerScroll {
   0%   { transform: translateX(0); }

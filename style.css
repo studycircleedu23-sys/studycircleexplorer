@@ -263,13 +263,14 @@ h1,h2,h3 { font-family: 'Space Grotesk', sans-serif; }
   font-weight: 600;
   letter-spacing: 0.08em;
   color: var(--gold);
+   color: red !important;
+font-size: 1.2rem !important;
 }
 
 @keyframes tickerScroll {
   0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  100% { transform: translateX(-25%); }
 }
-
 /* ============================================================
    HERO
    ============================================================ */

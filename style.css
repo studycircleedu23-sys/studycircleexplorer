@@ -824,9 +824,11 @@ h1,h2,h3 { font-family: 'Space Grotesk', sans-serif; }
 }
 
 .site-logo {
-width: 50px;
-height: 50px;
+width: 45px;
+height: 45px;
 border-radius: 50%;
 object-fit: cover;
-display: block;
+display: inline-block;
+vertical-align: middle;
 }
+

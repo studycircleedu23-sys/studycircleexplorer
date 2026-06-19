@@ -252,15 +252,16 @@ h1,h2,h3 { font-family: 'Space Grotesk', sans-serif; }
 }
 
 .ticker-inner {
-  display: flex;
-  white-space: nowrap;
-  gap: 100px;
-  animation: tickerScroll 180s linear infinite;
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  color: var(--gold);
+display: flex;
+white-space: nowrap;
+gap: 100px;
+animation: tickerScroll 300s linear infinite !important;
+font-size: 0.85rem;
+font-weight: 600;
+letter-spacing: 0.08em;
+color: var(--gold);
 }
+
 @keyframes tickerScroll {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }

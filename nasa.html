@@ -29,38 +29,49 @@
 <section class="section">
   <div class="container">
 
-    <div class="resource-card">
-      <div class="resource-info">
-        <h3 class="resource-title">
-          Roman Space Telescope Will Map the Invisible Universe
-        </h3>
-        <p class="resource-desc">
-          NASA's upcoming telescope will study dark matter and dark energy.
-        </p>
-        <a href="https://www.nasa.gov" target="_blank" class="resource-link">
-          Read More →
-        </a>
-      </div>
-    </div>
-
-    <br>
-
-    <div class="resource-card">
-      <div class="resource-info">
-        <h3 class="resource-title">
-          NASA Is Building a Telescope to Find Earth's Twin
-        </h3>
-        <p class="resource-desc">
-          Scientists hope to discover Earth-like worlds around nearby stars.
-        </p>
-        <a href="https://www.nasa.gov" target="_blank" class="resource-link">
-          Read More →
-        </a>
+    <div id="nasa-news">
+      <div class="resource-card">
+        <div class="resource-info">
+          <h3 class="resource-title">Loading Latest NASA News...</h3>
+          <p class="resource-desc">Please wait while we fetch the latest updates.</p>
+        </div>
       </div>
     </div>
 
   </div>
 </section>
 
+<script>
+fetch("https://api.rss2json.com/v1/api.json?rss_url=https://www.nasa.gov/rss/dyn/breaking_news.rss")
+.then(response => response.json())
+.then(data => {
+
+    let html = "";
+
+    data.items.slice(0,10).forEach(item => {
+
+        html += `
+        <div class="resource-card">
+          <div class="resource-info">
+            <h3 class="resource-title">${item.title}</h3>
+            <p class="resource-desc">
+              ${item.description.replace(/<[^>]*>/g,'').substring(0,180)}...
+            </p>
+            <a href="${item.link}" target="_blank" class="resource-link">
+              Read Full Article →
+            </a>
+          </div>
+        </div>
+        <br>
+        `;
+    });
+
+    document.getElementById("nasa-news").innerHTML = html;
+})
+.catch(error => {
+    document.getElementById("nasa-news").innerHTML =
+    "<p>Unable to load NASA news at this time.</p>";
+});
+</script>
 </body>
 </html>

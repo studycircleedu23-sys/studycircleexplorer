@@ -392,7 +392,7 @@ animation: newsScroll 300s linear infinite;
 }
 @keyframes newsScroll {
   0%   { transform: translateX(0); }
-  100% { transform: translateX(-15%); }
+  100% { transform: translateX(-10%); }
 }
 
 /* ============================================================

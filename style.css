@@ -219,7 +219,13 @@ h1,h2,h3 { font-family: 'Space Grotesk', sans-serif; }
    LIVE TICKER
    ============================================================ */
 .ticker-wrap {
-    background: red !important;
+  position: fixed;
+  top: 64px;
+  left: 0;
+  right: 0;
+  z-index: 90;
+  overflow: hidden;
+  height: 40px;
 }
 .ticker {
   display: flex;
@@ -250,12 +256,12 @@ h1,h2,h3 { font-family: 'Space Grotesk', sans-serif; }
   animation-duration: 300s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+  animation-play-state: paused !important;
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   color: var(--gold);
 }
-
 @keyframes tickerScroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-15%); }
@@ -379,14 +385,14 @@ h1,h2,h3 { font-family: 'Space Grotesk', sans-serif; }
 .news-scroll {
   display: flex;
   white-space: nowrap;
-  animation: newsScroll 40s linear infinite;
+animation: newsScroll 300s linear infinite;
   font-size: 0.8rem;
   color: var(--text-secondary);
   padding: 0 16px;
 }
 @keyframes newsScroll {
   0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  100% { transform: translateX(-15%); }
 }
 
 /* ============================================================

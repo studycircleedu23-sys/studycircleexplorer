@@ -219,16 +219,7 @@ h1,h2,h3 { font-family: 'Space Grotesk', sans-serif; }
    LIVE TICKER
    ============================================================ */
 .ticker-wrap {
-  position: fixed;
-  top: 64px;
-  left: 0;
-  right: 0;
-  z-index: 90;
-  background: rgba(30,45,79,0.9);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--border);
-  overflow: hidden;
-  height: 40px;
+    display: none !important;
 }
 .ticker {
   display: flex;

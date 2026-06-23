@@ -1,25 +1,20 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NASA News | Study Circle Explorer</title>
+<title>ISRO Missions | Study Circle Explorer</title>
+
 <link rel="stylesheet" href="style.css">
-  <style>
-.hero {
-    min-height: auto !important;
-    padding-top: 140px !important;
-    padding-bottom: 40px !important;
-}
 
-.hero-title {
-    margin-bottom: 15px !important;
-}
-
-.hero-subtitle {
-    margin-bottom: 20px !important;
+<style>
+.hero{
+    min-height:auto !important;
+    padding:120px 0 30px !important;
 }
 </style>
+
 </head>
 <body>
 
@@ -34,62 +29,87 @@
 
 <section class="hero">
   <div class="container hero-inner">
- <h1 class="hero-title">🚀 NASA News Center</h1>
- <p class="hero-subtitle">
-      Explore the latest NASA missions, James Webb discoveries,
-      exoplanets, black holes, Artemis Moon program,
-      and future space exploration updates.
-    </p>
-  <a href="index.html" class="btn btn-primary">
-      ← Back to Home
-    </a>
-</div>
-</section>
-<section class="section">
-  <div class="container">
-  <div id="nasa-news">
-      <div class="resource-card">
-        <div class="resource-info">
-          <h3 class="resource-title">Loading Latest NASA News...</h3>
-          <p class="resource-desc">Please wait while we fetch the latest updates.</p>
-        </div>
-      </div>
-    </div>
+
+```
+<h1 class="hero-title">🇮🇳 ISRO Missions Center</h1>
+
+<p class="hero-subtitle">
+  Explore Chandrayaan, Gaganyaan, Aditya-L1, NISAR,
+  Mangalyaan and future Indian space missions.
+</p>
+
+<a href="index.html" class="btn btn-primary">
+  ← Back to Home
+</a>
+```
 
   </div>
 </section>
 
-<script>
-fetch("https://api.rss2json.com/v1/api.json?rss_url=https://www.nasa.gov/rss/dyn/breaking_news.rss")
-.then(response => response.json())
-.then(data => {
+<section class="section">
+  <div class="container">
 
-    let html = "";
+```
+<div class="section-label">
+  🚀 LATEST ISRO UPDATES
+</div>
 
-    data.items.slice(0,10).forEach(item => {
+<div class="resource-card">
+  <div class="resource-info">
+    <h3 class="resource-title">Chandrayaan-4 Mission Update</h3>
+    <p class="resource-desc">
+      ISRO is preparing its next lunar mission with advanced sample-return capabilities.
+    </p>
+  </div>
+</div>
 
-        html += `
-        <div class="resource-card">
-          <div class="resource-info">
-            <h3 class="resource-title">${item.title}</h3>
-            <p class="resource-desc">
-              ${item.description.replace(/<[^>]*>/g,'').substring(0,180)}...
-            </p>
-            <a href="${item.link}" target="_blank" class="resource-link">
-              Read Full Article →
-            </a>
-          </div>
-        </div>
-        <br>
-        `;
-    });
+<br>
 
-    document.getElementById("nasa-news").innerHTML = html;
-})
-.catch(error => {
-    document.getElementById("nasa-news").innerHTML =
-    "<p>Unable to load NASA news at this time.</p>";
-});
-</script>
+<div class="resource-card">
+  <div class="resource-info">
+    <h3 class="resource-title">Gaganyaan Human Spaceflight Program</h3>
+    <p class="resource-desc">
+      India's first crewed space mission continues testing and astronaut preparation.
+    </p>
+  </div>
+</div>
+
+<br>
+
+<div class="resource-card">
+  <div class="resource-info">
+    <h3 class="resource-title">Aditya-L1 Solar Observatory</h3>
+    <p class="resource-desc">
+      ISRO's solar mission studies the Sun and space weather from the L1 point.
+    </p>
+  </div>
+</div>
+
+<br>
+
+<div class="resource-card">
+  <div class="resource-info">
+    <h3 class="resource-title">NISAR Earth Observation Mission</h3>
+    <p class="resource-desc">
+      A joint ISRO-NASA mission designed to monitor Earth's changing surface.
+    </p>
+  </div>
+</div>
+
+<br>
+
+<div class="resource-card">
+  <div class="resource-info">
+    <h3 class="resource-title">Future Indian Moon Base Concepts</h3>
+    <p class="resource-desc">
+      Scientists are exploring long-term lunar exploration and habitation possibilities.
+    </p>
+  </div>
+</div>
+```
+
+  </div>
+</section>
+
 </body>
 </html>

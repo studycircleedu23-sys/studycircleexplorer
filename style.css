@@ -270,13 +270,16 @@ h1,h2,h3 { font-family: 'Space Grotesk', sans-serif; }
    HERO
    ============================================================ */
 .hero {
-  position: relative;
- min-height: 250px !important;
-  align-items: center;
-  padding: 120px 0 20px !important;
-  background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(139,92,246,0.2) 0%, transparent 70%),
+    position: relative;
+    min-height: auto !important;
+    display: flex;
+    align-items: center;
+    padding: 140px 0 40px !important;
+    background: radial-gradient(ellipse 80% 60% at 50% -10%,
+              rgba(139,92,246,0.2) 0%,
+              transparent 70%),
               var(--bg-deep);
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .hero-stars {

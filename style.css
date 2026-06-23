@@ -254,9 +254,9 @@ h1,h2,h3 { font-family: 'Space Grotesk', sans-serif; }
 .ticker-inner {
   display: flex;
   white-space: nowrap;
-  gap: 100px;
+  gap: 150px;
   animation-name: tickerScroll;
-  animation-duration: 180s;
+  animation-duration: 300s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   font-size: 0.85rem;
@@ -266,8 +266,8 @@ h1,h2,h3 { font-family: 'Space Grotesk', sans-serif; }
 }
 
 @keyframes tickerScroll {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-25%); }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-15%); }
 }
 /* ============================================================
    HERO

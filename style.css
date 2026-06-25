@@ -477,9 +477,68 @@ h1,h2,h3 { font-family: 'Space Grotesk', sans-serif; }
 .stat-suffix.gold { color: var(--gold); }
 .stat-label { display: block; font-size: 0.8rem; color: var(--text-secondary); margin-top: 4px; letter-spacing: 0.04em; }
 
-
 /* ============================================================
-  ```css
+   FEATURED UPDATE
+============================================================ */
+
+.featured-update{
+    padding: 50px 0;
+    background: var(--bg-dark);
+}
+
+.update-card{
+    display:flex;
+    align-items:center;
+    gap:24px;
+    background:linear-gradient(135deg,rgba(124,58,237,.15),rgba(245,166,35,.08));
+    border:1px solid rgba(124,58,237,.25);
+    border-radius:18px;
+    padding:28px;
+}
+
+.update-badge{
+    background:#ef4444;
+    color:#fff;
+    padding:8px 14px;
+    border-radius:50px;
+    font-size:.8rem;
+    font-weight:700;
+    white-space:nowrap;
+}
+
+.update-content{
+    flex:1;
+}
+
+.update-content h2{
+    margin-bottom:10px;
+}
+
+.update-content p{
+    color:var(--text-secondary);
+    line-height:1.6;
+}
+
+.update-action{
+    flex-shrink:0;
+}
+
+@media(max-width:768px){
+
+.update-card{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+.update-action{
+    width:100%;
+}
+
+.update-action .btn{
+    width:100%;
+    text-align:center;
+}
+}
 /* ============================================================
    TRENDING TOPICS
 ============================================================ */
@@ -629,9 +688,94 @@ grid-template-columns:1fr;
 }
 
 }
-```
+/* ============================================================
+   LATEST ARTICLES
+============================================================ */
 
-```css
+.latest-articles{
+    background:var(--bg-dark);
+    padding:80px 0;
+}
+.articles-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:24px;
+    margin-top:40px;
+}
+
+.article-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:var(--bg-card);
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:24px;
+
+}
+
+.article-card:hover{
+    transform:translateY(-6px);
+    border-color:rgba(124,58,237,.35);
+    box-shadow:0 12px 32px rgba(0,0,0,.25);
+}
+
+.article-tag{
+    display:inline-block;
+    padding:6px 12px;
+    border-radius:30px;
+    font-size:.75rem;
+    font-weight:700;
+    margin-bottom:16px;
+}
+
+.article-tag.nasa{
+    background:#7c3aed;
+    color:#fff;
+}
+
+.article-tag.isro{
+    background:#2563eb;
+    color:#fff;
+}
+
+.article-tag.facts{
+    background:#059669;
+    color:#fff;
+}
+
+.article-card h3{
+    margin-bottom:12px;
+    line-height:1.4;
+}
+
+.article-card p{
+    color:var(--text-secondary);
+    line-height:1.7;
+    margin-bottom:18px;
+}
+
+.article-card a{
+
+    margin-top:auto;
+
+    color:var(--gold);
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.article-card a:hover{
+    color:#fff;
+}
+
 /* ============================================================
    FEATURED RESOURCES
 ============================================================ */

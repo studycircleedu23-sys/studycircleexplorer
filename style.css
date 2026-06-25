@@ -726,61 +726,64 @@ grid-template-columns:1fr;
 }
 
 .article-tag{
-    display:inline-block;
-    padding:8px 16px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:8px 18px;
     border-radius:50px;
-    font-size:.75rem;
+    font-size:12px;
     font-weight:700;
-    letter-spacing:.08em;
+    letter-spacing:1px;
     text-transform:uppercase;
-    margin-bottom:18px;
+    color:#fff !important;
 }
 .article-tag.nasa{
-    background:#7c3aed;
-    color:#ffffff;
+    background:#7c3aed !important;
+    color:#fff !important;
 }
 
 .article-tag.isro{
-    background:#2563eb;
-    color:#ffffff;
+    background:#2563eb !important;
+    color:#fff !important;
 }
+
 
 .article-tag.facts{
-    background:#059669;
-    color:#ffffff;
+    background:#059669 !important;
+    color:#fff !important;
 }
 
-.article-card h3{
-    color:#ffffff;
-    font-size:1.45rem;
+..article-card h3{
+    color:#fff;
+    font-size:1.35rem;
     font-weight:700;
-    line-height:1.4;
-    margin:12px 0;
+    margin:16px 0 12px;
 }
-
 .article-card p{
-    color:#b8c2d0;
+    color:#9ca3af;
+    font-size:.95rem;
     line-height:1.7;
-    font-size:0.95rem;
-    margin-bottom:22px;
 }
-
 .article-card a{
+    display:inline-block;
+    margin-top:20px;
     color:#f5b942;
     font-weight:700;
     text-decoration:none;
-    transition:.3s;
 }
 
 .article-card a:hover{
-    color:#ffffff;
+    color:#fff;
 }
+.article-card{
+    transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+
 .article-card:hover{
     transform:translateY(-8px);
     border-color:#7c3aed;
     box-shadow:0 12px 30px rgba(124,58,237,.25);
 }
-
 /* ============================================================
    FEATURED RESOURCES
 ============================================================ */

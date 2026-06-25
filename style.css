@@ -218,14 +218,13 @@ h1,h2,h3 { font-family: 'Space Grotesk', sans-serif; }
 /* ============================================================
    LIVE TICKER
    ============================================================ */
-.ticker-wrap {
-  position: fixed;
-  top: 64px;
-  left: 0;
-  right: 0;
-  z-index: 90;
-  overflow: hidden;
-  height: 40px;
+.ticker-wrap{
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
 }
 /* LIVE TICKER */
 
@@ -333,10 +332,13 @@ transform:translateX(-50%);
     display: flex;
     align-items: center;
     padding: 140px 0 40px !important;
-    background: radial-gradient(ellipse 80% 60% at 50% -10%,
-              rgba(139,92,246,0.2) 0%,
-              transparent 70%),
-              var(--bg-deep);
+
+    background: radial-gradient(
+        ellipse 80% 60% at 50% -10%,
+        rgba(139,92,246,0.2) 0%,
+        transparent 70%
+    ), var(--bg-deep);
+
     overflow: hidden;
 }
 
@@ -416,62 +418,6 @@ transform:translateX(-50%);
 .stat-suffix { font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 800; }
 .stat-suffix.gold { color: var(--gold); }
 .stat-label { display: block; font-size: 0.8rem; color: var(--text-muted); margin-top: 4px; letter-spacing: 0.04em; }
-
-/* ============================================================
-   NEWS TICKER
-   ============================================================ */
-.news-ticker {
-  display: flex;
-  align-items: center;
-  background: var(--blue-mid);
-  overflow: hidden;
-  height: 44px;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-}
-.news-label {
-  flex-shrink: 0;
-  background: var(--purple);
-  color: #fff;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  padding: 0 20px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
-}
-.news-scroll{
-    display:flex;
-    align-items:center;
-    width:max-content;
-    animation:newsScroll 45s linear infinite;
-}
-
-.news-scroll a{
-    color:#ffffff;
-    text-decoration:none;
-    margin-right:60px;
-    white-space:nowrap;
-    font-size:.82rem;
-    transition:.3s;
-}
-
-.news-scroll a:hover{
-    color:#facc15;
-}
-@keyframes newsScroll{
-
-0%{
-transform:translateX(0);
-}
-
-100%{
-transform:translateX(-50%);
-}
-
-}
 
 
 /* ============================================================

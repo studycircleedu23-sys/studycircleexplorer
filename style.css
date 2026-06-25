@@ -393,6 +393,10 @@ h1,h2,h3 { font-family: 'Space Grotesk', sans-serif; }
   color: var(--text-secondary);
   padding: 0 16px;
 }
+.news-scroll span{
+    display:inline-block;
+    padding-right:80px;
+}
 @keyframes newsScroll {
   0% {
     transform: translateX(0);

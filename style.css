@@ -275,7 +275,7 @@ display:flex;
 
 width:max-content;
 
-animation:tickerMove 180s linear infinite;
+animation: tickerMove 400s linear infinite;
 
 }
 
@@ -289,18 +289,12 @@ align-items:center;
 
 .ticker-content a{
 
-text-decoration:none;
-
-color:#facc15;
-
-margin-right:60px;
-
-font-size:.9rem;
-
-white-space:nowrap;
-
-transition:.3s;
-
+.ticker-content a{
+    text-decoration:none;
+    color:var(--gold);
+    margin-right:120px;
+    white-space:nowrap;
+    flex-shrink:0;
 }
 
 .ticker-content a:hover{

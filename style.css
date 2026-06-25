@@ -704,25 +704,19 @@ grid-template-columns:1fr;
 }
 
 .article-card{
-
     display:flex;
-
     flex-direction:column;
-
     background:var(--bg-card);
-
     border:1px solid var(--border);
-
     border-radius:18px;
-
     padding:24px;
-
+    transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
 }
 
-.article-card:hover{
-    transform:translateY(-6px);
-    border-color:rgba(124,58,237,.35);
-    box-shadow:0 12px 32px rgba(0,0,0,.25);
+   .article-card:hover{
+    transform:translateY(-8px);
+    border-color:#7c3aed;
+    box-shadow:0 12px 30px rgba(124,58,237,.25);
 }
 
 .article-tag{
@@ -771,6 +765,19 @@ grid-template-columns:1fr;
     font-size:1.35rem;
     font-weight:700;
     margin:16px 0 12px;
+    line-height:1.4;
+}
+
+.article-card h3 i{
+    color:var(--gold);
+    margin-right:10px;
+    font-size:1.1rem;
+    transition:all .3s ease;
+}
+
+.article-card:hover h3 i{
+    color:#ffffff;
+    transform:rotate(-8deg) scale(1.1);
 }
 .article-card p{
     color:#9ca3af;
@@ -778,24 +785,19 @@ grid-template-columns:1fr;
     line-height:1.7;
 }
 .article-card a{
-    display:inline-block;
-    margin-top:20px;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    margin-top:auto;
     color:#f5b942;
     font-weight:700;
     text-decoration:none;
+    transition:.3s ease;
 }
 
 .article-card a:hover{
     color:#fff;
-}
-.article-card{
-    transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
-}
-
-.article-card:hover{
-    transform:translateY(-8px);
-    border-color:#7c3aed;
-    box-shadow:0 12px 30px rgba(124,58,237,.25);
+    transform:translateX(5px);
 }
 /* ============================================================
    FEATURED RESOURCES

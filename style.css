@@ -317,84 +317,148 @@ h1,h2,h3 { font-family: 'Space Grotesk', sans-serif; }
 }
 ```
 
+```css
 /* ============================================================
    HERO
-   ============================================================ */
+============================================================ */
+
 .hero {
     position: relative;
-    min-height: auto !important;
     display: flex;
     align-items: center;
-    padding: 140px 0 40px !important;
-
-    background: radial-gradient(
-        ellipse 80% 60% at 50% -10%,
-        rgba(139,92,246,0.2) 0%,
-        transparent 70%
-    ), var(--bg-deep);
-
+    justify-content: center;
+    min-height: 78vh;
+    padding: 140px 0 80px;
     overflow: hidden;
+    background:
+        radial-gradient(circle at top,
+        rgba(139,92,246,.18) 0%,
+        transparent 60%),
+        var(--bg-deep);
 }
 
-.hero-stars {
-  position: absolute; inset: 0;
-  background-image:
-    radial-gradient(1px 1px at 10% 20%, rgba(255,255,255,0.7) 0%, transparent 0%),
-    radial-gradient(1px 1px at 25% 60%, rgba(255,255,255,0.5) 0%, transparent 0%),
-    radial-gradient(1px 1px at 40% 15%, rgba(255,255,255,0.6) 0%, transparent 0%),
-    radial-gradient(1px 1px at 55% 80%, rgba(255,255,255,0.4) 0%, transparent 0%),
-    radial-gradient(1px 1px at 70% 35%, rgba(255,255,255,0.7) 0%, transparent 0%),
-    radial-gradient(1px 1px at 85% 70%, rgba(255,255,255,0.5) 0%, transparent 0%),
-    radial-gradient(1px 1px at 15% 90%, rgba(255,255,255,0.6) 0%, transparent 0%),
-    radial-gradient(1px 1px at 90% 10%, rgba(255,255,255,0.4) 0%, transparent 0%),
-    radial-gradient(2px 2px at 33% 45%, rgba(245,166,35,0.5) 0%, transparent 0%),
-    radial-gradient(2px 2px at 68% 55%, rgba(139,92,246,0.5) 0%, transparent 0%),
-    radial-gradient(1px 1px at 48% 30%, rgba(255,255,255,0.8) 0%, transparent 0%),
-    radial-gradient(1px 1px at 77% 85%, rgba(255,255,255,0.5) 0%, transparent 0%),
-    radial-gradient(1px 1px at 5% 50%, rgba(255,255,255,0.6) 0%, transparent 0%),
-    radial-gradient(1px 1px at 92% 45%, rgba(255,255,255,0.4) 0%, transparent 0%),
-    radial-gradient(1px 1px at 62% 12%, rgba(255,255,255,0.7) 0%, transparent 0%);
-  pointer-events: none;
-  animation: twinkle 8s ease-in-out infinite alternate;
-}
-@keyframes twinkle {
-  0%  { opacity: 0.6; }
-  100%{ opacity: 1; }
+.hero-stars{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    opacity:.9;
+    animation:twinkle 8s ease-in-out infinite alternate;
 }
 
-.hero-inner { text-align: center; }
-
-.hero-title {
-  font-size: clamp(2.2rem, 6vw, 4rem);
-  font-weight: 800;
-  line-height: 1.15;
-  margin-bottom: 24px;
-  letter-spacing: -0.02em;
+@keyframes twinkle{
+    from{opacity:.55;}
+    to{opacity:1;}
 }
 
-.hero-subtitle {
-  font-size: clamp(1rem, 2vw, 1.15rem);
-  color: var(--text-secondary);
-  max-width: 600px;
-  margin: 0 auto 36px;
+.hero-inner{
+    position:relative;
+    z-index:2;
+    text-align:center;
 }
 
-.hero-cta {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 60px;
+.hero-title{
+    font-family:"Space Grotesk",sans-serif;
+    font-size:clamp(2.6rem,6vw,4.5rem);
+    font-weight:800;
+    line-height:1.1;
+    letter-spacing:-1px;
+    margin-bottom:24px;
 }
 
-.hero-stats {
-  display: flex;
-  justify-content: center;
-  gap: 0;
-  flex-wrap: wrap;
-  border-top: 1px solid var(--border);
-  padding-top: 40px;
+.hero-subtitle{
+    max-width:720px;
+    margin:0 auto 40px;
+    color:var(--text-secondary);
+    font-size:1.08rem;
+    line-height:1.8;
 }
+
+.hero-cta{
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+    margin-bottom:70px;
+}
+
+.hero-stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    max-width:900px;
+    margin:0 auto;
+}
+
+.stat-item{
+    background:rgba(255,255,255,.04);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:28px 18px;
+    transition:all .3s ease;
+}
+
+.stat-item:hover{
+    transform:translateY(-6px);
+    border-color:rgba(245,166,35,.35);
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+.stat-number{
+    display:inline;
+    font-family:"Space Grotesk",sans-serif;
+    font-size:2.4rem;
+    font-weight:800;
+    color:#fff;
+}
+
+.stat-suffix{
+    font-family:"Space Grotesk",sans-serif;
+    font-size:2rem;
+    font-weight:800;
+}
+
+.stat-suffix.gold{
+    color:var(--gold);
+}
+
+.stat-label{
+    display:block;
+    margin-top:8px;
+    font-size:.85rem;
+    color:var(--text-secondary);
+    letter-spacing:.04em;
+}
+
+@media (max-width:768px){
+
+.hero{
+    min-height:auto;
+    padding:130px 0 60px;
+}
+
+.hero-title{
+    font-size:2.5rem;
+}
+
+.hero-subtitle{
+    font-size:1rem;
+}
+
+.hero-stats{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media (max-width:480px){
+
+.hero-stats{
+    grid-template-columns:1fr;
+}
+
+}
+```
+
 .stat-item {
   padding: 20px 40px;
   text-align: center;
@@ -411,7 +475,7 @@ h1,h2,h3 { font-family: 'Space Grotesk', sans-serif; }
 }
 .stat-suffix { font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 800; }
 .stat-suffix.gold { color: var(--gold); }
-.stat-label { display: block; font-size: 0.8rem; color: var(--text-muted); margin-top: 4px; letter-spacing: 0.04em; }
+.stat-label { display: block; font-size: 0.8rem; color: var(--text-secondary); margin-top: 4px; letter-spacing: 0.04em; }
 
 
 /* ============================================================

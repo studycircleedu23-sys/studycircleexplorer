@@ -227,57 +227,108 @@ h1,h2,h3 { font-family: 'Space Grotesk', sans-serif; }
   overflow: hidden;
   height: 40px;
 }
-.ticker {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  padding: 0 16px;
+/* LIVE TICKER */
+
+.ticker-wrap{
+
+display:flex;
+
+align-items:center;
+
+overflow:hidden;
+
+background:#101827;
+
+height:42px;
+
+border-top:1px solid #222;
+
+border-bottom:1px solid #222;
+
 }
 
-.ticker-dot {
-  width: 8px;
-  height: 8px;
-  background: #ef4444;
-  border-radius: 50%;
-  margin-right: 12px;
-  flex-shrink: 0;
-  animation: none !important;
-}
-@keyframes blink {
-  0%,100% { opacity: 1; }
-  50% { opacity: 1; }
-}
+.ticker-label{
 
-.ticker-inner {
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
-  width: max-content;
-  gap: 60px;
+padding:0 20px;
 
-  animation: tickerScroll 80s linear infinite;
+background:#6d28d9;
 
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--gold);
-}
-@keyframes tickerScroll {
-  from {
-    transform: translateX(100%);
-  }
+color:#fff;
 
-  to {
-    transform: translateX(-100%);
-  }
-}
-.ticker-inner a {
-  color: var(--gold);
-  text-decoration: none;
-  flex-shrink: 0;
+font-weight:700;
+
+white-space:nowrap;
+
+height:100%;
+
+display:flex;
+
+align-items:center;
+
+z-index:2;
+
 }
 
-.ticker-inner a:hover {
-  color: #ffffff;
+.ticker-track{
+
+display:flex;
+
+width:max-content;
+
+animation:tickerMove 180s linear infinite;
+
+}
+
+.ticker-content{
+
+display:flex;
+
+align-items:center;
+
+}
+
+.ticker-content a{
+
+text-decoration:none;
+
+color:#facc15;
+
+margin-right:60px;
+
+font-size:.9rem;
+
+white-space:nowrap;
+
+transition:.3s;
+
+}
+
+.ticker-content a:hover{
+
+color:#fff;
+
+}
+
+.ticker-wrap:hover .ticker-track{
+
+animation-play-state:paused;
+
+}
+
+@keyframes tickerMove{
+
+0%{
+
+transform:translateX(0);
+
+}
+
+100%{
+
+transform:translateX(-50%);
+
+}
+
 }
 /* ============================================================
    HERO

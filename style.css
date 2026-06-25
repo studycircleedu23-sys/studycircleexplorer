@@ -250,21 +250,34 @@ h1,h2,h3 { font-family: 'Space Grotesk', sans-serif; }
 
 .ticker-inner {
   display: flex;
+  align-items: center;
   white-space: nowrap;
-  gap: 150px;
-  animation-name: tickerScroll;
-  animation-duration: 300s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-play-state: paused !important;
+  width: max-content;
+  gap: 60px;
+
+  animation: tickerScroll 80s linear infinite;
+
   font-size: 0.85rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
   color: var(--gold);
 }
 @keyframes tickerScroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-15%); }
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+.ticker-inner a {
+  color: var(--gold);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.ticker-inner a:hover {
+  color: #ffffff;
 }
 /* ============================================================
    HERO

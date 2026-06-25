@@ -387,14 +387,19 @@ h1,h2,h3 { font-family: 'Space Grotesk', sans-serif; }
 .news-scroll {
   display: flex;
   white-space: nowrap;
-animation: newsScroll 300s linear infinite;
+  width: max-content;
+  animation: newsScroll 120s linear infinite;
   font-size: 0.8rem;
   color: var(--text-secondary);
   padding: 0 16px;
 }
 @keyframes newsScroll {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-10%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* ============================================================

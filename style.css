@@ -384,27 +384,37 @@ h1,h2,h3 { font-family: 'Space Grotesk', sans-serif; }
   align-items: center;
   white-space: nowrap;
 }
-.news-scroll {
-  display: flex;
-  white-space: nowrap;
-  width: max-content;
-  animation: newsScroll 120s linear infinite;
-  font-size: 0.8rem;
-  color: var(--text-secondary);
-  padding: 0 16px;
+.news-scroll{
+    display:flex;
+    align-items:center;
+    width:max-content;
+    animation:newsScroll 45s linear infinite;
 }
-.news-scroll span{
-    display:inline-block;
-    padding-right:80px;
+
+.news-scroll a{
+    color:#ffffff;
+    text-decoration:none;
+    margin-right:60px;
+    white-space:nowrap;
+    font-size:.82rem;
+    transition:.3s;
 }
-@keyframes newsScroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+
+.news-scroll a:hover{
+    color:#facc15;
 }
+@keyframes newsScroll{
+
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-50%);
+}
+
+}
+
 
 /* ============================================================
    TRENDING TOPICS

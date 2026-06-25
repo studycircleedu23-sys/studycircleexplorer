@@ -44,6 +44,41 @@
 .contact-list a:hover{
     text-decoration:underline;
 }
+    /* ============================================================
+   CONTACT FORM
+============================================================ */
+
+.form-input{
+    width:100%;
+    padding:14px 16px;
+    margin-bottom:18px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.10);
+    border-radius:10px;
+    color:#ffffff;
+    font-size:1rem;
+    box-sizing:border-box;
+    transition:border-color .3s ease, background .3s ease;
+}
+
+.form-input::placeholder{
+    color:rgba(255,255,255,.60);
+}
+
+.form-input:focus{
+    outline:none;
+    border-color:#7c3aed;
+    background:rgba(255,255,255,.08);
+}
+
+textarea.form-input{
+    resize:vertical;
+    min-height:150px;
+}
+
+.contact-card .btn{
+    margin-top:8px;
+}
 </style>
 
 </head>
@@ -57,7 +92,7 @@
 </a>
 </nav>
 </header>
-
+<main>
 <section class="hero">
 <div class="container hero-inner">
 
@@ -73,7 +108,6 @@ Connect with Study Circle Explorer across our official platforms.
 
 </div>
 </section>
-
 <section class="section">
 <div class="container contact-section">
 
@@ -101,17 +135,46 @@ Connect with Study Circle Explorer across our official platforms.
 
 <div class="contact-card">
 
-<h2>🚀 Get in Touch</h2>
+    <h2>🚀 Get in Touch</h2>
 
-<p>
-Have a suggestion, found an issue, or want to collaborate?
-Follow our social platforms and stay connected for the latest space discoveries, educational resources, and updates.
-</p>
+    <p>
+        Have a suggestion, found an issue, or want to collaborate?
+        We'd love to hear from you. Fill out the form below and we'll get back to you as soon as possible.
+    </p>
+
+    <form>
+
+        <input
+            type="text"
+            placeholder="Your Name"
+            class="form-input"
+            required>
+
+        <input
+            type="email"
+            placeholder="Your Email"
+            class="form-input"
+            required>
+
+        <textarea
+            rows="6"
+            placeholder="Your Message"
+            class="form-input"
+            required></textarea>
+
+        <button
+            type="submit"
+            class="btn btn-primary">
+
+            📩 Send Message
+
+        </button>
+
+    </form>
 
 </div>
-
 </div>
 </section>
-
+</main>
 </body>
 </html>

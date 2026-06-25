@@ -752,8 +752,21 @@ grid-template-columns:1fr;
     background:#059669 !important;
     color:#fff !important;
 }
+.article-tag.blackhole{
+    background:#8b5cf6 !important;
+    color:#fff !important;
+}
 
-..article-card h3{
+.article-tag.exoplanet{
+    background:#f59e0b !important;
+    color:#111827 !important;
+}
+
+.article-tag.astronomy{
+    background:#0ea5e9 !important;
+    color:#fff !important;
+}
+.article-card h3{
     color:#fff;
     font-size:1.35rem;
     font-weight:700;

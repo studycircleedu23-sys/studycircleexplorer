@@ -727,53 +727,58 @@ grid-template-columns:1fr;
 
 .article-tag{
     display:inline-block;
-    padding:6px 12px;
-    border-radius:30px;
+    padding:8px 16px;
+    border-radius:50px;
     font-size:.75rem;
     font-weight:700;
-    margin-bottom:16px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    margin-bottom:18px;
 }
-
 .article-tag.nasa{
     background:#7c3aed;
-    color:#fff;
+    color:#ffffff;
 }
 
 .article-tag.isro{
     background:#2563eb;
-    color:#fff;
+    color:#ffffff;
 }
 
 .article-tag.facts{
     background:#059669;
-    color:#fff;
+    color:#ffffff;
 }
 
 .article-card h3{
-    margin-bottom:12px;
+    color:#ffffff;
+    font-size:1.45rem;
+    font-weight:700;
     line-height:1.4;
+    margin:12px 0;
 }
 
 .article-card p{
-    color:var(--text-secondary);
+    color:#b8c2d0;
     line-height:1.7;
-    margin-bottom:18px;
+    font-size:0.95rem;
+    margin-bottom:22px;
 }
 
 .article-card a{
-
-    margin-top:auto;
-
-    color:var(--gold);
-
+    color:#f5b942;
+    font-weight:700;
     text-decoration:none;
-
-    font-weight:600;
-
+    transition:.3s;
 }
 
 .article-card a:hover{
-    color:#fff;
+    color:#ffffff;
+}
+.article-card:hover{
+    transform:translateY(-8px);
+    border-color:#7c3aed;
+    box-shadow:0 12px 30px rgba(124,58,237,.25);
 }
 
 /* ============================================================

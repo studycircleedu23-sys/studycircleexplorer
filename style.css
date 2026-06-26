@@ -802,7 +802,17 @@ grid-template-columns:1fr;
 /* ============================================================
    FEATURED RESOURCES
 ============================================================ */
+.resource-title i{
+    color:var(--gold);
+    margin-right:10px;
+    font-size:1rem;
+    transition:.3s ease;
+}
 
+.resource-card:hover .resource-title i{
+    color:#ffffff;
+    transform:rotate(-8deg) scale(1.1);
+}
 .resources{
     background:var(--bg-deep);
     padding:80px 0;

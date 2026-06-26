@@ -3,11 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Resources | Study Circle Explorer</title>
+<<title>Resources | Study Circle Explorer</title>
 
 <link rel="stylesheet" href="style.css">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 <style>
+
 .hero{
     min-height:auto !important;
     padding:120px 0 40px !important;
@@ -29,26 +32,63 @@ transition:.3s;
 }
 
 .resource-box:hover{
-transform:translateY(-6px);
-border-color:#7dd3fc;
+
+transform:translateY(-8px);
+
+border-color:#7c3aed;
+
+box-shadow:0 14px 30px rgba(124,58,237,.25);
+
 }
 
 .resource-box h2{
 margin-bottom:15px;
 }
+.resource-box h2 i{
 
+color:var(--gold);
+
+margin-right:10px;
+
+font-size:1.1rem;
+
+transition:.3s;
+
+}
+
+.resource-box:hover h2 i{
+
+color:#fff;
+
+transform:rotate(-8deg) scale(1.1);
+
+}
 .resource-box p{
 opacity:.8;
 margin-bottom:20px;
 }
 
 .coming-soon{
+
 display:inline-block;
-padding:8px 16px;
-border-radius:30px;
-background:#2563eb;
+
+padding:8px 18px;
+
+border-radius:50px;
+
+background:linear-gradient(
+135deg,
+#2563eb,
+#7c3aed);
+
 color:#fff;
-font-size:.85rem;
+
+font-size:.82rem;
+
+font-weight:700;
+
+letter-spacing:.5px;
+
 }
 </style>
 
@@ -93,7 +133,7 @@ Download educational resources created by Study Circle Explorer.
 
 <div class="resource-box">
 
-<h2>📄 PDF Library</h2>
+<h2><i class="fa-solid fa-file-pdf"></i> PDF Library</h2>
 
 <p>
 Download free educational PDFs, space notes and study guides.
@@ -107,7 +147,7 @@ Coming Soon
 
 <div class="resource-box">
 
-<h2>🎞 PPT Library</h2>
+<h2><i class="fa-solid fa-file-powerpoint"></i> Presentation Library</h2>
 
 <p>
 Presentation slides for students and educators.
@@ -121,7 +161,7 @@ Coming Soon
 
 <div class="resource-box">
 
-<h2>🎧 Audio Lessons</h2>
+<h2><i class="fa-solid fa-headphones"></i> Audio Learning</h2>
 
 <p>
 Listen to educational audio lessons anywhere.
@@ -135,7 +175,7 @@ Coming Soon
 
 <div class="resource-box">
 
-<h2>🎥 Video Library</h2>
+<h2><i class="fa-solid fa-circle-play"></i> Video Library</h2>
 
 <p>
 Watch curated educational videos and explainers.
@@ -149,7 +189,7 @@ Coming Soon
 
 <div class="resource-box">
 
-<h2>📝 Study Notes</h2>
+<h2><i class="fa-solid fa-book-open"></i> Study Notes</h2>
 
 <p>
 Quick revision notes for space science and astronomy.
@@ -163,7 +203,7 @@ Coming Soon
 
 <div class="resource-box">
 
-<h2>🚀 Premium Resources</h2>
+<h2><i class="fa-solid fa-star"></i> Premium Resources</h2>
 
 <p>
 Exclusive content and advanced learning materials.

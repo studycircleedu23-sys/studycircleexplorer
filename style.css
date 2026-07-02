@@ -756,8 +756,8 @@ grid-template-columns:1fr;
 }
 
 .article-tag.astronomy{
-    background:#0ea5e9 !important;
-    color:#fff !important;
+background:#6c63ff;
+color:#fff;
 }
 .article-card h3{
     color:#fff;

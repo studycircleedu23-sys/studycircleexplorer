@@ -1,324 +1,328 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<title>Resources | Study Circle Explorer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources | Study Circle Explorer</title>
 
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-<style>
+    <style>
+        .hero {
+            min-height: auto !important;
+            padding: 120px 0 40px !important;
+        }
 
-.hero{
-    min-height:auto !important;
-    padding:120px 0 40px !important;
-}
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
 
-.resources-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
-margin-top:40px;
-}
+        .resource-box {
+            background: rgba(255, 255, 255, .05);
+            border: 1px solid rgba(255, 255, 255, .08);
+            border-radius: 18px;
+            padding: 30px;
+            transition: .3s;
+        }
 
-.resource-box{
-background:rgba(255,255,255,.05);
-border:1px solid rgba(255,255,255,.08);
-border-radius:18px;
-padding:30px;
-transition:.3s;
-}
+        .resource-box:hover {
 
-.resource-box:hover{
+            transform: translateY(-8px);
 
-transform:translateY(-8px);
+            border-color: #7c3aed;
 
-border-color:#7c3aed;
+            box-shadow: 0 14px 30px rgba(124, 58, 237, .25);
 
-box-shadow:0 14px 30px rgba(124,58,237,.25);
+        }
 
-}
+        .resource-box h2 {
+            margin-bottom: 15px;
+        }
 
-.resource-box h2{
-margin-bottom:15px;
-}
-.resource-box h2 i{
+        .resource-box h2 i {
 
-color:var(--gold);
+            color: var(--gold);
 
-margin-right:10px;
+            margin-right: 10px;
 
-font-size:1.1rem;
+            font-size: 1.1rem;
 
-transition:.3s;
+            transition: .3s;
 
-}
+        }
 
-.resource-box:hover h2 i{
+        .resource-box:hover h2 i {
 
-color:#fff;
+            color: #fff;
 
-transform:rotate(-8deg) scale(1.1);
+            transform: rotate(-8deg) scale(1.1);
 
-}
-.resource-box p{
-opacity:.8;
-margin-bottom:20px;
-}
-.resource-count{
-    color:var(--gold);
-    font-size:.85rem;
-    font-weight:700;
-    margin-bottom:14px;
-    letter-spacing:.5px;
-}
-.coming-soon{
+        }
 
-display:inline-block;
+        .resource-box p {
+            opacity: .8;
+            margin-bottom: 20px;
+        }
 
-padding:8px 18px;
+        .resource-count {
+            color: var(--gold);
+            font-size: .85rem;
+            font-weight: 700;
+            margin-bottom: 14px;
+            letter-spacing: .5px;
+        }
 
-border-radius:50px;
+        .coming-soon {
 
-background:linear-gradient(
-135deg,
-#2563eb,
-#7c3aed);
+            display: inline-block;
 
-color:#fff;
+            padding: 8px 18px;
 
-font-size:.82rem;
+            border-radius: 50px;
 
-font-weight:700;
+            background: linear-gradient(135deg,
+                    #2563eb,
+                    #7c3aed);
 
-letter-spacing:.5px;
+            color: #fff;
 
-}
-</style>
+            font-size: .82rem;
+
+            font-weight: 700;
+
+            letter-spacing: .5px;
+
+        }
+    </style>
 
 </head>
 
 <body>
 
-<header class="header">
-<nav class="nav container">
-<a href="index.html" class="nav-logo">
-<img src="studycircle-logo.png" class="site-logo">
-<span class="logo-text">Study Circle <span class="logo-accent">Explorer</span></span>
-</a>
-</nav>
-</header>
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav-logo">
+                <img src="studycircle-logo.png" class="site-logo">
+                <span class="logo-text">Study Circle <span class="logo-accent">Explorer</span></span>
+            </a>
+        </nav>
+    </header>
 
-<section class="hero">
+    <section class="hero">
 
-<div class="container hero-inner">
+        <div class="container hero-inner">
 
-<h1 class="hero-title">
-📚 Resource Center
-</h1>
+            <h1 class="hero-title">
+                📚 Resource Center
+            </h1>
 
-<p class="hero-subtitle">
-Explore free educational resources including space science PDFs,
-presentations, study notes, audio lessons and video learning materials
-designed for students, educators and space enthusiasts.
-</p>
+            <p class="hero-subtitle">
+                Explore free educational resources including space science PDFs,
+                presentations, study notes, audio lessons and video learning materials
+                designed for students, educators and space enthusiasts.
+            </p>
 
-<a href="index.html" class="btn btn-primary">
-← Back to Home
-</a>
+            <a href="index.html" class="btn btn-primary">
+                ← Back to Home
+            </a>
 
-</div>
+        </div>
 
-</section>
-<!-- FEATURED RESOURCE -->
+    </section>
+    <!-- FEATURED RESOURCE -->
 
-<section class="featured-update">
+    <section class="featured-update">
 
-    <div class="container">
+        <div class="container">
 
-        <div class="update-card">
+            <div class="update-card">
 
-            <div class="update-badge">
-                ⭐ FEATURED
-            </div>
+                <div class="update-badge">
+                    ⭐ FEATURED
+                </div>
 
-            <div class="update-content">
+                <div class="update-content">
 
-                <h2>Latest Free Learning Resources</h2>
+                    <h2>Latest Free Learning <title>
+                    </h2>
 
-                <p>
-                    Discover upcoming PDFs, presentations, study notes,
-                    audio lessons and educational videos created by
-                    Study Circle Explorer. New learning resources will
-                    be added regularly.
-                </p>
+                    <p>
+                        Discover upcoming PDFs, presentations, study notes,
+                        audio lessons and educational videos created by
+                        Study Circle Explorer. New learning resources will
+                        be added regularly.
+                    </p>
 
-            </div>
+                </div>
 
-            <div class="update-action">
+                <div class="update-action">
 
-                <a href="#resources" class="btn btn-primary">
+                    <a href="#resources" class="btn btn-primary">
 
-                    📚 Browse Resources
+                        📚 Browse Resources
 
-                </a>
+                    </a>
+
+                </div>
 
             </div>
 
         </div>
 
-    </div>
+    </section>
+    <section class="section" id="resources">
 
-</section>
-<section class="section" id="resources">
+        <div class="container">
 
-<div class="container">
+            <div class="resources-grid">
 
-<div class="resources-grid">
+                <div class="resource-box">
 
-<div class="resource-box">
+                    <h2><i class="fa-solid fa-file-pdf"></i> PDF Library</h2>
+                    <p class="resource-count">0 Resources</p>
+                    <p>
+                        Download free educational PDFs, space notes and study guides.
+                    </p>
 
-<h2><i class="fa-solid fa-file-pdf"></i> PDF Library</h2>
-<p class="resource-count">0 Resources</p>
-<p>
-Download free educational PDFs, space notes and study guides.
-</p>
+                    <span class="coming-soon">
+                        Coming Soon
+                    </span>
 
-<span class="coming-soon">
-Coming Soon
-</span>
+                </div>
 
-</div>
+                <div class="resource-box">
 
-<div class="resource-box">
+                    <h2><i class="fa-solid fa-file-powerpoint"></i> Presentation Library</h2>
 
-<h2><i class="fa-solid fa-file-powerpoint"></i> Presentation Library</h2>
+                    <p class="resource-count">0 Presentations</p>
+                    <p>
+                        Presentation slides for students and educators.
+                    </p>
 
-<p class="resource-count">0 Presentations</p>
-<p>
-Presentation slides for students and educators.
-</p>
+                    <span class="coming-soon">
+                        Coming Soon
+                    </span>
 
-<span class="coming-soon">
-Coming Soon
-</span>
+                </div>
 
-</div>
+                <div class="resource-box">
 
-<div class="resource-box">
+                    <h2><i class="fa-solid fa-headphones"></i> Audio Learning</h2>
 
-<h2><i class="fa-solid fa-headphones"></i> Audio Learning</h2>
+                    <p class="resource-count">0 Audio Lessons</p>
+                    <p>
+                        Listen to educational audio lessons anywhere.
+                    </p>
 
-<p class="resource-count">0 Audio Lessons</p>
-<p>
-Listen to educational audio lessons anywhere.
-</p>
+                    <span class="coming-soon">
+                        Coming Soon
+                    </span>
 
-<span class="coming-soon">
-Coming Soon
-</span>
+                </div>
 
-</div>
+                <div class="resource-box">
 
-<div class="resource-box">
+                    <h2><i class="fa-solid fa-circle-play"></i> Video Library</h2>
 
-<h2><i class="fa-solid fa-circle-play"></i> Video Library</h2>
+                    <p class="resource-count">0 Videos</p>
+                    <p>
+                        Watch curated educational videos and explainers.
+                    </p>
 
-<p class="resource-count">0 Videos</p>
-<p>
-Watch curated educational videos and explainers.
-</p>
+                    <span class="coming-soon">
+                        Coming Soon
+                    </span>
 
-<span class="coming-soon">
-Coming Soon
-</span>
+                </div>
 
-</div>
+                <div class="resource-box">
 
-<div class="resource-box">
+                    <h2><i class="fa-solid fa-book-open"></i> Study Notes</h2>
 
-<h2><i class="fa-solid fa-book-open"></i> Study Notes</h2>
+                    <p class="resource-count">0 Notes</p>
+                    <p>
+                        Quick revision notes for space science and astronomy.
+                    </p>
 
-<p class="resource-count">0 Notes</p>
-<p>
-Quick revision notes for space science and astronomy.
-</p>
+                    <span class="coming-soon">
+                        Coming Soon
+                    </span>
 
-<span class="coming-soon">
-Coming Soon
-</span>
+                </div>
 
-</div>
+                <div class="resource-box">
 
-<div class="resource-box">
+                    <h2><i class="fa-solid fa-star"></i> Premium Resources</h2>
 
-<h2><i class="fa-solid fa-star"></i> Premium Resources</h2>
+                    <p class="resource-count">Coming Soon</p>
 
-<p class="resource-count">Coming Soon</p>
+                    <p>
+                        Exclusive content and advanced learning materials.
+                    </p>
 
-<p>
-Exclusive content and advanced learning materials.
-</p>
+                    <span class="coming-soon">
+                        Launching Soon
+                    </span>
 
-<span class="coming-soon">
-Launching Soon
-</span>
+                </div>
 
-</div>
-
-</div>
-
-</div>
-
-</section>
-<section class="section">
-
-    <div class="container">
-
-        <div class="section-label">
-            ⭐ WHY CHOOSE OUR RESOURCES
-        </div>
-
-        <h2 class="section-title">
-            Learn Better with
-            <span class="gold-text">Study Circle Explorer</span>
-        </h2>
-
-        <p class="section-subtitle">
-            Every resource is designed to make learning space science easier,
-            clearer and more engaging for students, teachers and curious minds.
-        </p>
-
-        <div class="resources-grid">
-
-            <div class="resource-box">
-                <h2><i class="fa-solid fa-circle-check"></i> Free Access</h2>
-                <p>
-                    Most educational resources are available completely free.
-                </p>
-            </div>
-
-            <div class="resource-box">
-                <h2><i class="fa-solid fa-book"></i> Easy Learning</h2>
-                <p>
-                    Simple explanations with high-quality educational content.
-                </p>
-            </div>
-
-            <div class="resource-box">
-                <h2><i class="fa-solid fa-rocket"></i> Regular Updates</h2>
-                <p>
-                    New NASA, ISRO and space learning resources added regularly.
-                </p>
             </div>
 
         </div>
 
-    </div>
+    </section>
+    <section class="section">
 
-</section>
+        <div class="container">
+
+            <div class="section-label">
+                ⭐ WHY CHOOSE OUR RESOURCES
+            </div>
+
+            <h2 class="section-title">
+                Learn Better with
+                <span class="gold-text">Study Circle Explorer</span>
+            </h2>
+
+            <p class="section-subtitle">
+                Every resource is designed to make learning space science easier,
+                clearer and more engaging for students, teachers and curious minds.
+            </p>
+
+            <div class="resources-grid">
+
+                <div class="resource-box">
+                    <h2><i class="fa-solid fa-circle-check"></i> Free Access</h2>
+                    <p>
+                        Most educational resources are available completely free.
+                    </p>
+                </div>
+
+                <div class="resource-box">
+                    <h2><i class="fa-solid fa-book"></i> Easy Learning</h2>
+                    <p>
+                        Simple explanations with high-quality educational content.
+                    </p>
+                </div>
+
+                <div class="resource-box">
+                    <h2><i class="fa-solid fa-rocket"></i> Regular Updates</h2>
+                    <p>
+                        New NASA, ISRO and space learning resources added regularly.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
 </body>
 
 </html>

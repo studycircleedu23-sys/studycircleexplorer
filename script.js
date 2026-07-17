@@ -12,13 +12,12 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
    1. HEADER — sticky + scroll class
    ============================================================ */
 (function initHeader() {
-  const header = $('#header');
+  const header = document.querySelector(".header");
   if (!header) return;
 
   const onScroll = () => {
     header.classList.toggle('scrolled', window.scrollY > 40);
-    updateBackToTop();
-  };
+};
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 })();
@@ -119,23 +118,6 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
   }, { threshold: 0.4 });
 
   observer.observe(statsSection);
-})();
-
-/* ============================================================
-   5. BACK TO TOP
-   ============================================================ */
-function updateBackToTop() {
-  const btn = $('#backToTop');
-  if (!btn) return;
-  btn.classList.toggle('visible', window.scrollY > 400);
-}
-
-(function initBackToTop() {
-  const btn = $('#backToTop');
-  if (!btn) return;
-  btn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
 })();
 
 /* ============================================================
@@ -360,3 +342,67 @@ window.handleSubscribe = handleSubscribe;
     });
   });
 })();
+
+/* ============================================================
+   SCROLL PROGRESS BAR + BACK TO TOP
+============================================================ */
+
+(function () {
+
+    const progressBar = document.getElementById("progress-bar");
+    const backToTop = document.getElementById("backToTop");
+
+    function updateScrollUI() {
+
+        const scrollTop = window.scrollY;
+
+        const docHeight =
+            document.documentElement.scrollHeight -
+            document.documentElement.clientHeight;
+
+        const percent =
+            docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+
+        if (progressBar) {
+            progressBar.style.width = percent + "%";
+        }
+
+        if (backToTop) {
+            backToTop.classList.toggle("visible", scrollTop > 400);
+        }
+    }
+
+    window.addEventListener("scroll", updateScrollUI, {
+        passive: true
+    });
+
+    updateScrollUI();
+
+    if (backToTop) {
+
+        backToTop.addEventListener("click", () => {
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        });
+
+    }
+
+})();
+
+document.querySelectorAll(".article-card,.timeline-card,.category-card,.stat-card")
+.forEach(card=>{
+
+card.addEventListener("mouseenter",()=>{
+
+card.style.transition=".35s";
+
+});
+
+});

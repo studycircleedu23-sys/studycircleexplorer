@@ -63,22 +63,28 @@ h1,h2,h3 { font-family: 'Space Grotesk', sans-serif; }
 
 /* ---------- Buttons ---------- */
 .btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 13px 28px;
-  border-radius: 50px;
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 600;
-  font-size: 0.95rem;
-  cursor: pointer;
-  border: none;
-  transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
-  white-space: nowrap;
-}
-.btn:hover { transform: translateY(-2px); }
-.btn:active { transform: translateY(0); }
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 28px;
+    border-radius: 50px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    border: none;
+    white-space: nowrap;
 
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        background .35s ease;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(245,166,35,.25);
+}
 .btn-primary {
   background: linear-gradient(135deg, var(--gold) 0%, #e8932e 100%);
   color: #1a1000;
@@ -112,6 +118,10 @@ h1,h2,h3 { font-family: 'Space Grotesk', sans-serif; }
 
 /* ---------- Section Labels ---------- */
 .section-label {
+    box-shadow:
+
+0 0 20px rgba(139,92,246,.25);
+
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -139,9 +149,11 @@ h1,h2,h3 { font-family: 'Space Grotesk', sans-serif; }
   max-width: 560px;
   margin: 0 auto 40px;
 }
+.section{
 
-.section { padding: 80px 0; }
+padding:70px 0;
 
+}
 .center-cta { text-align: center; margin-top: 48px; }
 
 /* ============================================================
@@ -707,7 +719,13 @@ grid-template-columns:1fr;
     padding:24px;
     transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
 }
+.article-card:hover{
 
+transform:translateY(-8px);
+
+box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+}
    .article-card:hover{
     transform:translateY(-8px);
     border-color:#7c3aed;
@@ -1157,10 +1175,24 @@ height:200px;
    FOOTER
 ============================================================ */
 
-.footer{
-    background:#060c1a;
-    border-top:1px solid var(--border);
-    padding:80px 0 0;
+footer{
+
+padding:60px 20px;
+
+text-align:center;
+
+border-top:1px solid rgba(255,255,255,.08);
+
+background:#090d1f;
+
+}
+
+footer p{
+
+opacity:.85;
+
+line-height:1.8;
+
 }
 
 .footer-top{
@@ -1943,5 +1975,665 @@ gap:10px;
 font-size:1.6rem;
 
 }
+
+}
+/* ==========================
+   Astronomy Hero
+========================== */
+
+.astronomy-hero{
+text-align:center;
+padding:90px 0 50px;
+}
+
+.hero-badge{
+
+display:inline-block;
+padding:8px 18px;
+border-radius:30px;
+background:rgba(255,255,255,.08);
+border:1px solid rgba(255,255,255,.12);
+font-size:.9rem;
+margin-bottom:20px;
+
+}
+
+.hero-buttons{
+
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+margin-top:35px;
+
+}
+
+/* ==========================
+   Statistics
+========================== */
+
+.stats-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:45px;
+
+}
+
+.stat-card{
+
+transition:.35s ease;
+
+overflow:hidden;
+
+position:relative;
+
+}
+
+.stat-card::before{
+
+content:"";
+
+position:absolute;
+
+left:-120%;
+
+top:0;
+
+width:70%;
+
+height:100%;
+
+background:linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,255,255,.08),
+
+transparent
+
+);
+
+transition:.7s;
+
+}
+
+.stat-card:hover::before{
+
+left:130%;
+
+}
+
+.stat-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 25px 45px rgba(0,0,0,.35);
+
+}
+
+.stat-icon{
+
+font-size:2.2rem;
+margin-bottom:15px;
+
+}
+
+.stat-card h3{
+
+font-size:2.2rem;
+margin-bottom:10px;
+color:var(--gold-color,#FFD54F);
+
+}
+
+.stat-card p{
+
+opacity:.85;
+
+}
+
+/* ==========================================
+   CATEGORY NAVIGATION
+========================================== */
+
+.category-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:24px;
+margin-top:45px;
+
+}
+
+.category-card{
+
+transition:.35s ease;
+
+}
+
+.category-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+border-color:#8B5CF6;
+
+}
+.category-icon{
+
+font-size:2.5rem;
+margin-bottom:18px;
+
+}
+
+.category-card h3{
+
+margin-bottom:12px;
+font-size:1.25rem;
+color:var(--gold-color,#FFD54F);
+
+}
+
+.category-card p{
+
+line-height:1.7;
+opacity:.9;
+
+}
+
+/* ===================================
+   BIG BANG TIMELINE
+=================================== */
+
+.timeline-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:22px;
+margin-top:45px;
+
+}
+
+.timeline-card{
+
+    transition:.35s ease;
+
+    position:relative;
+    display:block;
+    padding:28px;
+    border-radius:20px;
+    background:linear-gradient(180deg,#141b2d,#0f1523);
+    border:1px solid rgba(255,255,255,.08);
+    text-decoration:none;
+    color:inherit;
+
+}
+
+.timeline-card:hover{
+
+    transform:translateY(-10px);
+    border-color:#F5A623;
+    box-shadow:0 20px 40px rgba(245,166,35,.2);
+
+}
+
+
+.timeline-number{
+
+display:inline-flex;
+align-items:center;
+justify-content:center;
+
+width:52px;
+height:52px;
+
+border-radius:50%;
+background:#FFD54F;
+color:#111;
+
+font-weight:700;
+font-size:1.1rem;
+
+margin-bottom:18px;
+
+}
+
+.timeline-card h3{
+
+margin-bottom:12px;
+color:#FFD54F;
+
+}
+
+.timeline-card p{
+
+line-height:1.7;
+opacity:.9;
+
+}
+
+/* Section Footer */
+
+.section-footer{
+
+text-align:center;
+margin-top:45px;
+
+}
+
+/* FAQ */
+
+.faq-container{
+
+max-width:900px;
+margin:45px auto 0;
+
+}
+
+.faq-item{
+
+margin-bottom:18px;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+border-radius:15px;
+overflow:hidden;
+
+}
+
+.faq-item summary{
+
+padding:20px 25px;
+cursor:pointer;
+font-size:1.1rem;
+font-weight:600;
+list-style:none;
+
+}
+
+.faq-item summary::-webkit-details-marker{
+
+display:none;
+
+}
+
+.faq-item summary::after{
+
+content:"+";
+float:right;
+font-size:1.4rem;
+transition:.3s;
+
+}
+
+.faq-item[open] summary::after{
+
+content:"−";
+
+}
+
+.faq-item p{
+
+padding:0 25px 20px;
+line-height:1.8;
+
+}
+
+/* SEARCH */
+
+.search-box{
+
+max-width:700px;
+margin:40px auto;
+display:flex;
+
+}
+
+.search-box input{
+
+flex:1;
+padding:18px 20px;
+font-size:1rem;
+border:none;
+outline:none;
+border-radius:50px 0 0 50px;
+background:#1f2937;
+color:#fff;
+
+}
+
+.search-box button{
+
+width:70px;
+border:none;
+cursor:not-allowed;
+background:linear-gradient(135deg,#4facfe,#00f2fe);
+color:#fff;
+font-size:1.2rem;
+border-radius:0 50px 50px 0;
+
+}
+
+.popular-tags{
+
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+margin-top:35px;
+
+}
+
+.popular-tags a{
+
+padding:10px 18px;
+background:rgba(255,255,255,.08);
+border-radius:30px;
+text-decoration:none;
+color:#fff;
+transition:.3s;
+
+}
+
+.popular-tags a:hover{
+
+background:#4facfe;
+transform:translateY(-3px);
+
+}
+
+/* COMMUNITY */
+
+.community-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
+margin-top:45px;
+
+}
+
+.community-card{
+
+display:block;
+text-align:center;
+padding:35px 25px;
+border-radius:20px;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+text-decoration:none;
+color:#fff;
+transition:.35s;
+
+}
+
+.community-card:hover{
+
+transform:translateY(-8px);
+border-color:#4facfe;
+
+}
+
+.community-card i{
+
+font-size:3rem;
+margin-bottom:20px;
+color:#4facfe;
+
+}
+
+.community-card h3{
+
+margin-bottom:12px;
+
+}
+
+.community-button{
+
+text-align:center;
+margin-top:45px;
+
+}
+
+/* Progress Bar */
+
+#progress-bar{
+
+position:fixed;
+top:0;
+left:0;
+width:0%;
+height:4px;
+background:linear-gradient(90deg,#4facfe,#00f2fe);
+z-index:9999;
+
+}
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+.article-image{
+
+transition:.4s;
+
+}
+
+.article-card:hover .article-image{
+
+transform:scale(1.08);
+
+}
+
+.article-card{
+
+transition:.35s;
+
+}
+
+.article-card:hover{
+
+transform:translateY(-8px);
+
+}
+::selection{
+
+background:#4facfe;
+
+color:white;
+
+}
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#0f172a;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#4facfe;
+
+border-radius:20px;
+
+}
+
+#backToTop{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:50%;
+    background:#f5a623;
+    color:#fff;
+    font-size:20px;
+    cursor:pointer;
+    display:none;
+    z-index:9999;
+}
+
+#backToTop:hover{
+    transform:translateY(-3px);
+}
+
+/* ============================================================
+   SCROLL PROGRESS BAR
+============================================================ */
+
+#progress-bar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:0%;
+    height:4px;
+    background:linear-gradient(90deg,#f5a623,#8b5cf6);
+    z-index:99999;
+    transition:width .15s linear;
+}
+
+/* ============================================================
+   BACK TO TOP BUTTON
+============================================================ */
+
+#backToTop{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:52px;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,#f5a623,#8b5cf6);
+
+    color:#fff;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateY(20px);
+
+    transition:.3s ease;
+
+    z-index:9999;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
+
+}
+
+#backToTop.visible{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+
+}
+
+#backToTop:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.45);
+
+}
+
+#backToTop i{
+
+    pointer-events:none;
+
+}
+
+.stat-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+}
+
+/* Section Title Decoration */
+
+.section-title{
+    position:relative;
+    display:inline-block;
+    margin-bottom:28px;
+}
+
+.section-title::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:-12px;
+
+    transform:translateX(-50%);
+
+    width:90px;
+
+    height:4px;
+
+    border-radius:50px;
+
+    background:linear-gradient(90deg,#8B5CF6,#F5A623);
+
+}
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#0d1224;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#8B5CF6;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#F5A623;
 
 }

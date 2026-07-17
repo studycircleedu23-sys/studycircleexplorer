@@ -10,7 +10,11 @@
 
 <meta name="description"
 content="Explore galaxies, nebulae, stars, constellations, and fascinating discoveries about the universe.">
+<meta name="robots" content="index, follow">
 
+<meta name="author" content="Study Circle Explorer">
+
+<meta name="theme-color" content="#08111f">
 <link rel="stylesheet" href="style.css">
 
 <link rel="stylesheet"
@@ -28,8 +32,9 @@ padding:60px 0 20px !important;
 </head>
 
 <body>
+    <div id="progress-bar"></div>
 
-<header class="header">
+<header id="header" class="header">
 
 <nav class="nav container">
 
@@ -51,70 +56,42 @@ Study Circle
 
 </header>
 
-<section class="hero">
+<!-- HERO -->
+
+<section class="hero astronomy-hero">
 
 <div class="container hero-inner">
 
+<div class="hero-badge">
+
+🌌 Astronomy Knowledge Hub
+
+</div>
+
 <h1 class="hero-title">
 
-🌌 Astronomy
+Explore the Universe,<br>
+One Discovery at a Time
 
 </h1>
 
 <p class="hero-subtitle">
 
-Discover galaxies, nebulae, stars, constellations, and the incredible structure of our universe.
+Dive into an ever-growing collection of astronomy articles covering the Solar System, stars, galaxies, black holes, cosmology, space missions, and the complete evolution of the universe—from the Big Bang to the Cosmic Web.
 
 </p>
 
-<a href="index.html"
-class="btn btn-primary">
+<div class="hero-buttons">
 
-← Back to Home
+<a href="#categories" class="btn btn-primary">
+
+Explore Articles
 
 </a>
 
-</div>
+<a href="#big-bang-timeline" class="btn btn-outline">
 
-</section>
-
-<!-- FEATURED -->
-
-<section class="featured-update">
-
-<div class="container">
-
-<div class="update-card">
-
-<div class="update-badge">
-
-🌌 FEATURED
-
-</div>
-
-<div class="update-content">
-
-<h2>
-
-Explore the Wonders of the Universe
-
-</h2>
-
-<p>
-
-Journey through galaxies, nebulae, star clusters, superclusters, and the largest known structures in space.
-
-</p>
-
-</div>
-
-<div class="update-action">
-
-<a href="#latest"
-
-class="btn btn-primary">
-
-Explore →
+Big Bang Timeline
 
 </a>
 
@@ -122,60 +99,213 @@ Explore →
 
 </div>
 
-</div>
-
 </section>
+<!-- ASTRONOMY STATISTICS -->
 
-<!-- LATEST ASTRONOMY ARTICLES -->
-
-<section class="section" id="latest">
+<section class="section astronomy-stats">
 
 <div class="container">
 
 <div class="section-label">
 
-🌌 ASTRONOMY ARTICLES
+📊 ASTRONOMY LIBRARY
 
 </div>
 
 <h2 class="section-title">
 
-Latest <span class="gold-text">Astronomy</span>
+Explore Our <span class="gold-text">Universe</span>
 
 </h2>
 
 <p class="section-subtitle">
 
-Discover galaxies, stars, nebulae, constellations and the fascinating universe around us.
+Study Circle Explorer brings together astronomy, cosmology, planetary science, and space exploration into one organized knowledge library.
 
 </p>
 
-<div class="resources-list">
+<div class="stats-grid">
 
-<!-- ARTICLE 1 -->
+<div class="stat-card">
 
-<div class="resource-card">
+<div class="stat-icon">📚</div>
 
-<div class="resource-info">
+<h3>100+</h3>
 
-<h3 class="resource-title">
+<p>Articles</p>
 
-<i class="fa-solid fa-galaxy"></i>
+</div>
 
-The Milky Way Galaxy
+<div class="stat-card">
 
-</h3>
+<div class="stat-icon">🌍</div>
 
-<p class="resource-desc">
+<h3>15</h3>
 
-Learn about our home galaxy, its spiral structure, billions of stars, and the supermassive black hole at its center.
+<p>Categories</p>
+
+</div>
+
+<div class="stat-card">
+
+<div class="stat-icon">💥</div>
+
+<h3>14</h3>
+
+<p>Big Bang Timeline</p>
+
+</div>
+
+<div class="stat-card">
+
+<div class="stat-icon">🚀</div>
+
+<h3>20+</h3>
+
+<p>Space Missions</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- CATEGORY NAVIGATION -->
+
+<section class="section" id="categories">
+
+<div class="container">
+
+<div class="section-label">
+
+🧭 QUICK NAVIGATION
+
+</div>
+
+<h2 class="section-title">
+
+Browse by <span class="gold-text">Category</span>
+
+</h2>
+
+<p class="section-subtitle">
+
+Jump directly to your favorite astronomy topics and explore our growing collection of articles.
 
 </p>
 
-<a href="articles/milky-way.html"
-class="resource-link">
+<div class="category-grid">
 
-Read More →
+<a href="#big-bang-timeline" class="category-card">
+
+<div class="category-icon">💥</div>
+
+<h3>Big Bang Timeline</h3>
+
+<p>
+
+Follow the complete evolution of the universe from the Planck Epoch to the first galaxies.
+
+</p>
+
+</a>
+
+<a href="#universe" class="category-card">
+
+<div class="category-icon">🌌</div>
+
+<h3>Universe & Cosmology</h3>
+
+<p>
+
+Explore the Big Bang, dark matter, dark energy, cosmic web, and the observable universe.
+
+</p>
+
+</a>
+
+<a href="#solar-system" class="category-card">
+
+<div class="category-icon">🌍</div>
+
+<h3>Solar System</h3>
+
+<p>
+
+Discover the Sun, planets, moons, asteroids, comets, and dwarf planets.
+
+</p>
+
+</a>
+
+<a href="#stars" class="category-card">
+
+<div class="category-icon">⭐</div>
+
+<h3>Stars & Nebulae</h3>
+
+<p>
+
+Learn how stars are born, evolve, explode, and create the elements of the universe.
+
+</p>
+
+</a>
+
+<a href="#galaxies" class="category-card">
+
+<div class="category-icon">🌠</div>
+
+<h3>Galaxies</h3>
+
+<p>
+
+Explore the Milky Way, Andromeda, galaxy clusters, and large-scale structures.
+
+</p>
+
+</a>
+
+<a href="#black-holes" class="category-card">
+
+<div class="category-icon">⚫</div>
+
+<h3>Black Holes</h3>
+
+<p>
+
+Understand event horizons, singularities, supermassive black holes, and cosmic mysteries.
+
+</p>
+
+</a>
+
+<a href="#telescopes" class="category-card">
+
+<div class="category-icon">🔭</div>
+
+<h3>Space Telescopes</h3>
+
+<p>
+
+Discover Hubble, James Webb, Roman, Chandra, and other observatories.
+
+</p>
+
+</a>
+
+<a href="#missions" class="category-card">
+
+<div class="category-icon">🚀</div>
+
+<h3>Space Missions</h3>
+
+<p>
+
+Explore NASA, ISRO, ESA, Chandrayaan, Aditya-L1, Gaganyaan, and more.
+
+</p>
 
 </a>
 
@@ -183,30 +313,266 @@ Read More →
 
 </div>
 
-<!-- ARTICLE 2 -->
+</section>
+<!-- BIG BANG TIMELINE -->
 
-<div class="resource-card">
+<section class="section" id="big-bang-timeline">
 
-<div class="resource-info">
+<div class="container">
 
-<h3 class="resource-title">
+<div class="section-label">
 
-<i class="fa-solid fa-star"></i>
+💥 COMPLETE BIG BANG TIMELINE
 
-The Andromeda Galaxy
+</div>
 
-</h3>
+<h2 class="section-title">
 
-<p class="resource-desc">
+The <span class="gold-text">History of the Universe</span>
 
-Discover the nearest major galaxy to the Milky Way and its future collision with our galaxy.
+</h2>
+
+<p class="section-subtitle">
+
+Follow the evolution of the universe from the very first fraction of a second after the Big Bang to the birth of the first galaxies.
 
 </p>
 
-<a href="articles/andromeda.html"
-class="resource-link">
+<div class="timeline-grid">
 
-Read More →
+<a href="articles/planck-epoch.html" class="timeline-card">
+<span class="timeline-number">01</span>
+<h3>Planck Epoch</h3>
+<p>The earliest known moment of the universe.</p>
+</a>
+
+<a href="articles/grand-unification-epoch.html" class="timeline-card">
+<span class="timeline-number">02</span>
+<h3>Grand Unification</h3>
+<p>The strong force separated from the unified force.</p>
+</a>
+
+<a href="articles/cosmic-inflation.html" class="timeline-card">
+<span class="timeline-number">03</span>
+<h3>Cosmic Inflation</h3>
+<p>The universe expanded faster than the speed of light.</p>
+</a>
+
+<a href="articles/electroweak-epoch.html" class="timeline-card">
+<span class="timeline-number">04</span>
+<h3>Electroweak Epoch</h3>
+<p>The electromagnetic and weak forces became separate.</p>
+</a>
+
+<a href="articles/quark-epoch.html" class="timeline-card">
+<span class="timeline-number">05</span>
+<h3>Quark Epoch</h3>
+<p>The universe was filled with free quarks and gluons.</p>
+</a>
+
+<a href="articles/hadron-epoch.html" class="timeline-card">
+<span class="timeline-number">06</span>
+<h3>Hadron Epoch</h3>
+<p>Quarks combined to form protons and neutrons.</p>
+</a>
+
+<a href="articles/lepton-epoch.html" class="timeline-card">
+<span class="timeline-number">07</span>
+<h3>Lepton Epoch</h3>
+<p>Leptons dominated the young universe.</p>
+</a>
+
+<a href="articles/photon-epoch.html" class="timeline-card">
+<span class="timeline-number">08</span>
+<h3>Photon Epoch</h3>
+<p>The universe became a glowing sea of light.</p>
+</a>
+
+<a href="articles/recombination-epoch.html" class="timeline-card">
+<span class="timeline-number">09</span>
+<h3>Recombination</h3>
+<p>The first atoms formed and the universe became transparent.</p>
+</a>
+
+<a href="articles/cosmic-dark-ages.html" class="timeline-card">
+<span class="timeline-number">10</span>
+<h3>Cosmic Dark Ages</h3>
+<p>No stars had formed yet; gravity shaped the future cosmos.</p>
+</a>
+
+<a href="articles/first-stars.html" class="timeline-card">
+<span class="timeline-number">11</span>
+<h3>First Stars</h3>
+<p>The first generation of stars illuminated the universe.</p>
+</a>
+
+<a href="articles/first-galaxies.html" class="timeline-card">
+<span class="timeline-number">12</span>
+<h3>First Galaxies</h3>
+<p>Early galaxies began forming across the universe.</p>
+</a>
+
+<a href="articles/epoch-of-reionization.html" class="timeline-card">
+<span class="timeline-number">13</span>
+<h3>Epoch of Reionization</h3>
+<p>Ultraviolet light ionized the surrounding hydrogen.</p>
+</a>
+
+<a href="articles/galaxy-evolution.html" class="timeline-card">
+<span class="timeline-number">14</span>
+<h3>Galaxy Evolution</h3>
+<p>Galaxies grew into the magnificent structures we observe today.</p>
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- UNIVERSE & COSMOLOGY -->
+
+<section class="section" id="universe">
+
+<div class="container">
+
+<div class="section-label">
+
+🌌 UNIVERSE & COSMOLOGY
+
+</div>
+
+<h2 class="section-title">
+
+Explore the <span class="gold-text">Universe</span>
+
+</h2>
+
+<p class="section-subtitle">
+
+From the Big Bang to dark matter and the largest structures ever discovered, explore the science that explains our universe.
+
+</p>
+
+<div class="articles-grid">
+
+<article class="article-card">
+
+<img loading="lazy" src="images/mars.webp.png" class="article-image" alt="Mars">
+
+<span class="article-tag">COSMOLOGY</span>
+
+<h3>Observable Universe</h3>
+
+<p>The vast region of space we can observe and how its immense size is measured.</p>
+
+<a href="articles/observable-universe.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img loading="lazy" src="images/mars.webp.png" class="article-image" alt="Mars">
+
+<span class="article-tag">COSMOLOGY</span>
+
+<h3>Big Bang Theory</h3>
+
+<p>Discover how the universe began and the evidence supporting modern cosmology.</p>
+
+<a href="articles/big-bang.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img loading="lazy" src="images/mars.webp.png" class="article-image" alt="Mars">
+
+<span class="article-tag">COSMOLOGY</span>
+
+<h3>Cosmic Microwave Background</h3>
+
+<p>The oldest light in the universe that reveals conditions shortly after the Big Bang.</p>
+
+<a href="articles/cosmic-microwave-background.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img loading="lazy" src="images/mars.webp.png" class="article-image" alt="Mars">
+
+<span class="article-tag">COSMOLOGY</span>
+
+<h3>Dark Matter</h3>
+
+<p>The invisible matter that holds galaxies together through gravity.</p>
+
+<a href="articles/dark-matter.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img loading="lazy" src="images/mars.webp.png" class="article-image" alt="Mars">
+<span class="article-tag">COSMOLOGY</span>
+
+<h3>Dark Energy</h3>
+
+<p>The mysterious force accelerating the expansion of the universe.</p>
+
+<a href="articles/dark-energy.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img loading="lazy" src="images/mars.webp.png" class="article-image" alt="Mars">
+<span class="article-tag">LARGE SCALE STRUCTURE</span>
+
+<h3>Cosmic Web</h3>
+
+<p>Explore the enormous network of galaxies, clusters, and filaments spanning the cosmos.</p>
+
+<a href="articles/cosmic-web.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img loading="lazy" src="images/mars.webp.png" class="article-image" alt="Mars">
+
+<span class="article-tag">COSMOLOGY</span>
+
+<h3>Great Attractor</h3>
+
+<p>The mysterious gravitational region pulling thousands of nearby galaxies.</p>
+
+<a href="articles/great-attractor.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img loading="lazy" src="images/mars.webp.png" class="article-image" alt="Mars">
+
+<span class="article-tag">SUPERCLUSTERS</span>
+
+<h3>Laniakea Supercluster</h3>
+
+<p>The immense cosmic home that contains the Milky Way and nearly 100,000 galaxies.</p>
+
+<a href="articles/laniakea-supercluster.html" class="read-btn">Read Article →</a>
+
+</article>
+
+</div>
+
+<div class="section-footer">
+
+<a href="#" class="btn btn-outline">
+
+View All Universe Articles →
 
 </a>
 
@@ -214,6 +580,1238 @@ Read More →
 
 </div>
 
+</section>
+
+<!-- SOLAR SYSTEM -->
+
+<section class="section" id="solar-system">
+
+<div class="container">
+
+<div class="section-label">
+
+🌍 SOLAR SYSTEM
+
+</div>
+
+<h2 class="section-title">
+
+Explore Our <span class="gold-text">Solar System</span>
+
+</h2>
+
+<p class="section-subtitle">
+
+Journey through the Sun, planets, moons, dwarf planets, asteroids, comets, and other fascinating objects that make up our cosmic neighborhood.
+
+</p>
+
+<div class="articles-grid">
+
+<article class="article-card">
+
+<img loading="lazy" src="images/mars.webp.png" class="article-image" alt="Mars">
+
+<span class="article-tag">STAR</span>
+
+<h3>The Sun</h3>
+
+<p>The heart of our Solar System and the source of light and energy for every planet.</p>
+
+<a href="articles/sun.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img loading="lazy" src="images/mars.webp.png" class="article-image" alt="Mars">
+
+<span class="article-tag">PLANET</span>
+
+<h3>Mercury</h3>
+
+<p>The smallest and fastest planet orbiting closest to the Sun.</p>
+
+<a href="articles/mercury.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img loading="lazy" src="images/mars.webp.png" class="article-image" alt="Mars">
+
+<span class="article-tag">PLANET</span>
+
+<h3>Venus</h3>
+
+<p>Earth's scorching twin with a dense atmosphere and runaway greenhouse effect.</p>
+
+<a href="articles/venus.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img loading="lazy" src="images/mars.webp.png" class="article-image" alt="Mars">
+
+<span class="article-tag">PLANET</span>
+
+<h3>Earth</h3>
+
+<p>The only known planet to support life, oceans, and a protective atmosphere.</p>
+
+<a href="articles/earth.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img loading="lazy" src="images/mars.webp.png" class="article-image" alt="Mars">
+
+<span class="article-tag">NATURAL SATELLITE</span>
+
+<h3>Moon</h3>
+
+<p>Explore Earth's only natural satellite and its influence on tides and eclipses.</p>
+
+<a href="articles/moon.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img loading="lazy" src="images/mars.webp.png" class="article-image" alt="Mars">
+
+<span class="article-tag">PLANET</span>
+
+<h3>Mars</h3>
+
+<p>The Red Planet and humanity's most promising destination for future exploration.</p>
+
+<a href="articles/mars.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img loading="lazy" src="images/mars.webp.png" class="article-image" alt="Mars">
+
+<span class="article-tag">GAS GIANT</span>
+
+<h3>Jupiter</h3>
+
+<p>The largest planet in the Solar System, famous for its Great Red Spot.</p>
+
+<a href="articles/jupiter.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img loading="lazy" src="images/mars.webp.png" class="article-image" alt="Mars">
+
+<span class="article-tag">GAS GIANT</span>
+
+<h3>Saturn</h3>
+
+<p>The magnificent ringed giant with dozens of fascinating moons.</p>
+
+<a href="articles/saturn.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img loading="lazy" src="images/mars.webp.png" class="article-image" alt="Mars">
+
+<span class="article-tag">ICE GIANT</span>
+
+<h3>Uranus</h3>
+
+<p>An icy giant that rotates on its side unlike any other planet.</p>
+
+<a href="articles/uranus.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img loading="lazy" src="images/mars.webp.png" class="article-image" alt="Mars">
+
+
+<span class="article-tag">ICE GIANT</span>
+
+<h3>Neptune</h3>
+
+<p>The most distant major planet, home to the fastest winds in the Solar System.</p>
+
+<a href="articles/neptune.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img loading="lazy" src="images/mars.webp.png" class="article-image" alt="Mars">
+<span class="article-tag">DWARF PLANETS</span>
+
+<h3>Dwarf Planets</h3>
+
+<p>Learn about Pluto, Eris, Haumea, Makemake, and Ceres.</p>
+
+<a href="articles/dwarf-planets.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img loading="lazy" src="images/mars.webp.png" class="article-image" alt="Mars">
+
+<span class="article-tag">SMALL BODIES</span>
+
+<h3>Comets</h3>
+
+<p>Icy visitors that develop spectacular glowing tails as they approach the Sun.</p>
+
+<a href="articles/comets.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img loading="lazy" src="images/mars.webp.png" class="article-image" alt="Mars">
+
+<span class="article-tag">SMALL BODIES</span>
+
+<h3>Asteroids</h3>
+
+<p>Rocky remnants from the Solar System's formation orbiting mainly between Mars and Jupiter.</p>
+
+<a href="articles/asteroids.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img loading="lazy" src="images/mars.webp.png" class="article-image" alt="Mars">
+
+<span class="article-tag">METEORS</span>
+
+<h3>Meteors</h3>
+
+<p>Discover meteoroids, meteors, meteorites, and the spectacular meteor showers seen from Earth.</p>
+
+<a href="articles/meteors.html" class="read-btn">Read Article →</a>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+<!-- STARS & STELLAR EVOLUTION -->
+
+<section class="section" id="stars">
+
+<div class="container">
+
+<div class="section-label">
+
+⭐ STARS & STELLAR EVOLUTION
+
+</div>
+
+<h2 class="section-title">
+
+Life Cycle of <span class="gold-text">Stars</span>
+
+</h2>
+
+<p class="section-subtitle">
+
+Discover how stars are born inside nebulae, evolve over millions to billions of years, and end their lives as white dwarfs, neutron stars, or black holes.
+
+</p>
+
+<div class="articles-grid">
+
+<article class="article-card">
+
+<img loading="lazy" src="images/mars.webp.png" class="article-image" alt="Mars">
+
+<span class="article-tag">STARS</span>
+
+<h3>Stars</h3>
+
+<p>Learn what stars are, how they produce energy, and why they are the building blocks of galaxies.</p>
+
+<a href="articles/stars.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img loading="lazy" src="images/mars.webp.png" class="article-image" alt="Mars">
+
+<span class="article-tag">NEBULAE</span>
+
+<h3>Nebulae</h3>
+
+<p>Massive clouds of gas and dust where new stars are born and stellar evolution begins.</p>
+
+<a href="articles/nebula.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img loading="lazy" src="images/mars.webp.png" class="article-image" alt="Mars">
+
+<span class="article-tag">STAR FORMATION</span>
+
+<h3>Protostar</h3>
+
+<p>The earliest stage of a star's life before nuclear fusion begins in its core.</p>
+
+<a href="articles/protostar.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+<img loading="lazy" src="images/mars.webp.png" class="article-image" alt="Mars">
+
+<span class="article-tag">STELLAR EVOLUTION</span>
+
+<h3>Main Sequence Stars</h3>
+
+<p>The longest stage of a star's life, where hydrogen is steadily fused into helium.</p>
+
+<a href="articles/main-sequence-stars.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img loading="lazy" src="images/mars.webp.png" class="article-image" alt="Mars">
+
+<span class="article-tag">GIANT STARS</span>
+
+<h3>Red Giants</h3>
+
+<p>Discover what happens when aging stars expand dramatically after exhausting their hydrogen fuel.</p>
+
+<a href="articles/red-giant.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img loading="lazy" src="images/mars.webp.png" class="article-image" alt="Mars">
+
+<span class="article-tag">EXPLOSIONS</span>
+
+<h3>Supernova</h3>
+
+<p>The spectacular explosion of massive stars that creates many of the elements found throughout the universe.</p>
+
+<a href="articles/supernova.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img loading="lazy" src="images/mars.webp.png" class="article-image" alt="Mars">
+
+<span class="article-tag">STELLAR REMNANTS</span>
+
+<h3>White Dwarfs</h3>
+
+<p>The dense remnants left behind after Sun-like stars complete their life cycle.</p>
+
+<a href="articles/white-dwarf.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/neutron-star.webp.png" class="article-image" alt="Neutron Star">
+
+<span class="article-tag">STELLAR REMNANTS</span>
+
+<h3>Neutron Stars</h3>
+
+<p>Ultra-dense stellar cores formed after some supernova explosions.</p>
+
+<a href="articles/neutron-star.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/pulsar.webp.png" class="article-image" alt="Pulsar">
+
+<span class="article-tag">PULSARS</span>
+
+<h3>Pulsars</h3>
+
+<p>Rapidly spinning neutron stars that emit beams of radio waves across space.</p>
+
+<a href="articles/pulsar.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/magnetar.webp.png" class="article-image" alt="Magnetar">
+
+<span class="article-tag">MAGNETARS</span>
+
+<h3>Magnetars</h3>
+
+<p>The most magnetic objects known in the universe, capable of producing powerful cosmic flares.</p>
+
+<a href="articles/magnetar.html" class="read-btn">Read Article →</a>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+<!-- GALAXIES -->
+
+<section class="section" id="galaxies">
+
+<div class="container">
+
+<div class="section-label">
+
+🌠 GALAXIES
+
+</div>
+
+<h2 class="section-title">
+
+Explore <span class="gold-text">Galaxies</span>
+
+</h2>
+
+<p class="section-subtitle">
+
+Journey beyond our Solar System to discover the Milky Way, giant spiral galaxies, galaxy clusters, superclusters, and the largest structures in the observable universe.
+
+</p>
+
+<div class="articles-grid">
+
+<article class="article-card">
+
+<img src="images/milky-way.webp.png" class="article-image" alt="Milky Way">
+
+<span class="article-tag">SPIRAL GALAXY</span>
+
+<h3>Milky Way</h3>
+
+<p>Explore our home galaxy, containing hundreds of billions of stars, nebulae, and mysterious dark matter.</p>
+
+<a href="articles/milky-way.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/andromeda.webp.png" class="article-image" alt="Andromeda Galaxy">
+
+<span class="article-tag">SPIRAL GALAXY</span>
+
+<h3>Andromeda Galaxy</h3>
+
+<p>The closest large galaxy to the Milky Way and destined to collide with it billions of years from now.</p>
+
+<a href="articles/andromeda.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/galaxy-types.webp.png" class="article-image" alt="Galaxy Types">
+
+<span class="article-tag">GALAXY CLASSIFICATION</span>
+
+<h3>Types of Galaxies</h3>
+
+<p>Learn the differences between spiral, elliptical, lenticular, and irregular galaxies.</p>
+
+<a href="articles/types-of-galaxies.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/dwarf-galaxy.webp.png" class="article-image" alt="Dwarf Galaxy">
+
+<span class="article-tag">DWARF GALAXIES</span>
+
+<h3>Dwarf Galaxies</h3>
+
+<p>Small galaxies that play a major role in the growth and evolution of larger galaxies.</p>
+
+<a href="articles/dwarf-galaxies.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/galaxy-cluster.webp.png" class="article-image" alt="Galaxy Cluster">
+
+<span class="article-tag">GALAXY CLUSTERS</span>
+
+<h3>Galaxy Clusters</h3>
+
+<p>Massive collections of hundreds or thousands of galaxies bound together by gravity.</p>
+
+<a href="articles/galaxy-clusters.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/virgo-cluster.webp.png" class="article-image" alt="Virgo Cluster">
+
+<span class="article-tag">CLUSTERS</span>
+
+<h3>Virgo Cluster</h3>
+
+<p>The nearest major galaxy cluster and an important part of our cosmic neighborhood.</p>
+
+<a href="articles/virgo-cluster.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/laniakea-supercluster.webp.png" class="article-image" alt="Laniakea">
+
+<span class="article-tag">SUPERCLUSTER</span>
+
+<h3>Laniakea Supercluster</h3>
+
+<p>The enormous supercluster that contains the Milky Way and nearly 100,000 galaxies.</p>
+
+<a href="articles/laniakea-supercluster.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/shapley-supercluster.webp.png" class="article-image" alt="Shapley Supercluster">
+
+<span class="article-tag">SUPERCLUSTER</span>
+
+<h3>Shapley Supercluster</h3>
+
+<p>One of the largest concentrations of galaxies in the nearby universe.</p>
+
+<a href="articles/shapley-supercluster.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/bootes-void.webp.png" class="article-image" alt="Boötes Void">
+
+<span class="article-tag">COSMIC VOID</span>
+
+<h3>Boötes Void</h3>
+
+<p>A gigantic region of space containing remarkably few galaxies, making it one of the largest known cosmic voids.</p>
+
+<a href="articles/bootes-void.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/hercules-corona-borealis-great-wall.webp.png" class="article-image" alt="Hercules-Corona Borealis Great Wall">
+
+<span class="article-tag">LARGE SCALE STRUCTURE</span>
+
+<h3>Hercules–Corona Borealis Great Wall</h3>
+
+<p>Among the largest known structures in the observable universe, stretching across billions of light-years.</p>
+
+<a href="articles/hercules-corona-borealis-great-wall.html" class="read-btn">Read Article →</a>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- BLACK HOLES & EXTREME OBJECTS -->
+
+<section class="section" id="black-holes">
+
+<div class="container">
+
+<div class="section-label">
+
+⚫ BLACK HOLES & EXTREME OBJECTS
+
+</div>
+
+<h2 class="section-title">
+
+Explore <span class="gold-text">Black Holes & Cosmic Extremes</span>
+
+</h2>
+
+<p class="section-subtitle">
+
+Discover the universe's most mysterious objects—from stellar black holes and supermassive giants to quasars, wormholes, and the strange physics that governs them.
+
+</p>
+
+<div class="articles-grid">
+
+<article class="article-card">
+
+<img src="images/black-hole.webp.png" class="article-image" alt="Black Hole">
+
+<span class="article-tag">BLACK HOLES</span>
+
+<h3>Black Holes</h3>
+
+<p>Understand how black holes form, grow, and warp space-time with their immense gravity.</p>
+
+<a href="articles/black-holes.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/sagittarius-a.webp.png" class="article-image" alt="Sagittarius A*">
+
+<span class="article-tag">SUPERMASSIVE</span>
+
+<h3>Sagittarius A*</h3>
+
+<p>The supermassive black hole located at the center of the Milky Way galaxy.</p>
+
+<a href="articles/sagittarius-a.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/ton-618.webp.png" class="article-image" alt="TON 618">
+
+<span class="article-tag">ULTRAMASSIVE</span>
+
+<h3>TON 618</h3>
+
+<p>One of the largest black holes ever discovered, with billions of times the Sun's mass.</p>
+
+<a href="articles/ton-618.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/event-horizon.webp.png" class="article-image" alt="Event Horizon">
+
+<span class="article-tag">BLACK HOLE PHYSICS</span>
+
+<h3>Event Horizon</h3>
+
+<p>The invisible boundary beyond which nothing—not even light—can escape.</p>
+
+<a href="articles/event-horizon.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/singularity.webp.png" class="article-image" alt="Singularity">
+
+<span class="article-tag">THEORY</span>
+
+<h3>Singularity</h3>
+
+<p>Explore the mysterious point where gravity becomes infinitely strong and known physics breaks down.</p>
+
+<a href="articles/singularity.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/hawking-radiation.webp.png" class="article-image" alt="Hawking Radiation">
+
+<span class="article-tag">QUANTUM PHYSICS</span>
+
+<h3>Hawking Radiation</h3>
+
+<p>Discover Stephen Hawking's revolutionary idea that black holes can slowly evaporate.</p>
+
+<a href="articles/hawking-radiation.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/quasar.webp.png" class="article-image" alt="Quasar">
+
+<span class="article-tag">ACTIVE GALAXIES</span>
+
+<h3>Quasars</h3>
+
+<p>The brightest objects in the universe, powered by supermassive black holes.</p>
+
+<a href="articles/quasar.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/wormhole.webp.png" class="article-image" alt="Wormhole">
+
+<span class="article-tag">THEORETICAL</span>
+
+<h3>Wormholes</h3>
+
+<p>Hypothetical tunnels through space-time that could connect distant regions of the universe.</p>
+
+<a href="articles/wormhole.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/spaghettification.webp.png" class="article-image" alt="Spaghettification">
+
+<span class="article-tag">GRAVITY</span>
+
+<h3>Spaghettification</h3>
+
+<p>Learn what happens when extreme tidal forces stretch objects near a black hole.</p>
+
+<a href="articles/spaghettification.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/accretion-disk.webp.png" class="article-image" alt="Accretion Disk">
+
+<span class="article-tag">ASTROPHYSICS</span>
+
+<h3>Accretion Disks</h3>
+
+<p>Hot, glowing disks of gas and dust spiraling into black holes and neutron stars.</p>
+
+<a href="articles/accretion-disk.html" class="read-btn">Read Article →</a>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SPACE TELESCOPES -->
+
+<section class="section" id="telescopes">
+
+<div class="container">
+
+<div class="section-label">
+
+🔭 SPACE TELESCOPES & OBSERVATORIES
+
+</div>
+
+<h2 class="section-title">
+
+Explore <span class="gold-text">Space Telescopes</span>
+
+</h2>
+
+<p class="section-subtitle">
+
+Discover the observatories that transformed our understanding of the universe—from Hubble to James Webb and the next generation of powerful space telescopes.
+
+</p>
+
+<div class="articles-grid">
+
+<article class="article-card">
+
+<img src="images/james-webb-space-telescope.webp.png" class="article-image" alt="James Webb Space Telescope">
+
+<span class="article-tag">NASA</span>
+
+<h3>James Webb Space Telescope</h3>
+
+<p>The world's most powerful space telescope exploring the first galaxies, exoplanets, and the early universe.</p>
+
+<a href="articles/james-webb-space-telescope.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/hubble-space-telescope.webp.png" class="article-image" alt="Hubble Space Telescope">
+
+<span class="article-tag">NASA / ESA</span>
+
+<h3>Hubble Space Telescope</h3>
+
+<p>The legendary observatory that transformed modern astronomy with breathtaking discoveries.</p>
+
+<a href="articles/hubble-space-telescope.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/nancy-grace-roman-space-telescope.webp.png" class="article-image" alt="Roman Space Telescope">
+
+<span class="article-tag">NASA</span>
+
+<h3>Nancy Grace Roman Space Telescope</h3>
+
+<p>NASA's next-generation observatory designed to study dark energy, exoplanets, and the universe on a massive scale.</p>
+
+<a href="articles/nancy-grace-roman-space-telescope.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/chandra-x-ray-observatory.webp.png" class="article-image" alt="Chandra X-ray Observatory">
+
+<span class="article-tag">X-RAY</span>
+
+<h3>Chandra X-ray Observatory</h3>
+
+<p>Revealing black holes, neutron stars, and extremely energetic events through X-ray astronomy.</p>
+
+<a href="articles/chandra-x-ray-observatory.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/spitzer-space-telescope.webp.png" class="article-image" alt="Spitzer Space Telescope">
+
+<span class="article-tag">INFRARED</span>
+
+<h3>Spitzer Space Telescope</h3>
+
+<p>An infrared observatory that uncovered hidden regions of star formation and distant galaxies.</p>
+
+<a href="articles/spitzer-space-telescope.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/euclid-space-telescope.webp.png" class="article-image" alt="Euclid Telescope">
+
+<span class="article-tag">ESA</span>
+
+<h3>Euclid Space Telescope</h3>
+
+<p>Mapping billions of galaxies to understand dark matter and dark energy.</p>
+
+<a href="articles/euclid-space-telescope.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/vera-rubin-observatory.webp.png" class="article-image" alt="Vera Rubin Observatory">
+
+<span class="article-tag">OBSERVATORY</span>
+
+<h3>Vera C. Rubin Observatory</h3>
+
+<p>A revolutionary survey observatory that will repeatedly map the entire southern sky.</p>
+
+<a href="articles/vera-rubin-observatory.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/square-kilometre-array.webp.png" class="article-image" alt="Square Kilometre Array">
+
+<span class="article-tag">RADIO</span>
+
+<h3>Square Kilometre Array (SKA)</h3>
+
+<p>The world's largest radio telescope project designed to explore the deepest mysteries of the universe.</p>
+
+<a href="articles/square-kilometre-array.html" class="read-btn">Read Article →</a>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SPACE MISSIONS -->
+
+<section class="section" id="missions">
+
+<div class="container">
+
+<div class="section-label">
+
+🚀 SPACE MISSIONS & EXPLORATION
+
+</div>
+
+<h2 class="section-title">
+
+Explore <span class="gold-text">Space Missions</span>
+
+</h2>
+
+<p class="section-subtitle">
+
+Discover humanity's greatest journeys beyond Earth—from the Apollo Moon landings to Mars rovers, Chandrayaan missions, and the future of deep-space exploration.
+
+</p>
+
+<div class="articles-grid">
+
+<article class="article-card">
+
+<img src="images/apollo-program.webp.png" class="article-image" alt="Apollo Program">
+
+<span class="article-tag">NASA</span>
+
+<h3>Apollo Program</h3>
+
+<p>The historic missions that landed the first humans on the Moon and changed space exploration forever.</p>
+
+<a href="articles/apollo-program.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/artemis-program.webp.png" class="article-image" alt="Artemis Program">
+
+<span class="article-tag">NASA</span>
+
+<h3>Artemis Program</h3>
+
+<p>NASA's ambitious program to return humans to the Moon and prepare for future missions to Mars.</p>
+
+<a href="articles/artemis-program.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/chandrayaan.webp.png" class="article-image" alt="Chandrayaan Missions">
+
+<span class="article-tag">ISRO</span>
+
+<h3>Chandrayaan Missions</h3>
+
+<p>India's successful lunar exploration program, including the historic Chandrayaan-3 landing near the Moon's south pole.</p>
+
+<a href="articles/chandrayaan.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/aditya-l1.webp.png" class="article-image" alt="Aditya-L1">
+
+<span class="article-tag">ISRO</span>
+
+<h3>Aditya-L1</h3>
+
+<p>India's first solar observatory mission dedicated to studying the Sun from the L1 Lagrange point.</p>
+
+<a href="articles/aditya-l1.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/gaganyaan.webp.png" class="article-image" alt="Gaganyaan">
+
+<span class="article-tag">ISRO</span>
+
+<h3>Gaganyaan</h3>
+
+<p>India's first human spaceflight program, designed to send Indian astronauts into orbit.</p>
+
+<a href="articles/gaganyaan.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/voyager.webp.png" class="article-image" alt="Voyager Missions">
+
+<span class="article-tag">NASA</span>
+
+<h3>Voyager Missions</h3>
+
+<p>The farthest human-made spacecraft, now exploring interstellar space beyond our Solar System.</p>
+
+<a href="articles/voyager.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/mars-rovers.webp.png" class="article-image" alt="Mars Rovers">
+
+<span class="article-tag">MARS</span>
+
+<h3>Mars Rovers</h3>
+
+<p>Meet Sojourner, Spirit, Opportunity, Curiosity, and Perseverance as they explore the Red Planet.</p>
+
+<a href="articles/mars-rovers.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/international-space-station.webp.png" class="article-image" alt="International Space Station">
+
+<span class="article-tag">ISS</span>
+
+<h3>International Space Station</h3>
+
+<p>A permanently inhabited laboratory orbiting Earth where astronauts conduct groundbreaking scientific research.</p>
+
+<a href="articles/international-space-station.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/hubble-servicing-mission.webp.png" class="article-image" alt="Hubble Servicing Missions">
+
+<span class="article-tag">NASA</span>
+
+<h3>Hubble Servicing Missions</h3>
+
+<p>The astronaut missions that repaired and upgraded Hubble, extending its scientific life for decades.</p>
+
+<a href="articles/hubble-servicing-missions.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/nisar.webp.png" class="article-image" alt="NISAR Mission">
+
+<span class="article-tag">NASA & ISRO</span>
+
+<h3>NISAR Mission</h3>
+
+<p>A joint NASA-ISRO Earth observation mission using advanced radar technology to study our changing planet.</p>
+
+<a href="articles/nisar.html" class="read-btn">Read Article →</a>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FEATURED ARTICLES -->
+
+<section class="section" id="featured">
+
+<div class="container">
+
+<div class="section-label">
+
+⭐ EDITOR'S PICKS
+
+</div>
+
+<h2 class="section-title">
+
+Featured <span class="gold-text">Articles</span>
+
+</h2>
+
+<p class="section-subtitle">
+
+Start your journey with our most popular and carefully selected astronomy articles.
+
+</p>
+
+<div class="articles-grid">
+
+<article class="article-card">
+
+<img src="images/big-bang.webp.png" class="article-image" alt="Big Bang">
+
+<span class="article-tag">POPULAR</span>
+
+<h3>The Big Bang</h3>
+
+<p>Explore how our universe began nearly 13.8 billion years ago.</p>
+
+<a href="articles/big-bang.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/james-webb-space-telescope.webp.png" class="article-image" alt="JWST">
+
+<span class="article-tag">TRENDING</span>
+
+<h3>James Webb Telescope</h3>
+
+<p>Discover the telescope changing our understanding of the universe.</p>
+
+<a href="articles/james-webb-space-telescope.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/black-hole.webp.png" class="article-image" alt="Black Hole">
+
+<span class="article-tag">MUST READ</span>
+
+<h3>Black Holes</h3>
+
+<p>One of the greatest mysteries in modern astrophysics.</p>
+
+<a href="articles/black-holes.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/milky-way.webp.png" class="article-image" alt="Milky Way">
+
+<span class="article-tag">BEGINNER</span>
+
+<h3>Milky Way Galaxy</h3>
+
+<p>Take a tour through our home galaxy.</p>
+
+<a href="articles/milky-way.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/chandrayaan.webp.png" class="article-image" alt="Chandrayaan">
+
+<span class="article-tag">ISRO</span>
+
+<h3>Chandrayaan Missions</h3>
+
+<p>India's remarkable journey to the Moon.</p>
+
+<a href="articles/chandrayaan.html" class="read-btn">Read Article →</a>
+
+</article>
+
+<article class="article-card">
+
+<img src="images/mars.webp.png" class="article-image" alt="Mars">
+
+<span class="article-tag">EXPLORE</span>
+
+<h3>Mars</h3>
+
+<p>Why the Red Planet is humanity's next destination.</p>
+
+<a href="articles/mars.html" class="read-btn">Read Article →</a>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- QUICK FACTS -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="section-label">
+
+📊 ASTRONOMY FACTS
+
+</div>
+
+<h2 class="section-title">
+
+Universe <span class="gold-text">By the Numbers</span>
+
+</h2>
+
+<div class="stats-grid">
+
+<div class="stat-card">
+
+<h3>13.8 Billion</h3>
+
+<p>Years Old Universe</p>
+
+</div>
+
+<div class="stat-card">
+
+<h3>8</h3>
+
+<p>Major Planets</p>
+
+</div>
+
+<div class="stat-card">
+
+<h3>100–400 Billion</h3>
+
+<p>Stars in the Milky Way</p>
+
+</div>
+
+<div class="stat-card">
+
+<h3>2 Trillion+</h3>
+
+<p>Estimated Galaxies</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
 <!-- ARTICLE 3 -->
 
 <div class="resource-card">
@@ -343,7 +1941,168 @@ Read More →
 </div>
 
 </section>
+<!-- FAQ -->
 
+<section class="section" id="faq">
+
+<div class="container">
+
+<div class="section-label">
+
+❓ FREQUENTLY ASKED QUESTIONS
+
+</div>
+
+<h2 class="section-title">
+
+Astronomy <span class="gold-text">FAQs</span>
+
+</h2>
+
+<p class="section-subtitle">
+
+Quick answers to some of the most common questions about space and astronomy.
+
+</p>
+
+<div class="faq-container">
+
+<details class="faq-item">
+
+<summary>How old is the Universe?</summary>
+
+<p>
+The Universe is approximately <strong>13.8 billion years old</strong>, according to measurements of the Cosmic Microwave Background and the expansion of space.
+</p>
+
+</details>
+
+<details class="faq-item">
+
+<summary>How many galaxies are there?</summary>
+
+<p>
+Astronomers estimate that the observable universe contains over <strong>2 trillion galaxies</strong>.
+</p>
+
+</details>
+
+<details class="faq-item">
+
+<summary>What is the largest planet?</summary>
+
+<p>
+<strong>Jupiter</strong> is the largest planet in our Solar System, with a diameter of about 143,000 km.
+</p>
+
+</details>
+
+<details class="faq-item">
+
+<summary>Can black holes destroy galaxies?</summary>
+
+<p>
+No. Supermassive black holes are found at the centers of most galaxies, but they don't consume the entire galaxy.
+</p>
+
+</details>
+
+<details class="faq-item">
+
+<summary>Will the Milky Way collide with Andromeda?</summary>
+
+<p>
+Yes. Scientists predict the Milky Way and Andromeda will merge in about <strong>4–5 billion years</strong>.
+</p>
+
+</details>
+
+<details class="faq-item">
+
+<summary>Which telescope is the most powerful?</summary>
+
+<p>
+The <strong>James Webb Space Telescope</strong> is currently the most powerful space telescope ever launched.
+</p>
+
+</details>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SEARCH & POPULAR TOPICS -->
+
+<section class="section" id="search">
+
+<div class="container">
+
+<div class="section-label">
+
+🔍 FIND A TOPIC
+
+</div>
+
+<h2 class="section-title">
+
+Search the <span class="gold-text">Universe</span>
+
+</h2>
+
+<p class="section-subtitle">
+
+Looking for a specific topic? Browse our most popular astronomy categories below.
+
+</p>
+
+<div class="search-box">
+
+<input
+type="text"
+placeholder="Search articles... (Coming Soon)"
+disabled>
+
+<button disabled>
+
+<i class="fas fa-search"></i>
+
+</button>
+
+</div>
+
+<div class="popular-tags">
+
+<a href="articles/big-bang.html">Big Bang</a>
+
+<a href="articles/black-holes.html">Black Holes</a>
+
+<a href="articles/mars.html">Mars</a>
+
+<a href="articles/jupiter.html">Jupiter</a>
+
+<a href="articles/milky-way.html">Milky Way</a>
+
+<a href="articles/dark-matter.html">Dark Matter</a>
+
+<a href="articles/dark-energy.html">Dark Energy</a>
+
+<a href="articles/james-webb-space-telescope.html">JWST</a>
+
+<a href="articles/chandrayaan.html">Chandrayaan</a>
+
+<a href="articles/aditya-l1.html">Aditya-L1</a>
+
+<a href="articles/galaxies.html">Galaxies</a>
+
+<a href="articles/neutron-star.html">Neutron Stars</a>
+
+</div>
+
+</div>
+
+</section>
 <!-- RELATED TOPICS -->
 
 <section class="section">
@@ -410,6 +2169,88 @@ Explore →
 
 </section>
 
+<!-- STAY CONNECTED -->
+
+<section class="section" id="community">
+
+<div class="container">
+
+<div class="section-label">
+
+🚀 JOIN THE COMMUNITY
+
+</div>
+
+<h2 class="section-title">
+
+Stay Connected with <span class="gold-text">Study Circle Explorer</span>
+
+</h2>
+
+<p class="section-subtitle">
+
+Never miss the latest discoveries in astronomy, space exploration, NASA, ISRO, and fascinating cosmic mysteries. Follow us and continue exploring the universe with us.
+
+</p>
+
+<div class="community-grid">
+
+<a href="https://youtube.com/@studycircleexp-23" target="_blank" class="community-card">
+
+<i class="fab fa-youtube"></i>
+
+<h3>YouTube</h3>
+
+<p>Watch astronomy videos, explainers, and space documentaries.</p>
+
+</a>
+
+<a href="https://www.instagram.com/studycircle.explorer" target="_blank" class="community-card">
+
+<i class="fab fa-instagram"></i>
+
+<h3>Instagram</h3>
+
+<p>Daily space facts, reels, quizzes, and astronomy updates.</p>
+
+</a>
+
+<a href="https://www.facebook.com/studycircleexplorer2026" target="_blank" class="community-card">
+
+<i class="fab fa-facebook"></i>
+
+<h3>Facebook</h3>
+
+<p>Join our growing astronomy community and discussions.</p>
+
+</a>
+
+<a href="https://t.me/spacestudyhub" target="_blank" class="community-card">
+
+<i class="fab fa-telegram"></i>
+
+<h3>Telegram</h3>
+
+<p>Receive instant updates, articles, and learning resources.</p>
+
+</a>
+
+</div>
+
+<div class="community-button">
+
+<a href="index.html" class="btn btn-primary">
+
+Explore More Articles →
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
 <!-- PAGE NAVIGATION -->
 
 <section class="section">
@@ -441,21 +2282,27 @@ Next Section →
 
 <!-- FOOTER -->
 
-<footer class="footer">
+<footer>
 
 <div class="container">
 
-<div class="footer-bottom">
+<p>
+🚀 Keep looking up. Every discovery begins with curiosity.
+</p>
 
 <p>
-© 2026 Study Circle Explorer • Made with ❤️ for curious minds.
+© 2026 Study Circle Explorer. All Rights Reserved.
 </p>
 
 </div>
 
-</div>
-
 </footer>
+<button id="backToTop" aria-label="Back to Top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<script src="script.js"></script>
+
 
 </body>
 </html>

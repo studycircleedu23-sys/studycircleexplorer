@@ -1,0 +1,11 @@
+# ==========================================
+# robots.txt
+# Study Circle Explorer
+# https://studycircleedu23-sys.github.io/studycircleexplorer/
+# ==========================================
+
+User-agent: *
+Allow: /
+
+# XML Sitemap
+Sitemap: https://studycircleedu23-sys.github.io/studycircleexplorer/sitemap.xml

@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- ========================= -->
+    <!-- MAIN WEBSITE PAGES -->
+    <!-- ========================= -->
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/astronomy.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/nasa.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/isro.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/space-facts.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/black-holes.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/exoplanets.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/resources.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/about.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/contact.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/privacy-policy.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/terms.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/disclaimer.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+    </url>
+
+    <!-- Do not index these pages -->
+
+    <!--
+    404.html
+    coming-soon.html
+
+    These are intentionally excluded from the sitemap.
+    -->
+
+    <!-- ========================= -->
+    <!-- ARTICLES (A–H) START -->
+    <!-- ========================= -->
+
+        <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/absolute-zero.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/aditya-l1.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/andromeda.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/artemis-iii.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/big-bang.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/big-bounce.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/big-crunch.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/big-freeze.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/big-rip.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/bootes-void.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/chandrayaan-3.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/coldest-place.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/cosmic-dark-ages.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/cosmic-inflation.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/cosmic-microwave-background.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/cosmic-web.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/dark-energy.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/dark-matter.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/detecting-exoplanets.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/earth-2.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/earth-like-planets.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/earth-twin.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/earth.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/electroweak-epoch.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/epoch-of-reionization.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/europa-clipper.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/event-horizon.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/false-vacuum-decay.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/first-galaxies.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/first-stars.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/gaganyaan.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/galaxies.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/galaxy-clusters.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/galaxy-evolution.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/galaxy-groups.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/grand-unification-epoch.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/great-attractor.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/habitable-worlds.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/hadron-epoch.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/hawking-radiation.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/hercules-corona-borealis-great-wall.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- ARTICLES I–R CONTINUE IN PART 3 -->
+
+        <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/jupiter.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/jwst-galaxies.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/kepler-discoveries.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/kuiper-belt.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/laniakea-supercluster.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/lepton-epoch.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/local-group.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/m-theory.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/mars.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/milky-way.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/moon.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/moon-disappears.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/multiverse-theory.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/nebula.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/neptune.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/neutron-stars.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/nisar.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/observable-universe.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/oort-cloud.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/parker-solar-probe.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/photon-epoch.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/planck-epoch.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/quark-epoch.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/recombination-epoch.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/roman-space-telescope.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- ARTICLES S–Z CONTINUE IN PART 4 -->
+        <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/sagittarius-a.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/saturn.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/shapley-supercluster.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/sloan-great-wall.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/solar-system.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/spadex.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/star-formation.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/stellar-life-cycle.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/string-theory.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/sun.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/supernova.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/ton-618.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/trappist-1.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/types-of-black-holes.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/quantum-foam.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/uranus.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/virgo-cluster.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/virgo-supercluster.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/what-is-black-hole.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/wormholes.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://studycircleedu23-sys.github.io/studycircleexplorer/articles/xposat.html</loc>
+        <lastmod>2026-07-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+</urlset>

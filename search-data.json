@@ -1,0 +1,84 @@
+[
+  {
+    "id": 1,
+    "title": "NASA",
+    "category": "NASA",
+    "type": "Article",
+    "description": "Latest NASA missions, discoveries, launches and space exploration updates.",
+    "url": "nasa.html",
+    "image": "images/nasa.jpg",
+    "keywords": [
+      "nasa",
+      "artemis",
+      "moon",
+      "mars",
+      "space",
+      "rocket"
+    ]
+  },
+
+  {
+    "id": 2,
+    "title": "ISRO",
+    "category": "ISRO",
+    "type": "Article",
+    "description": "Latest ISRO missions, Chandrayaan, Gaganyaan and Indian space research.",
+    "url": "isro.html",
+    "image": "images/isro.jpg",
+    "keywords": [
+      "isro",
+      "india",
+      "chandrayaan",
+      "gaganyaan",
+      "aditya"
+    ]
+  },
+
+  {
+    "id": 3,
+    "title": "Black Holes Explained",
+    "category": "Astronomy",
+    "type": "Article",
+    "description": "Learn how black holes form, event horizons and singularities.",
+    "url": "black-holes.html",
+    "image": "images/blackhole.jpg",
+    "keywords": [
+      "black hole",
+      "singularity",
+      "gravity",
+      "event horizon"
+    ]
+  },
+
+  {
+    "id": 4,
+    "title": "Space Facts",
+    "category": "Space Facts",
+    "type": "Article",
+    "description": "Amazing facts about planets, galaxies and the universe.",
+    "url": "space-facts.html",
+    "image": "images/facts.jpg",
+    "keywords": [
+      "facts",
+      "space",
+      "planet",
+      "galaxy"
+    ]
+  },
+
+  {
+    "id": 5,
+    "title": "Resources Library",
+    "category": "Resources",
+    "type": "PDF",
+    "description": "Free PDFs, notes, presentations and educational materials.",
+    "url": "resources.html",
+    "image": "images/resources.jpg",
+    "keywords": [
+      "pdf",
+      "notes",
+      "resources",
+      "study"
+    ]
+  }
+]

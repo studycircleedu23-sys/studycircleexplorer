@@ -1,0 +1,97 @@
+[
+  {
+    "id": 1,
+    "title": "NASA Artemis Mission: Returning Humans to the Moon",
+    "description": "Discover how NASA's Artemis program will return astronauts to the Moon and prepare for future missions to Mars.",
+    "category": "NASA",
+    "type": "Article",
+    "image": "images/articles/artemis.webp",
+    "url": "articles/artemis.html",
+    "date": "2026-07-20",
+    "featured": true,
+    "readingTime": "6 min read",
+    "keywords": [
+      "NASA",
+      "Artemis",
+      "Moon",
+      "Lunar Mission",
+      "Space Exploration"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "How Black Holes Bend Space and Time",
+    "description": "Learn how black holes distort spacetime, trap light, and challenge our understanding of physics.",
+    "category": "Black Hole",
+    "type": "Article",
+    "image": "images/articles/black-hole.webp",
+    "url": "articles/black-hole.html",
+    "date": "2026-07-18",
+    "featured": false,
+    "readingTime": "8 min read",
+    "keywords": [
+      "Black Hole",
+      "Gravity",
+      "Einstein",
+      "Relativity",
+      "Space"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "James Webb Space Telescope's Greatest Discoveries",
+    "description": "Explore the most fascinating discoveries made by the James Webb Space Telescope.",
+    "category": "Astronomy",
+    "type": "Article",
+    "image": "images/articles/jwst.webp",
+    "url": "articles/jwst.html",
+    "date": "2026-07-16",
+    "featured": false,
+    "readingTime": "7 min read",
+    "keywords": [
+      "JWST",
+      "James Webb",
+      "Galaxy",
+      "Universe",
+      "NASA"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Top 10 Amazing Space Facts You Should Know",
+    "description": "Interesting space facts that reveal how incredible and mysterious our universe really is.",
+    "category": "Space Facts",
+    "type": "Article",
+    "image": "images/articles/space-facts.webp",
+    "url": "articles/space-facts.html",
+    "date": "2026-07-15",
+    "featured": false,
+    "readingTime": "5 min read",
+    "keywords": [
+      "Space Facts",
+      "Universe",
+      "Planets",
+      "Stars",
+      "Astronomy"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "ISRO's Future Space Missions Explained",
+    "description": "A complete guide to ISRO's upcoming missions, including Gaganyaan, Chandrayaan and more.",
+    "category": "ISRO",
+    "type": "Article",
+    "image": "images/articles/isro.webp",
+    "url": "articles/isro-missions.html",
+    "date": "2026-07-14",
+    "featured": false,
+    "readingTime": "6 min read",
+    "keywords": [
+      "ISRO",
+      "Gaganyaan",
+      "Chandrayaan",
+      "India",
+      "Space Mission"
+    ]
+  }
+]

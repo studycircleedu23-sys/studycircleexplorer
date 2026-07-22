@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta http-equiv="Content-Security-Policy"
+content="upgrade-insecure-requests">
   <meta charset="UTF-8" />
+  <meta name="theme-color" content="#070b18">
+<meta name="msapplication-navbutton-color" content="#070b18">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Study Circle Explorer — Your gateway to the universe of knowledge. Watch videos, download PDFs, listen to audio lessons on NASA, ISRO, space science, and educational content." />
   <meta name="keywords" content="NASA, ISRO, space science, astronomy, education, study, black holes, exoplanets" />
@@ -9,7 +16,11 @@
   <meta property="og:title" content="Study Circle Explorer" />
   <meta property="og:description" content="Explore the Universe of Knowledge — NASA, ISRO, space science, and educational content, all free." />
   <meta property="og:type" content="website" />
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b1020">
+  <link rel="apple-touch-icon" href="favicon.png">
   <meta name="twitter:card" content="summary_large_image">
+  <link rel="manifest" href="site.webmanifest">
 <meta name="twitter:title" content="Study Circle Explorer">
 <meta name="twitter:description" content="Explore NASA, ISRO, Astronomy, Space Facts, Free PDFs and Educational Resources.">
 <meta name="twitter:image" content="https://studycircleedu23-sys.github.io/studycircleexplorer/images/og-image.webp">
@@ -17,6 +28,8 @@
   <meta property="og:image" content="https://studycircleedu23-sys.github.io/studycircleexplorer/images/og-image.webp">
   <title>Study Circle Explorer — Explore the Universe of Knowledge</title>
   <link rel="canonical" href="https://studycircleedu23-sys.github.io/studycircleexplorer/">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="dns-prefetch" href="//fonts.gstatic.com">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -25,7 +38,66 @@
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <!-- Main CSS -->
    <link rel="icon" type="image/png" href="favicon.png">
+   <link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+   <link rel="preload"
+href="studycircle-logo.png"
+as="image">
+<link rel="preload"
+href="images/hero.webp"
+as="image">
   <link rel="stylesheet" href="style.css" />
+  <!-- Organization Schema -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+
+  "name":"Study Circle Explorer",
+
+  "url":"https://studycircleedu23-sys.github.io/studycircleexplorer/",
+
+  "logo":"https://studycircleedu23-sys.github.io/studycircleexplorer/studycircle-logo.png",
+
+  "description":"Study Circle Explorer provides NASA, ISRO, astronomy, space science, educational articles, PDFs, quizzes and learning resources.",
+
+  "sameAs":[
+    "https://youtube.com/@studycircleexp-23",
+    "https://www.facebook.com/studycircleexplorer2026",
+    "https://www.instagram.com/studycircle.explorer",
+    "https://t.me/spacestudyhub",
+    "https://whatsapp.com/channel/0029VbBxdL83gvWabpdfyF3c",
+    "https://github.com/studycircleedu23-sys/studycircleexplorer"
+  ]
+}
+</script>
+
+<!-- Website Schema -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+
+  "@type":"WebSite",
+
+  "name":"Study Circle Explorer",
+
+  "url":"https://studycircleedu23-sys.github.io/studycircleexplorer/",
+
+  "description":"Explore NASA, ISRO, Space Facts, Astronomy, Black Holes, Exoplanets, Educational Resources, Free PDFs and Learning Materials.",
+
+  "publisher":{
+    "@type":"Organization",
+    "name":"Study Circle Explorer"
+  },
+
+  "inLanguage":"en",
+
+  "potentialAction":{
+    "@type":"SearchAction",
+    "target":"https://studycircleedu23-sys.github.io/studycircleexplorer/search.html?q={search_term_string}",
+    "query-input":"required name=search_term_string"
+  }
+}
+</script>
 </head>
 <body>
 
@@ -131,7 +203,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
             <div class="breaking-image">
                 <img
 src="images/jwst.webp.png"
-alt="NASA James Webb Space Telescope discovers ancient galaxy"
+alt="James Webb discovers ancient galaxy"
 loading="lazy"
 width="700"
 height="450">
@@ -546,7 +618,9 @@ onclick="handleSubscribe()">
        class="social-card yt"
        aria-label="Study Circle YouTube Channel">
 
-        <div class="social-icon">▶</div>
+        <div class="social-icon">
+    <i class="fab fa-youtube"></i>
+</div>
 
         <div class="social-info">
             <span class="social-platform">YouTube</span>
@@ -562,8 +636,9 @@ onclick="handleSubscribe()">
        class="social-card fb"
        aria-label="Study Circle Facebook Page">
 
-        <div class="social-icon">f</div>
-
+        <div class="social-icon">
+    <i class="fab fa-facebook-f"></i>
+</div>
         <div class="social-info">
             <span class="social-platform">Facebook</span>
             <span class="social-handle">Study Circle Explorer</span>
@@ -578,8 +653,9 @@ onclick="handleSubscribe()">
        class="social-card ig"
        aria-label="Study Circle Instagram">
 
-        <div class="social-icon">📷</div>
-
+       <div class="social-icon">
+    <i class="fab fa-instagram"></i>
+</div>
         <div class="social-info">
             <span class="social-platform">Instagram</span>
             <span class="social-handle">@studycircle.explorer</span>
@@ -594,7 +670,9 @@ onclick="handleSubscribe()">
        class="social-card tg"
        aria-label="Study Circle Telegram Channel">
 
-        <div class="social-icon">✈</div>
+        <div class="social-icon">
+    <i class="fab fa-telegram-plane"></i>
+</div>
 
         <div class="social-info">
             <span class="social-platform">Telegram</span>
@@ -610,8 +688,9 @@ onclick="handleSubscribe()">
        class="social-card wa"
        aria-label="Study Circle WhatsApp Channel">
 
-        <div class="social-icon">💬</div>
-
+        <div class="social-icon">
+    <i class="fab fa-whatsapp"></i>
+</div>
         <div class="social-info">
             <span class="social-platform">WhatsApp</span>
             <span class="social-handle">Study Circle Channel</span>
@@ -691,7 +770,8 @@ onclick="handleSubscribe()">
 <li><a href="resources.html">PDF Library</a></li>
 <li><a href="resources.html">Audio Lessons</a></li>
 <li><a href="resources.html">Presentations</a></li>
-<li><a href="nasa.html">Blog</a></li>
+<li><a href="latest-articles.html">Latest Articles</a></li>
+<li><a href="sitemap.html">HTML Sitemap</a></li>
           </ul>
         </div>
 

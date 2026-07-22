@@ -2661,3 +2661,26 @@ border-radius:20px;
 background:#F5A623;
 
 }
+
+.social-icon{
+display:flex;
+justify-content:center;
+align-items:center;
+
+width:62px;
+height:62px;
+
+border-radius:50%;
+
+font-size:28px;
+
+transition:.35s ease;
+}
+
+.social-card:hover .social-icon{
+
+transform:scale(1.15) rotate(6deg);
+
+box-shadow:0 0 20px rgba(255,255,255,.25);
+
+}

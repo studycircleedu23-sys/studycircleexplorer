@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ==========================================
+         BASIC META
+    =========================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Loading... | Study Circle Explorer</title>
+
+    <meta name="description" content="">
+
+    <meta name="keywords" content="">
+
+    <meta name="author"
+          content="Study Circle Explorer">
+
+    <meta name="robots"
+          content="index,follow">
+
+
+    <!-- ==========================================
+         CANONICAL
+    =========================================== -->
+
+    <link rel="canonical" href="">
+
+
+    <!-- ==========================================
+         OPEN GRAPH
+    =========================================== -->
+
+    <meta property="og:type"
+          content="article">
+
+    <meta property="og:title"
+          content="">
+
+    <meta property="og:description"
+          content="">
+
+    <meta property="og:image"
+          content="">
+
+    <meta property="og:url"
+          content="">
+
+
+    <!-- ==========================================
+         TWITTER
+    =========================================== -->
+
+    <meta name="twitter:card"
+          content="summary_large_image">
+
+    <meta name="twitter:title"
+          content="">
+
+    <meta name="twitter:description"
+          content="">
+
+    <meta name="twitter:image"
+          content="">
+
+
+    <!-- ==========================================
+         GOOGLE FONTS
+    =========================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <!-- ==========================================
+         FONT AWESOME
+    =========================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+
+    <!-- ==========================================
+         CSS
+    =========================================== -->
+
+    <link rel="stylesheet"
+          href="style.css">
+
+    <link rel="stylesheet"
+          href="article.css">
+
+</head>
+
+<body>
+
+
+<!-- ==========================================
+     PAGE LOADER
+========================================== -->
+
+<div class="page-loader">
+
+    <div class="loader"></div>
+
+</div>
+
+
+<!-- ==========================================
+     READING PROGRESS BAR
+========================================== -->
+
+<div id="readingProgress"></div>
+
+
+<!-- ==========================================
+     HEADER
+========================================== -->
+
+<header>
+
+    <div class="container">
+
+        <div class="logo">
+
+            <a href="index.html">
+
+                Study Circle Explorer
+
+            </a>
+
+        </div>
+
+        <nav>
+
+            <ul>
+
+                <li>
+
+                    <a href="index.html">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="articles.html">
+
+                        Articles
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="nasa.html">
+
+                        NASA
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="isro.html">
+
+                        ISRO
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="space-facts.html">
+
+                        Space Facts
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- ==========================================
+     MAIN
+========================================== -->
+
+<main>
+    <!-- ==========================================
+     BREADCRUMB
+========================================== -->
+
+<section class="breadcrumb">
+
+    <a href="index.html">Home</a>
+
+    <span> / </span>
+
+    <a href="articles.html">Articles</a>
+
+    <span> / </span>
+
+    <span id="breadcrumbTitle">Loading...</span>
+
+</section>
+
+
+<!-- ==========================================
+     HERO SECTION
+========================================== -->
+
+<section class="article-hero fade-up">
+
+    <img
+        id="heroImage"
+        src="images/placeholder.webp"
+        alt="Article Image"
+        loading="eager"
+    >
+
+    <div class="hero-content">
+
+        <div id="category">
+
+            Space
+
+        </div>
+
+        <h1 id="title">
+
+            Loading Article...
+
+        </h1>
+
+        <p id="description">
+
+            Please wait while the article is loading.
+
+        </p>
+
+        <div class="article-meta">
+
+            <span>
+
+                <i class="fas fa-user"></i>
+
+                <span id="author">
+
+                    Study Circle Explorer
+
+                </span>
+
+            </span>
+
+            <span>
+
+                <i class="fas fa-calendar-alt"></i>
+
+                <span id="published">
+
+                    --
+
+                </span>
+
+            </span>
+
+            <span>
+
+                <i class="fas fa-clock"></i>
+
+                <span id="readingTime">
+
+                    --
+
+                </span>
+
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     SHARE SECTION
+========================================== -->
+
+<section class="share-section">
+
+    <button
+        class="share-btn"
+        data-share="facebook"
+        aria-label="Facebook">
+
+        <i class="fab fa-facebook-f"></i>
+
+    </button>
+
+    <button
+        class="share-btn"
+        data-share="twitter"
+        aria-label="X">
+
+        <i class="fab fa-x-twitter"></i>
+
+    </button>
+
+    <button
+        class="share-btn"
+        data-share="whatsapp"
+        aria-label="WhatsApp">
+
+        <i class="fab fa-whatsapp"></i>
+
+    </button>
+
+    <button
+        class="share-btn"
+        data-share="telegram"
+        aria-label="Telegram">
+
+        <i class="fab fa-telegram"></i>
+
+    </button>
+
+    <button
+        class="share-btn"
+        data-share="copy"
+        aria-label="Copy Link">
+
+        <i class="fas fa-link"></i>
+
+    </button>
+
+    <button
+        class="share-btn"
+        data-share="native"
+        aria-label="Share">
+
+        <i class="fas fa-share-alt"></i>
+
+    </button>
+
+</section>
+
+
+<!-- ==========================================
+     ARTICLE LAYOUT
+========================================== -->
+
+<section class="article-layout">
+
+    <!-- ==========================
+         ARTICLE CONTENT
+    ========================== -->
+
+    <article
+        id="articleContent"
+        class="fade-up">
+
+        <!-- Dynamic Article Content -->
+
+    </article>
+
+
+    <!-- ==========================
+         SIDEBAR
+    ========================== -->
+
+    <aside class="article-sidebar">
+
+
+        <!-- ==========================
+             TABLE OF CONTENTS
+        ========================== -->
+
+        <div class="sidebar-card">
+
+            <h3>
+
+                Table of Contents
+
+            </h3>
+
+            <nav id="tableOfContents">
+
+                <!-- Dynamic TOC -->
+
+            </nav>
+
+        </div>
+
+
+        <!-- ==========================
+             RELATED ARTICLES
+        ========================== -->
+
+        <div class="sidebar-card">
+
+            <h3>
+
+                Related Articles
+
+            </h3>
+
+            <div id="relatedArticles">
+
+                <!-- Dynamic Related Articles -->
+
+            </div>
+
+        </div>
+
+    </aside>
+
+</section>
+
+<!-- ==========================================
+     PREVIOUS / NEXT ARTICLES
+========================================== -->
+
+<section class="article-navigation">
+
+    <div id="previousArticle">
+
+        <!-- Previous Article -->
+
+    </div>
+
+    <div id="nextArticle">
+
+        <!-- Next Article -->
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+     NEWSLETTER
+========================================== -->
+
+<section class="newsletter">
+
+    <h2>
+
+        Stay Updated with Space Discoveries 🚀
+
+    </h2>
+
+    <p>
+
+        Subscribe to Study Circle Explorer and receive the latest
+        NASA, ISRO, astronomy and space science articles directly.
+
+    </p>
+
+    <form id="newsletterForm">
+
+        <input
+            type="email"
+            id="newsletterEmail"
+            placeholder="Enter your email"
+            required
+        >
+
+        <button type="submit">
+
+            Subscribe
+
+        </button>
+
+    </form>
+
+</section>
+
+</main>
+
+
+<!-- ==========================================
+     FOOTER
+========================================== -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-content">
+
+            <h3>
+
+                Study Circle Explorer
+
+            </h3>
+
+            <p>
+
+                Explore NASA, ISRO, Astronomy,
+                Space Science and the Universe.
+
+            </p>
+
+            <div class="footer-links">
+
+                <a href="index.html">Home</a>
+
+                <a href="articles.html">Articles</a>
+
+                <a href="nasa.html">NASA</a>
+
+                <a href="isro.html">ISRO</a>
+
+                <a href="about.html">About</a>
+
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+            <p>
+
+                © 2026 Study Circle Explorer.
+                All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- ==========================================
+     BACK TO TOP
+========================================== -->
+
+<button
+    id="backToTop"
+    aria-label="Back To Top">
+
+    <i class="fas fa-arrow-up"></i>
+
+</button>
+
+
+<!-- ==========================================
+     JSON-LD PLACEHOLDER
+========================================== -->
+
+<script type="application/ld+json" id="articleSchema">
+{}
+</script>
+
+
+<!-- ==========================================
+     JAVASCRIPT
+========================================== -->
+
+<script src="article.js"></script>
+
+</body>
+
+</html>

@@ -6,15 +6,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Search Resources | Study Circle Explorer</title>
+<title>Search | Study Circle Explorer</title>
 
 <meta name="description"
-content="Search astronomy, space science, NASA, ISRO, cosmology, black holes and educational resources from Study Circle Explorer.">
+content="Search astronomy, NASA, ISRO, black holes, galaxies, planets and all Study Circle Explorer articles.">
 
 <link rel="icon" href="favicon.ico">
 
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="search.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
@@ -23,17 +28,23 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 
 <body>
 
-<!-- Header -->
+<!-- ================= HEADER ================= -->
+
 <header class="search-header">
 
-<div class="container">
+<div class="search-nav">
 
-<a href="index.html" class="logo">
+<a href="index.html" class="brand">
 
-<img src="studycircle-logo.png"
-alt="Study Circle Explorer Logo">
+<img src="studycircle-logo.png" alt="Study Circle Explorer">
 
-<span>Study Circle Explorer</span>
+<div>
+
+<h2>Study Circle Explorer</h2>
+
+<span>Space Encyclopedia</span>
+
+</div>
 
 </a>
 
@@ -53,39 +64,36 @@ alt="Study Circle Explorer Logo">
 
 </header>
 
-<!-- Hero -->
+<!-- ================= HERO ================= -->
 
-<section class="search-hero">
+<section class="hero">
 
-<div class="container hero-content">
+<div class="hero-inner">
 
 <h1>
 
-<i class="fa-solid fa-magnifying-glass"></i>
-
-Search Space Resources
+Search the Universe
 
 </h1>
 
 <p>
 
-Search all astronomy articles, space facts,
-NASA, ISRO and educational resources.
+Explore astronomy, NASA, ISRO, black holes,
+galaxies, planets and every article published on
+Study Circle Explorer.
 
 </p>
 
 <div class="search-box">
 
-<i class="fa-solid fa-search"></i>
+<i class="fa-solid fa-magnifying-glass"></i>
 
 <input
 id="searchInput"
 type="text"
-placeholder="Search planets, black holes, galaxies...">
+placeholder="Search articles...">
 
-<button
-id="clearSearch"
-type="button">
+<button id="clearSearch">
 
 <i class="fa-solid fa-xmark"></i>
 
@@ -93,17 +101,35 @@ type="button">
 
 </div>
 
+<div class="trending">
+
+<span>🔥 Trending</span>
+
+<button class="search-chip" data-search="NASA">NASA</button>
+
+<button class="search-chip" data-search="ISRO">ISRO</button>
+
+<button class="search-chip" data-search="Black Hole">Black Hole</button>
+
+<button class="search-chip" data-search="Galaxy">Galaxy</button>
+
+<button class="search-chip" data-search="JWST">JWST</button>
+
+<button class="search-chip" data-search="Mars">Mars</button>
+
+</div>
+
 </div>
 
 </section>
 
-<!-- Statistics -->
+<!-- ================= QUICK STATS ================= -->
 
-<section class="search-stats">
+<section class="quick-stats">
 
-<div class="search-container">
+<button class="stat-card" id="allArticles">
 
-<div class="stat-card">
+<div>
 
 <h2 id="articleCount">0</h2>
 
@@ -111,7 +137,13 @@ type="button">
 
 </div>
 
-<div class="stat-card">
+<i class="fa-solid fa-arrow-right"></i>
+
+</button>
+
+<button class="stat-card">
+
+<div>
 
 <h2 id="pdfCount">0</h2>
 
@@ -119,7 +151,13 @@ type="button">
 
 </div>
 
-<div class="stat-card">
+<i class="fa-solid fa-lock"></i>
+
+</button>
+
+<button class="stat-card">
+
+<div>
 
 <h2 id="videoCount">0</h2>
 
@@ -127,149 +165,63 @@ type="button">
 
 </div>
 
-<div class="stat-card">
+<i class="fa-solid fa-lock"></i>
 
-<h2 id="resourceCount">0</h2>
-
-<p>Total Resources</p>
-
-</div>
-
-</div>
+</button>
 
 </section>
 
-<!-- Trending Searches -->
+<!-- ================= FILTERS ================= -->
 
-<section class="popular-searches">
+<section class="filter-bar">
 
-<div class="container">
-
-<h2>Popular Searches</h2>
-
-<div class="chip-container">
-
-<button class="search-chip"
-data-search="Black Hole">
-
-Black Hole
-
-</button>
-
-<button class="search-chip"
-data-search="NASA">
-
-NASA
-
-</button>
-
-<button class="search-chip"
-data-search="Galaxy">
-
-Galaxy
-
-</button>
-
-<button class="search-chip"
-data-search="ISRO">
-
-ISRO
-
-</button>
-
-<button class="search-chip"
-data-search="Universe">
-
-Universe
-
-</button>
-
-<button class="search-chip"
-data-search="Dark Matter">
-
-Dark Matter
-
-</button>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- Category Filters -->
-
-<section class="category-section">
-
-<div class="container">
-
-<div class="category-filter">
-
-<button
-class="filter-btn active"
-data-category="all">
+<button class="filter-btn active" data-category="all">
 
 All
 
 </button>
 
-<button
-class="filter-btn"
-data-category="Astronomy">
+<button class="filter-btn" data-category="Astronomy">
 
 Astronomy
 
 </button>
 
-<button
-class="filter-btn"
-data-category="Cosmology">
-
-Cosmology
-
-</button>
-
-<button
-class="filter-btn"
-data-category="Black Holes">
+<button class="filter-btn" data-category="Black Holes">
 
 Black Holes
 
 </button>
 
-<button
-class="filter-btn"
-data-category="Galaxies">
+<button class="filter-btn" data-category="Galaxies">
 
 Galaxies
 
 </button>
 
-<button
-class="filter-btn"
-data-category="Planets">
+<button class="filter-btn" data-category="Cosmology">
+
+Cosmology
+
+</button>
+
+<button class="filter-btn" data-category="Planets">
 
 Planets
 
 </button>
 
-</div>
-
-</div>
-
 </section>
 
-<!-- Results -->
+<!-- ================= RESULTS ================= -->
 
-<section class="results-section">
+<main class="results-wrapper">
 
-<div class="container">
-
-<div class="result-info">
+<div class="results-header">
 
 <h2 id="resultTitle">
 
-All Resources
+All Articles
 
 </h2>
 
@@ -281,57 +233,29 @@ Loading...
 
 </div>
 
-<div
-id="loadingState"
-class="loading-state">
+<div id="loadingState" class="loading-state">
 
-<div class="loader"></div>
+    <div class="loader"></div>
 
-<p>Loading resources...</p>
+    <h3>Loading Articles...</h3>
 
-</div>
-
-<div
-id="emptyState"
-class="empty-state">
-
-<i class="fa-solid fa-box-open"></i>
-
-<h3>No Results Found</h3>
-
-<p>
-
-Try another keyword.
-
-</p>
+    <p>Please wait while we explore the universe.</p>
 
 </div>
 
-<div
-id="searchResults"
-class="results-grid">
+<div id="emptyState" class="empty-state">
+
+    <i class="fa-solid fa-magnifying-glass"></i>
+
+    <h3>No Articles Found</h3>
+
+    <p>Try another keyword or browse a category.</p>
 
 </div>
 
-</div>
+<div id="searchResults" class="results-grid"></div>
 
-</section>
-
-<!-- Footer -->
-
-<footer class="search-footer">
-
-<div class="container">
-
-<p>
-
-© 2026 Study Circle Explorer
-
-</p>
-
-</div>
-
-</footer>
+</main>
 
 <script src="search.js"></script>
 

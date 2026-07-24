@@ -115,7 +115,7 @@ function loadFeaturedArticle() {
 
     featuredImage.alt = featured.title;
 
-    featuredButton.href = featured.url;
+  featuredButton.href = `article.html?slug=${featured.slug}`;
 
 }
 
@@ -292,7 +292,7 @@ function renderArticles(data) {
                 </div>
 
                 <a
-                    href="${article.url}"
+                    href="article.html?slug=${article.slug}"
                     class="read-btn">
 
                     Read Article

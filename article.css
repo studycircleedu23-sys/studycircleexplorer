@@ -1,0 +1,1893 @@
+/* =====================================================
+   STUDY CIRCLE EXPLORER
+   ARTICLE.CSS
+   PART 2A
+   Root • Reset • Body • Progress • Hero
+===================================================== */
+
+/* ===============================
+   1. ROOT VARIABLES
+================================ */
+
+:root{
+
+    --primary:#2EA8FF;
+    --primary-dark:#0F6DFF;
+    --secondary:#7B61FF;
+
+    --bg:#050816;
+    --bg-light:#0B132B;
+    --card:#101B34;
+
+    --border:#1E315C;
+
+    --text:#FFFFFF;
+    --text-light:#C6D2EA;
+    --text-muted:#8F9BB7;
+
+    --success:#29D391;
+    --warning:#FFC857;
+    --danger:#FF5E7A;
+
+    --shadow:0 15px 40px rgba(0,0,0,.35);
+
+    --radius-sm:10px;
+    --radius:18px;
+    --radius-lg:28px;
+
+    --transition:.35s ease;
+
+    --container:1200px;
+    --article-width:780px;
+    --sidebar-width:320px;
+
+}
+
+
+/* ===============================
+   2. RESET
+================================ */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    line-height:1.8;
+
+    overflow-x:hidden;
+
+}
+
+img{
+    display:block;
+    max-width:100%;
+}
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+    transition:var(--transition);
+
+}
+
+button{
+
+    font:inherit;
+
+    cursor:pointer;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+.container{
+
+    width:min(92%,var(--container));
+
+    margin:auto;
+
+}
+
+
+/* ===============================
+   3. SELECTION
+================================ */
+
+::selection{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+
+/* ===============================
+   4. SCROLLBAR
+================================ */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#081022;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(
+        var(--primary),
+        var(--secondary)
+    );
+
+    border-radius:50px;
+
+}
+
+
+/* ===============================
+   5. READING PROGRESS BAR
+================================ */
+
+#readingProgress{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:0;
+
+    height:5px;
+
+    background:linear-gradient(
+        90deg,
+        #29B6FF,
+        #6A5CFF
+    );
+
+    z-index:99999;
+
+    transition:width .15s linear;
+
+}
+
+
+/* ===============================
+   6. BREADCRUMB
+================================ */
+
+.breadcrumb{
+
+    width:min(92%,var(--container));
+
+    margin:35px auto;
+
+    color:var(--text-muted);
+
+    font-size:.95rem;
+
+}
+
+.breadcrumb a{
+
+    color:var(--primary);
+
+}
+
+.breadcrumb span{
+
+    color:#fff;
+
+    font-weight:600;
+
+}
+
+
+/* ===============================
+   7. HERO SECTION
+================================ */
+
+.article-hero{
+
+    width:min(92%,var(--container));
+
+    margin:auto;
+
+    background:
+
+    radial-gradient(circle at top right,
+    rgba(46,168,255,.18),
+    transparent 40%),
+
+    linear-gradient(
+    135deg,
+    #081021,
+    #0B1835);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius-lg);
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+/* ===============================
+   8. HERO IMAGE
+================================ */
+
+#heroImage{
+
+    width:100%;
+
+    height:430px;
+
+    object-fit:cover;
+
+    transition:transform .6s ease;
+
+}
+
+.article-hero:hover #heroImage{
+
+    transform:scale(1.04);
+
+}
+
+
+/* ===============================
+   9. HERO CONTENT
+================================ */
+
+.hero-content{
+
+    padding:50px;
+
+}
+
+
+/* ===============================
+   10. CATEGORY BADGE
+================================ */
+
+#category{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:10px 18px;
+
+    border-radius:50px;
+
+    background:
+
+    rgba(46,168,255,.12);
+
+    border:1px solid rgba(46,168,255,.35);
+
+    color:#66C6FF;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+
+}
+
+
+/* ===============================
+   11. TITLE
+================================ */
+
+#title{
+
+    font-family:'Space Grotesk',sans-serif;
+
+    font-size:clamp(2.2rem,5vw,3.8rem);
+
+    line-height:1.15;
+
+    font-weight:700;
+
+    margin-bottom:22px;
+
+    color:#fff;
+
+}
+
+
+/* ===============================
+   12. DESCRIPTION
+================================ */
+
+#description{
+
+    font-size:1.18rem;
+
+    color:var(--text-light);
+
+    max-width:850px;
+
+    margin-bottom:35px;
+
+}
+
+
+/* ===============================
+   13. META
+================================ */
+
+.article-meta{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+    color:var(--text-muted);
+
+    font-size:.95rem;
+
+}
+
+.article-meta span{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+
+/* ===============================
+   14. MOBILE
+================================ */
+
+@media(max-width:992px){
+
+#heroImage{
+
+    height:320px;
+
+}
+
+.hero-content{
+
+    padding:35px;
+
+}
+
+#title{
+
+    font-size:2.5rem;
+
+}
+
+}
+
+@media(max-width:768px){
+
+#heroImage{
+
+    height:250px;
+
+}
+
+.hero-content{
+
+    padding:25px;
+
+}
+
+#title{
+
+    font-size:2rem;
+
+}
+
+#description{
+
+    font-size:1rem;
+
+}
+
+.article-meta{
+
+    gap:14px;
+
+    font-size:.88rem;
+
+}
+
+}
+
+/* =====================================================
+   STUDY CIRCLE EXPLORER
+   ARTICLE.CSS
+   PART 2B
+   Share • Layout • Sidebar • TOC
+===================================================== */
+
+
+/* ===============================
+   15. SHARE SECTION
+================================ */
+
+.share-section{
+
+    width:min(92%,var(--container));
+
+    margin:35px auto;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:14px;
+
+    flex-wrap:wrap;
+
+}
+
+.share-btn{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:50%;
+
+    border:1px solid var(--border);
+
+    background:var(--card);
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:1.15rem;
+
+    transition:var(--transition);
+
+    cursor:pointer;
+
+}
+
+.share-btn:hover{
+
+    transform:translateY(-6px);
+
+    background:var(--primary);
+
+    border-color:var(--primary);
+
+    box-shadow:0 15px 30px rgba(46,168,255,.35);
+
+}
+
+
+/* ===============================
+   16. MAIN ARTICLE LAYOUT
+================================ */
+
+.article-layout{
+
+    width:min(92%,var(--container));
+
+    margin:50px auto;
+
+    display:grid;
+
+    grid-template-columns:
+
+        minmax(0,var(--article-width))
+
+        minmax(280px,var(--sidebar-width));
+
+    gap:55px;
+
+    align-items:start;
+
+}
+
+
+/* ===============================
+   17. ARTICLE CONTAINER
+================================ */
+
+#articleContent{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius-lg);
+
+    padding:55px;
+
+    box-shadow:var(--shadow);
+
+    overflow:hidden;
+
+}
+
+
+/* ===============================
+   18. SIDEBAR
+================================ */
+
+.article-sidebar{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+    position:sticky;
+
+    top:100px;
+
+}
+
+
+/* ===============================
+   19. SIDEBAR CARDS
+================================ */
+
+.sidebar-card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:22px;
+
+    padding:25px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.sidebar-card h3{
+
+    font-family:"Space Grotesk",sans-serif;
+
+    font-size:1.25rem;
+
+    margin-bottom:18px;
+
+    color:#fff;
+
+}
+
+
+/* ===============================
+   20. TABLE OF CONTENTS
+================================ */
+
+#tableOfContents{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+#tableOfContents a{
+
+    color:var(--text-light);
+
+    padding:10px 14px;
+
+    border-radius:10px;
+
+    transition:var(--transition);
+
+    border-left:3px solid transparent;
+
+    font-size:.95rem;
+
+}
+
+#tableOfContents a:hover{
+
+    background:rgba(46,168,255,.08);
+
+    color:#fff;
+
+    border-left-color:var(--primary);
+
+    transform:translateX(5px);
+
+}
+
+#tableOfContents a.active{
+    background:rgba(46,168,255,.14);
+    color:#fff;
+    border-left:4px solid var(--primary);
+    box-shadow:0 0 18px rgba(46,168,255,.18);
+}
+
+/* ===============================
+   21. RELATED ARTICLES
+================================ */
+
+#relatedArticles{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+
+.related-card{
+
+    display:flex;
+
+    gap:14px;
+
+    align-items:center;
+
+    background:#0d1731;
+
+    border:1px solid var(--border);
+
+    border-radius:16px;
+
+    padding:12px;
+
+    transition:var(--transition);
+
+}
+
+.related-card:hover{
+
+    transform:translateY(-4px);
+
+    border-color:var(--primary);
+
+    box-shadow:0 12px 25px rgba(46,168,255,.15);
+
+}
+
+.related-card img{
+
+    width:90px;
+
+    height:70px;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+    flex-shrink:0;
+
+}
+
+.related-info{
+
+    flex:1;
+
+}
+
+.related-info h4{
+
+    font-size:.98rem;
+
+    color:#fff;
+
+    line-height:1.4;
+
+    margin-bottom:6px;
+
+}
+
+.related-info span{
+
+    font-size:.82rem;
+
+    color:var(--text-muted);
+
+}
+
+
+/* ===============================
+   22. STICKY SHARE BAR
+================================ */
+
+.floating-share{
+
+    position:fixed;
+
+    left:25px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+    z-index:1000;
+
+}
+
+.floating-share .share-btn{
+
+    width:46px;
+
+    height:46px;
+
+}
+
+
+/* ===============================
+   23. SIDEBAR SCROLL
+================================ */
+
+.article-sidebar::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+.article-sidebar::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:20px;
+
+}
+
+
+/* ===============================
+   24. TABLET
+================================ */
+
+@media(max-width:1100px){
+
+.article-layout{
+
+    grid-template-columns:1fr;
+
+}
+
+.article-sidebar{
+
+    position:static;
+
+    width:100%;
+
+}
+
+.floating-share{
+
+    display:none;
+
+}
+
+}
+
+
+/* ===============================
+   25. MOBILE
+================================ */
+
+@media(max-width:768px){
+
+#articleContent{
+
+    padding:28px;
+
+}
+
+.sidebar-card{
+
+    padding:20px;
+
+}
+
+.related-card{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+}
+
+.related-card img{
+
+    width:100%;
+
+    height:180px;
+
+}
+
+.share-section{
+
+    gap:10px;
+
+}
+
+.share-btn{
+
+    width:48px;
+
+    height:48px;
+
+}
+
+}
+ /* =====================================================
+   STUDY CIRCLE EXPLORER
+   ARTICLE.CSS
+   PART 2C
+   Article Content • Typography • Images • Tables
+=====================================================*/
+
+
+/* ==========================================
+   26. ARTICLE TYPOGRAPHY
+========================================== */
+
+#articleContent{
+
+    font-size:1.12rem;
+
+    color:var(--text-light);
+
+    line-height:1.95;
+
+}
+
+#articleContent>*:first-child{
+
+    margin-top:0;
+
+}
+
+#articleContent>*:last-child{
+
+    margin-bottom:0;
+
+}
+
+
+/* ==========================================
+   HEADINGS
+========================================== */
+
+#articleContent h1,
+#articleContent h2,
+#articleContent h3,
+#articleContent h4,
+#articleContent h5,
+#articleContent h6{
+
+    font-family:"Space Grotesk",sans-serif;
+
+    color:#fff;
+
+    font-weight:700;
+
+    line-height:1.3;
+
+    margin-top:50px;
+
+    margin-bottom:18px;
+
+    scroll-margin-top:120px;
+
+}
+
+#articleContent h1{
+
+    font-size:2.7rem;
+
+}
+
+#articleContent h2{
+
+    font-size:2rem;
+
+}
+
+#articleContent h3{
+
+    font-size:1.6rem;
+
+}
+
+#articleContent h4{
+
+    font-size:1.3rem;
+
+}
+
+
+/* ==========================================
+   PARAGRAPH
+========================================== */
+
+#articleContent p{
+
+    margin:22px 0;
+
+    color:var(--text-light);
+
+}
+
+
+/* ==========================================
+   LINKS
+========================================== */
+
+#articleContent a{
+
+    color:var(--primary);
+
+    font-weight:600;
+
+    text-decoration:none;
+
+    border-bottom:1px dashed transparent;
+
+    transition:var(--transition);
+
+}
+
+#articleContent a:hover{
+
+    border-color:var(--primary);
+
+}
+
+
+/* ==========================================
+   STRONG
+========================================== */
+
+#articleContent strong{
+
+    color:#fff;
+
+    font-weight:700;
+
+}
+
+
+/* ==========================================
+   EMPHASIS
+========================================== */
+
+#articleContent em{
+
+    color:#FFD166;
+
+}
+
+
+/* ==========================================
+   IMAGES
+========================================== */
+
+#articleContent img{
+
+    width:100%;
+
+    margin:40px 0;
+
+    border-radius:22px;
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+    transition:.5s;
+
+    cursor:zoom-in;
+
+}
+
+#articleContent img:hover{
+
+    transform:scale(1.02);
+
+}
+
+
+/* ==========================================
+   IMAGE CAPTION
+========================================== */
+
+#articleContent figcaption{
+
+    text-align:center;
+
+    color:var(--text-muted);
+
+    font-size:.9rem;
+
+    margin-top:-18px;
+
+    margin-bottom:35px;
+
+}
+
+
+/* ==========================================
+   LISTS
+========================================== */
+
+#articleContent ul,
+#articleContent ol{
+
+    margin:25px 0 35px 30px;
+
+}
+
+#articleContent li{
+
+    margin-bottom:14px;
+
+    color:var(--text-light);
+
+}
+
+
+/* ==========================================
+   BLOCKQUOTE
+========================================== */
+
+#articleContent blockquote{
+
+    margin:45px 0;
+
+    padding:30px;
+
+    border-left:5px solid var(--primary);
+
+    border-radius:18px;
+
+    background:linear-gradient(
+
+        135deg,
+
+        rgba(46,168,255,.08),
+
+        rgba(123,97,255,.08)
+
+    );
+
+    color:#fff;
+
+    font-size:1.1rem;
+
+    font-style:italic;
+
+}
+
+
+/* ==========================================
+   HORIZONTAL LINE
+========================================== */
+
+#articleContent hr{
+
+    border:none;
+
+    height:1px;
+
+    background:var(--border);
+
+    margin:50px 0;
+
+}
+
+
+/* ==========================================
+   INLINE CODE
+========================================== */
+
+#articleContent code{
+
+    background:#091427;
+
+    color:#00E5FF;
+
+    padding:3px 8px;
+
+    border-radius:6px;
+
+    font-size:.95rem;
+
+}
+
+
+/* ==========================================
+   CODE BLOCK
+========================================== */
+
+#articleContent pre{
+
+    background:#091427;
+
+    color:#EAEAEA;
+
+    padding:24px;
+
+    border-radius:18px;
+
+    overflow:auto;
+
+    border:1px solid var(--border);
+
+    margin:35px 0;
+
+}
+
+#articleContent pre code{
+
+    background:none;
+
+    padding:0;
+
+    color:#EAEAEA;
+
+}
+
+
+/* ==========================================
+   TABLES
+========================================== */
+
+#articleContent table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin:40px 0;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+}
+
+#articleContent thead{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+#articleContent th{
+
+    padding:18px;
+
+    text-align:left;
+
+}
+
+#articleContent td{
+
+    padding:18px;
+
+    border-bottom:1px solid var(--border);
+
+    color:var(--text-light);
+
+    background:var(--card);
+
+}
+
+#articleContent tr:hover td{
+
+    background:#14254A;
+
+}
+
+
+/* ==========================================
+   INFORMATION BOX
+========================================== */
+
+.info-box{
+
+    margin:40px 0;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    border-left:5px solid var(--primary);
+
+    background:rgba(46,168,255,.08);
+
+}
+
+.warning-box{
+
+    margin:40px 0;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    border-left:5px solid orange;
+
+    background:rgba(255,165,0,.08);
+
+}
+
+.success-box{
+
+    margin:40px 0;
+
+    padding:25px;
+
+    border-radius:18px;
+
+    border-left:5px solid #00C853;
+
+    background:rgba(0,200,83,.08);
+
+}
+
+
+/* ==========================================
+   KEY TAKEAWAYS
+========================================== */
+
+.key-takeaways{
+
+    margin:50px 0;
+
+    padding:35px;
+
+    border-radius:24px;
+
+    background:linear-gradient(
+
+        135deg,
+
+        rgba(46,168,255,.12),
+
+        rgba(123,97,255,.10)
+
+    );
+
+    border:1px solid var(--border);
+
+}
+
+.key-takeaways h3{
+
+    margin-top:0;
+
+    margin-bottom:20px;
+
+}
+
+.key-takeaways ul{
+
+    margin-left:22px;
+
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media(max-width:768px){
+
+#articleContent{
+
+    font-size:1rem;
+
+}
+
+#articleContent h1{
+
+    font-size:2rem;
+
+}
+
+#articleContent h2{
+
+    font-size:1.6rem;
+
+}
+
+#articleContent h3{
+
+    font-size:1.35rem;
+
+}
+
+#articleContent table{
+
+    display:block;
+
+    overflow-x:auto;
+
+}
+
+#articleContent img{
+
+    border-radius:16px;
+
+}
+
+.key-takeaways{
+
+    padding:25px;
+
+}
+
+}
+
+/* =====================================================
+   STUDY CIRCLE EXPLORER
+   ARTICLE.CSS
+   PART 2D (FINAL)
+   Previous • Newsletter • Back To Top • Loading
+   Footer • Print • Animations
+=====================================================*/
+
+
+/* ==========================================
+   36. PREVIOUS / NEXT ARTICLES
+========================================== */
+
+.article-navigation{
+
+    width:min(92%,var(--container));
+
+    margin:70px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+}
+
+.article-nav-card{
+
+    background:var(--card);
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    padding:28px;
+
+    transition:var(--transition);
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+.article-nav-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:var(--primary);
+
+    box-shadow:0 18px 40px rgba(46,168,255,.18);
+
+}
+
+.article-nav-label{
+
+    color:var(--text-muted);
+
+    font-size:.85rem;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+}
+
+.article-nav-title{
+
+    color:#fff;
+
+    font-size:1.15rem;
+
+    font-weight:700;
+
+    line-height:1.5;
+
+}
+
+
+/* ==========================================
+   37. NEWSLETTER
+========================================== */
+
+.newsletter{
+
+    width:min(92%,900px);
+
+    margin:80px auto;
+
+    padding:60px 40px;
+
+    text-align:center;
+
+    background:linear-gradient(
+        135deg,
+        rgba(46,168,255,.12),
+        rgba(123,97,255,.12)
+    );
+
+    border:1px solid var(--border);
+
+    border-radius:28px;
+
+}
+
+.newsletter h2{
+
+    font-family:"Space Grotesk",sans-serif;
+
+    color:#fff;
+
+    margin-bottom:18px;
+
+    font-size:2rem;
+
+}
+
+.newsletter p{
+
+    color:var(--text-light);
+
+    margin-bottom:30px;
+
+}
+
+.newsletter form{
+
+    display:flex;
+
+    gap:15px;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+}
+
+.newsletter input{
+
+    flex:1;
+
+    min-width:260px;
+
+    max-width:450px;
+
+    padding:16px 20px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:50px;
+
+    background:#fff;
+
+    font-size:1rem;
+
+}
+
+.newsletter button{
+
+    padding:16px 32px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.newsletter button:hover{
+
+    background:var(--primary-dark);
+
+    transform:translateY(-3px);
+
+}
+
+
+/* ==========================================
+   38. BACK TO TOP
+========================================== */
+
+#backToTop{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    width:54px;
+
+    height:54px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color:#fff;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:1.2rem;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s;
+
+    z-index:999;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+
+}
+
+#backToTop.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+#backToTop:hover{
+
+    transform:translateY(-6px);
+
+}
+
+
+/* ==========================================
+   39. LOADING SKELETON
+========================================== */
+
+.skeleton{
+
+    background:linear-gradient(
+        90deg,
+        #13213F 25%,
+        #20335E 50%,
+        #13213F 75%
+    );
+
+    background-size:200% 100%;
+
+    animation:skeletonLoading 1.5s infinite;
+
+    border-radius:12px;
+
+}
+
+@keyframes skeletonLoading{
+
+    0%{
+
+        background-position:200% 0;
+
+    }
+
+    100%{
+
+        background-position:-200% 0;
+
+    }
+
+}
+
+
+/* ==========================================
+   40. FADE ANIMATION
+========================================== */
+
+.fade-up{
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+    transition:.8s ease;
+
+}
+
+.fade-up.show{
+
+    opacity:1;
+
+    transform:none;
+
+}
+
+
+/* ==========================================
+   41. ZOOM ANIMATION
+========================================== */
+
+.zoom-in{
+
+    opacity:0;
+
+    transform:scale(.92);
+
+    transition:.7s;
+
+}
+
+.zoom-in.show{
+
+    opacity:1;
+
+    transform:scale(1);
+
+}
+
+
+/* ==========================================
+   42. PAGE LOADER
+========================================== */
+
+.page-loader{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#050816;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:999999;
+
+}
+
+.loader{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    border:5px solid rgba(255,255,255,.15);
+
+    border-top:5px solid var(--primary);
+
+    animation:spin .8s linear infinite;
+
+}
+
+@keyframes spin{
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+/* ==========================================
+   43. PRINT STYLE
+========================================== */
+
+@media print{
+
+body{
+
+    background:#fff;
+
+    color:#000;
+
+}
+
+.article-sidebar,
+.share-section,
+#backToTop,
+.newsletter,
+header,
+footer{
+
+    display:none !important;
+
+}
+
+#articleContent{
+
+    width:100%;
+
+    box-shadow:none;
+
+    border:none;
+
+    color:#000;
+
+}
+
+}
+
+
+/* ==========================================
+   44. RESPONSIVE
+========================================== */
+
+@media(max-width:900px){
+
+.article-navigation{
+
+    grid-template-columns:1fr;
+
+}
+
+.newsletter{
+
+    padding:40px 25px;
+
+}
+
+.newsletter h2{
+
+    font-size:1.7rem;
+
+}
+
+}
+
+
+@media(max-width:768px){
+
+.newsletter form{
+
+    flex-direction:column;
+
+}
+
+.newsletter input{
+
+    max-width:100%;
+
+}
+
+.newsletter button{
+
+    width:100%;
+
+}
+
+#backToTop{
+
+    width:48px;
+
+    height:48px;
+
+    right:20px;
+
+    bottom:20px;
+
+}
+
+}
+
+
+/* ==========================================
+   45. REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce){
+
+*{
+
+    animation:none !important;
+
+    transition:none !important;
+
+    scroll-behavior:auto !important;
+
+}
+
+}
+
+
+/* ==========================================
+   END OF ARTICLE.CSS
+========================================== */

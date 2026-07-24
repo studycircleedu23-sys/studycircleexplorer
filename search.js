@@ -1,15 +1,16 @@
-/* ==========================================
-   Study Circle Explorer
-   Search v4.0
-========================================== */
+"use strict";
 
-let searchData = [];
-let filteredData = [];
+/* ==========================================================
+   APP STATE
+========================================================== */
+
+let articles = [];
+let filteredArticles = [];
 let currentCategory = "all";
 
-/* ==========================================
-   Elements
-========================================== */
+/* ==========================================================
+   DOM ELEMENTS
+========================================================== */
 
 const searchInput = document.getElementById("searchInput");
 const searchResults = document.getElementById("searchResults");
@@ -23,132 +24,115 @@ const resultCount = document.getElementById("resultCount");
 const articleCount = document.getElementById("articleCount");
 const pdfCount = document.getElementById("pdfCount");
 const videoCount = document.getElementById("videoCount");
-const resourceCount = document.getElementById("resourceCount");
 
 const clearSearch = document.getElementById("clearSearch");
 
-/* ==========================================
-   Load Search Database
-========================================== */
+const filterButtons = document.querySelectorAll(".filter-btn");
+const trendingButtons = document.querySelectorAll(".search-chip");
 
-async function loadSearchData() {
+/* ==========================================================
+   INITIALIZE
+========================================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    initializeSearch();
+
+});
+
+/* ==========================================================
+   INITIALIZE APP
+========================================================== */
+
+async function initializeSearch() {
+
+    showLoading();
+
+    await loadContent();
+
+    renderStatistics();
+
+    renderResults(articles);
+
+    hideLoading();
+
+}
+
+/* ==========================================================
+   LOAD CONTENT
+========================================================== */
+
+async function loadContent() {
 
     try {
-
-        loadingState.style.display = "grid";
-        emptyState.style.display = "none";
 
         const response = await fetch("content.json");
 
         if (!response.ok) {
+
             throw new Error("Unable to load content.json");
+
         }
 
-        const json = await response.json();
+        const data = await response.json();
 
-        searchData = json.articles || [];
-        filteredData = [...searchData];
+        articles = data.articles || [];
 
-        articleCount.textContent = searchData.length;
-        pdfCount.textContent = "0";
-        videoCount.textContent = "0";
-        resourceCount.textContent = searchData.length;
-
-        loadingState.style.display = "none";
-
-        renderResults(searchData);
+        filteredArticles = [...articles];
 
     }
 
-    catch(error){
+    catch (error) {
 
         console.error(error);
 
-        loadingState.style.display = "none";
-
-        resultTitle.textContent = "Search Error";
-
-        resultCount.textContent =
-        "Unable to load content.";
+        showEmpty("Unable to load articles.");
 
     }
 
 }
 
-/* ==========================================
-   Start
-========================================== */
+/* ==========================================================
+   STATISTICS
+========================================================== */
 
-document.addEventListener("DOMContentLoaded",()=>{
+function renderStatistics() {
 
-    loadSearchData();
+    articleCount.textContent = articles.length;
 
-});
+    pdfCount.textContent = 0;
 
-/* ==========================================
-   Render Results
-========================================== */
+    videoCount.textContent = 0;
 
-function renderResults(data){
+    resultTitle.textContent = "All Articles";
+
+    resultCount.textContent = `${articles.length} Articles`;
+
+}
+
+/* ==========================================================
+   RENDER RESULTS
+========================================================== */
+
+function renderResults(data) {
 
     searchResults.innerHTML = "";
 
-    if(data.length === 0){
+    if (!data.length) {
 
-        emptyState.style.display = "flex";
-
-        resultCount.textContent = "0 Results Found";
+        showEmpty("No articles found.");
 
         return;
 
     }
 
-    emptyState.style.display = "none";
+    hideEmpty();
 
-    resultCount.textContent =
-    `${data.length} Result${data.length!==1?"s":""}`;
+    resultCount.textContent = `${data.length} Articles`;
 
-    data.forEach(article=>{
+    data.forEach(article => {
 
-        const card=document.createElement("a");
-
-        card.className="search-card";
-
-        card.href=article.url || "#";
-
-        card.innerHTML=`
-
-        <img
-        src="${article.image || 'images/default.jpg'}"
-        alt="${article.title}">
-
-        <div class="search-category">
-
-        ${article.category || "Space"}
-
-        </div>
-
-        <h2>
-
-        ${article.title}
-
-        </h2>
-
-        <p>
-
-        ${article.description || article.excerpt || ""}
-
-        </p>
-
-        <span>
-
-        Read Article
-
-        <i class="fas fa-arrow-right"></i>
-
-        </span>
-
-        `;
+        const card = createArticleCard(article);
 
         searchResults.appendChild(card);
 
@@ -156,237 +140,517 @@ function renderResults(data){
 
 }
 
-/* ==========================================
-   Search Function
-========================================== */
+/* ==========================================================
+   CREATE CARD
+========================================================== */
 
-function performSearch(){
+function createArticleCard(article) {
 
-    const keyword =
-    searchInput.value.trim().toLowerCase();
+    const card = document.createElement("a");
 
-    filteredData = searchData.filter(item=>{
+    card.className = "article-card";
 
-        const title =
-        (item.title||"").toLowerCase();
+    card.href = `article.html?slug=${article.slug}` || "#";
 
-        const description =
-        (item.description||"").toLowerCase();
+    card.innerHTML = `
 
-        const excerpt =
-        (item.excerpt||"").toLowerCase();
+        <div class="article-image">
 
-        const keywords =
-        (item.keywords||"").toLowerCase();
-
-        const category =
-        (item.category||"").toLowerCase();
-
-        const matchKeyword =
-
-        title.includes(keyword) ||
-
-        description.includes(keyword) ||
-
-        excerpt.includes(keyword) ||
-
-        keywords.includes(keyword) ||
-
-        category.includes(keyword);
-
-        const matchCategory =
-
-        currentCategory==="all" ||
-
-        category===currentCategory.toLowerCase();
-
-        return matchKeyword && matchCategory;
-
-    });
-
-    resultTitle.textContent =
-
-    keyword===""
-    ? "All Resources"
-    : `Results for "${searchInput.value}"`;
-
-    renderResults(filteredData);
-
-}
-
-/* ==========================================
-   Live Search
-========================================== */
-
-searchInput.addEventListener("input",()=>{
-
-    performSearch();
-
-});
-
-/* ==========================================
-   Clear Button
-========================================== */
-
-clearSearch.addEventListener("click",()=>{
-
-    searchInput.value="";
-
-    performSearch();
-
-    searchInput.focus();
-
-});
-
-/* ==========================================
-   Render Results
-========================================== */
-
-function renderResults(data){
-
-    searchResults.innerHTML = "";
-
-    if(data.length === 0){
-
-        emptyState.style.display = "flex";
-
-        resultCount.textContent = "0 Results Found";
-
-        return;
-
-    }
-
-    emptyState.style.display = "none";
-
-    resultCount.textContent =
-    `${data.length} Result${data.length!==1?"s":""}`;
-
-    data.forEach(article=>{
-
-        const card=document.createElement("a");
-
-        card.className="search-card";
-
-        card.href=article.url || "#";
-
-        card.innerHTML=`
-
-        <img
-        src="${article.image || 'images/default.jpg'}"
-        alt="${article.title}">
-
-        <div class="search-category">
-
-        ${article.category || "Space"}
+            <img
+                src="${article.image || 'images/default.jpg'}"
+                alt="${article.title}">
 
         </div>
 
-        <h2>
+        <div class="article-content">
 
-        ${article.title}
+            <div class="article-category">
 
-        </h2>
+                ${article.category || "Astronomy"}
 
-        <p>
+            </div>
 
-        ${article.description || article.excerpt || ""}
+            <h3 class="article-title">
 
-        </p>
+                ${article.title}
 
-        <span>
+            </h3>
 
-        Read Article
+            <p class="article-description">
 
-        <i class="fas fa-arrow-right"></i>
+                ${article.description || article.excerpt || ""}
 
-        </span>
+            </p>
 
-        `;
+            <div class="article-footer">
 
-        searchResults.appendChild(card);
+                <span class="read-link">
 
-    });
+                    Read Article →
+
+                </span>
+
+            </div>
+
+        </div>
+
+    `;
+
+    return card;
 
 }
 
-/* ==========================================
-   Search Function
-========================================== */
+/* ==========================================================
+   UI HELPERS
+========================================================== */
 
-function performSearch(){
+function showLoading() {
 
-    const keyword =
-    searchInput.value.trim().toLowerCase();
+    loadingState.style.display = "grid";
 
-    filteredData = searchData.filter(item=>{
+}
 
-        const title =
-        (item.title||"").toLowerCase();
+function hideLoading() {
 
-        const description =
-        (item.description||"").toLowerCase();
+    loadingState.style.display = "none";
 
-        const excerpt =
-        (item.excerpt||"").toLowerCase();
+}
 
-        const keywords =
-        (item.keywords||"").toLowerCase();
+function showEmpty(message = "No articles found.") {
 
-        const category =
-        (item.category||"").toLowerCase();
+    emptyState.style.display = "flex";
 
-        const matchKeyword =
+    searchResults.innerHTML = "";
 
-        title.includes(keyword) ||
+    resultCount.textContent = "0 Articles";
 
-        description.includes(keyword) ||
+    const text = emptyState.querySelector("p");
 
-        excerpt.includes(keyword) ||
+    if (text) {
 
-        keywords.includes(keyword) ||
+        text.textContent = message;
 
-        category.includes(keyword);
+    }
 
-        const matchCategory =
+}
 
-        currentCategory==="all" ||
+function hideEmpty() {
 
-        category===currentCategory.toLowerCase();
+    emptyState.style.display = "none";
 
-        return matchKeyword && matchCategory;
+}
+/* ==========================================================
+   SEARCH ENGINE
+========================================================== */
+
+function performSearch() {
+
+    const keyword = searchInput.value
+        .trim()
+        .toLowerCase();
+
+    filteredArticles = articles.filter(article => {
+
+        const title = (article.title || "").toLowerCase();
+
+        const description = (article.description || "").toLowerCase();
+
+        const excerpt = (article.excerpt || "").toLowerCase();
+
+        const keywords = (article.keywords || "").toLowerCase();
+
+        const category = (article.category || "").toLowerCase();
+
+        const tags = Array.isArray(article.tags)
+            ? article.tags.join(" ").toLowerCase()
+            : "";
+
+        const matchesKeyword =
+
+            title.includes(keyword) ||
+
+            description.includes(keyword) ||
+
+            excerpt.includes(keyword) ||
+
+            keywords.includes(keyword) ||
+
+            tags.includes(keyword) ||
+
+            category.includes(keyword);
+
+        const matchesCategory =
+
+            currentCategory === "all" ||
+
+            category === currentCategory.toLowerCase();
+
+        return matchesKeyword && matchesCategory;
 
     });
 
     resultTitle.textContent =
 
-    keyword===""
-    ? "All Resources"
-    : `Results for "${searchInput.value}"`;
+        keyword === ""
 
-    renderResults(filteredData);
+        ? "All Articles"
+
+        : `Search: "${searchInput.value}"`;
+
+    renderResults(filteredArticles);
 
 }
 
-/* ==========================================
-   Live Search
-========================================== */
+/* ==========================================================
+   CATEGORY FILTER
+========================================================== */
 
-searchInput.addEventListener("input",()=>{
+function applyCategory(category) {
+
+    currentCategory = category;
+
+    filterButtons.forEach(button => {
+
+        button.classList.remove("active");
+
+        if (button.dataset.category === category) {
+
+            button.classList.add("active");
+
+        }
+
+    });
+
+    performSearch();
+
+}
+
+/* ==========================================================
+   FILTER BUTTON EVENTS
+========================================================== */
+
+filterButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        applyCategory(button.dataset.category);
+
+    });
+
+});
+
+/* ==========================================================
+   TRENDING CHIPS
+========================================================== */
+
+trendingButtons.forEach(chip => {
+
+    chip.addEventListener("click", () => {
+
+        const keyword = chip.dataset.search;
+
+        searchInput.value = keyword;
+
+        performSearch();
+
+        searchInput.focus();
+
+    });
+
+});
+
+/* ==========================================================
+   LIVE SEARCH
+========================================================== */
+
+searchInput.addEventListener("input", () => {
 
     performSearch();
 
 });
 
-/* ==========================================
-   Clear Button
-========================================== */
+/* ==========================================================
+   CLEAR BUTTON
+========================================================== */
 
-clearSearch.addEventListener("click",()=>{
+clearSearch.addEventListener("click", () => {
 
-    searchInput.value="";
+    searchInput.value = "";
+
+    currentCategory = "all";
+
+    filterButtons.forEach(button => {
+
+        button.classList.remove("active");
+
+        if (button.dataset.category === "all") {
+
+            button.classList.add("active");
+
+        }
+
+    });
 
     performSearch();
 
     searchInput.focus();
 
 });
+
+/* ==========================================================
+   CLICKABLE ARTICLE CARD
+========================================================== */
+
+searchResults.addEventListener("click", event => {
+
+    const card = event.target.closest(".article-card");
+
+    if (!card) return;
+
+});
+
+/* ==========================================================
+   CLICKABLE STAT CARD
+========================================================== */
+
+const allArticlesButton = document.getElementById("allArticles");
+
+if (allArticlesButton) {
+
+    allArticlesButton.addEventListener("click", () => {
+
+        currentCategory = "all";
+
+        searchInput.value = "";
+
+        performSearch();
+
+        document.querySelector(".results-wrapper")
+            .scrollIntoView({
+
+                behavior: "smooth"
+
+            });
+
+    });
+
+}
+
+/* ==========================================================
+   IMAGE FALLBACK
+========================================================== */
+
+document.addEventListener("error", (event) => {
+
+    if (
+        event.target.tagName === "IMG" &&
+        event.target.closest(".article-image")
+    ) {
+
+        event.target.src = "images/default.jpg";
+
+    }
+
+}, true);
+
+
+/* ==========================================================
+   LOADING SKELETON
+========================================================== */
+
+function showSkeleton(count = 6) {
+
+    searchResults.innerHTML = "";
+
+    hideEmpty();
+
+    loadingState.style.display = "none";
+
+    for (let i = 0; i < count; i++) {
+
+        const skeleton = document.createElement("div");
+
+        skeleton.className = "article-card skeleton-card";
+
+        skeleton.innerHTML = `
+
+            <div class="skeleton-image"></div>
+
+            <div class="article-content">
+
+                <div class="skeleton-category"></div>
+
+                <div class="skeleton-title"></div>
+
+                <div class="skeleton-text"></div>
+
+                <div class="skeleton-text short"></div>
+
+            </div>
+
+        `;
+
+        searchResults.appendChild(skeleton);
+
+    }
+
+}
+
+
+/* ==========================================================
+   FADE-IN ANIMATION
+========================================================== */
+
+function animateCards() {
+
+    const cards = document.querySelectorAll(".article-card");
+
+    cards.forEach((card, index) => {
+
+        card.style.opacity = "0";
+
+        card.style.transform = "translateY(20px)";
+
+        setTimeout(() => {
+
+            card.style.transition =
+                "opacity .4s ease, transform .4s ease";
+
+            card.style.opacity = "1";
+
+            card.style.transform = "translateY(0)";
+
+        }, index * 40);
+
+    });
+
+}
+
+
+/* ==========================================================
+   IMPROVED RENDER
+========================================================== */
+
+const originalRenderResults = renderResults;
+
+renderResults = function (data) {
+
+    originalRenderResults(data);
+
+    animateCards();
+
+};
+
+
+/* ==========================================================
+   SCROLL TO TOP AFTER SEARCH
+========================================================== */
+
+function scrollResultsIntoView() {
+
+    const wrapper = document.querySelector(".results-wrapper");
+
+    if (!wrapper) return;
+
+    wrapper.scrollIntoView({
+
+        behavior: "smooth",
+
+        block: "start"
+
+    });
+
+}
+
+
+/* ==========================================================
+   ENTER KEY
+========================================================== */
+
+searchInput.addEventListener("keydown", (event) => {
+
+    if (event.key === "Enter") {
+
+        performSearch();
+
+        scrollResultsIntoView();
+
+    }
+
+});
+
+
+/* ==========================================================
+   ESC KEY
+========================================================== */
+
+document.addEventListener("keydown", (event) => {
+
+    if (event.key !== "Escape") return;
+
+    searchInput.value = "";
+
+    currentCategory = "all";
+
+    performSearch();
+
+});
+
+
+/* ==========================================================
+   SCROLL TO TOP BUTTON (Future Ready)
+========================================================== */
+
+window.addEventListener("scroll", () => {
+
+    // Reserved for future Back-to-Top button
+
+});
+
+
+/* ==========================================================
+   PERFORMANCE
+========================================================== */
+
+function debounce(fn, delay = 250) {
+
+    let timer;
+
+    return (...args) => {
+
+        clearTimeout(timer);
+
+        timer = setTimeout(() => {
+
+            fn(...args);
+
+        }, delay);
+
+    };
+
+}
+
+const debouncedSearch = debounce(() => {
+
+    performSearch();
+
+}, 200);
+
+
+/* ==========================================================
+   REPLACE INPUT EVENT
+========================================================== */
+
+searchInput.removeEventListener("input", performSearch);
+
+searchInput.addEventListener("input", debouncedSearch);
+
+
+/* ==========================================================
+   SEARCH COMPLETE
+========================================================== */
+
+console.log(
+    "%cSearch v5.0 Loaded",
+    "color:#00d4ff;font-size:14px;font-weight:bold;"
+);

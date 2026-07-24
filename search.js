@@ -1,12 +1,15 @@
 /* ==========================================
-   Study Circle Explorer Search v2.0
+   Study Circle Explorer
+   Search v4.0
 ========================================== */
 
 let searchData = [];
 let filteredData = [];
 let currentCategory = "all";
 
-/* ---------- Elements ---------- */
+/* ==========================================
+   Elements
+========================================== */
 
 const searchInput = document.getElementById("searchInput");
 const searchResults = document.getElementById("searchResults");
@@ -25,34 +28,35 @@ const resourceCount = document.getElementById("resourceCount");
 const clearSearch = document.getElementById("clearSearch");
 
 /* ==========================================
-   Load JSON Database
+   Load Search Database
 ========================================== */
 
-async function loadSearchData(){
+async function loadSearchData() {
 
-    try{
+    try {
 
-        loadingState.style.display="grid";
+        loadingState.style.display = "grid";
+        emptyState.style.display = "none";
 
-        const response = await fetch("search-data.json");
+        const response = await fetch("content.json");
 
-        if(!response.ok){
-
-            throw new Error("Unable to load search data.");
-
+        if (!response.ok) {
+            throw new Error("Unable to load content.json");
         }
 
-        searchData = await response.json();
+        const json = await response.json();
 
+        searchData = json.articles || [];
         filteredData = [...searchData];
 
-        loadingState.style.display="none";
+        articleCount.textContent = searchData.length;
+        pdfCount.textContent = "0";
+        videoCount.textContent = "0";
+        resourceCount.textContent = searchData.length;
 
-        updateStatistics();
+        loadingState.style.display = "none";
 
-        renderResults(filteredData);
-
-        initializeURLSearch();
+        renderResults(searchData);
 
     }
 
@@ -60,17 +64,19 @@ async function loadSearchData(){
 
         console.error(error);
 
-        loadingState.style.display="none";
+        loadingState.style.display = "none";
 
-        resultTitle.textContent="Search unavailable";
+        resultTitle.textContent = "Search Error";
 
-        resultCount.textContent="Unable to load search database.";
+        resultCount.textContent =
+        "Unable to load content.";
 
     }
 
 }
+
 /* ==========================================
-   Start Application
+   Start
 ========================================== */
 
 document.addEventListener("DOMContentLoaded",()=>{
@@ -80,102 +86,67 @@ document.addEventListener("DOMContentLoaded",()=>{
 });
 
 /* ==========================================
-   Live Search
-========================================== */
-
-function performSearch() {
-
-    const query = searchInput.value.trim().toLowerCase();
-
-    filteredData = searchData.filter(item => {
-
-        const matchCategory =
-            currentCategory === "all" ||
-            item.category.toLowerCase() === currentCategory.toLowerCase();
-
-        const matchSearch =
-
-            item.title.toLowerCase().includes(query) ||
-
-            item.description.toLowerCase().includes(query) ||
-
-            item.category.toLowerCase().includes(query) ||
-
-            item.type.toLowerCase().includes(query) ||
-
-            item.keywords.some(keyword =>
-                keyword.toLowerCase().includes(query)
-            );
-
-        return matchCategory && matchSearch;
-
-    });
-
-    renderResults(filteredData);
-
-}
-
-/* ==========================================
    Render Results
 ========================================== */
 
 function renderResults(data){
 
-    searchResults.innerHTML="";
+    searchResults.innerHTML = "";
 
-    if(data.length===0){
+    if(data.length === 0){
 
-        emptyState.style.display="flex";
+        emptyState.style.display = "flex";
 
-        resultTitle.textContent="No Results Found";
-
-        resultCount.textContent="Try another keyword.";
+        resultCount.textContent = "0 Results Found";
 
         return;
 
     }
 
-    emptyState.style.display="none";
+    emptyState.style.display = "none";
 
-    resultTitle.textContent="Search Results";
+    resultCount.textContent =
+    `${data.length} Result${data.length!==1?"s":""}`;
 
-    resultCount.textContent=`${data.length} result(s) found`;
-
-    data.forEach(item=>{
+    data.forEach(article=>{
 
         const card=document.createElement("a");
 
-        card.href=item.url;
-
         card.className="search-card";
+
+        card.href=article.url || "#";
 
         card.innerHTML=`
 
-            <div class="search-category">
+        <img
+        src="${article.image || 'images/default.jpg'}"
+        alt="${article.title}">
 
-                ${item.category}
+        <div class="search-category">
 
-            </div>
+        ${article.category || "Space"}
 
-            <h2>
+        </div>
 
-                ${item.title}
+        <h2>
 
-            </h2>
+        ${article.title}
 
-            <p>
+        </h2>
 
-                ${item.description}
+        <p>
 
-            </p>
+        ${article.description || article.excerpt || ""}
 
-            <span>
+        </p>
 
-                Read More
+        <span>
 
-                <i class="fa-solid fa-arrow-right"></i>
+        Read Article
 
-            </span>
+        <i class="fas fa-arrow-right"></i>
+
+        </span>
 
         `;
 
@@ -186,7 +157,65 @@ function renderResults(data){
 }
 
 /* ==========================================
-   Live Typing
+   Search Function
+========================================== */
+
+function performSearch(){
+
+    const keyword =
+    searchInput.value.trim().toLowerCase();
+
+    filteredData = searchData.filter(item=>{
+
+        const title =
+        (item.title||"").toLowerCase();
+
+        const description =
+        (item.description||"").toLowerCase();
+
+        const excerpt =
+        (item.excerpt||"").toLowerCase();
+
+        const keywords =
+        (item.keywords||"").toLowerCase();
+
+        const category =
+        (item.category||"").toLowerCase();
+
+        const matchKeyword =
+
+        title.includes(keyword) ||
+
+        description.includes(keyword) ||
+
+        excerpt.includes(keyword) ||
+
+        keywords.includes(keyword) ||
+
+        category.includes(keyword);
+
+        const matchCategory =
+
+        currentCategory==="all" ||
+
+        category===currentCategory.toLowerCase();
+
+        return matchKeyword && matchCategory;
+
+    });
+
+    resultTitle.textContent =
+
+    keyword===""
+    ? "All Resources"
+    : `Results for "${searchInput.value}"`;
+
+    renderResults(filteredData);
+
+}
+
+/* ==========================================
+   Live Search
 ========================================== */
 
 searchInput.addEventListener("input",()=>{
@@ -196,195 +225,168 @@ searchInput.addEventListener("input",()=>{
 });
 
 /* ==========================================
-   Category Filters
+   Clear Button
 ========================================== */
 
-const filterButtons = document.querySelectorAll(".filter-btn");
+clearSearch.addEventListener("click",()=>{
 
-filterButtons.forEach(button => {
+    searchInput.value="";
 
-    button.addEventListener("click", () => {
-
-        filterButtons.forEach(btn =>
-            btn.classList.remove("active")
-        );
-
-        button.classList.add("active");
-
-        currentCategory = button.dataset.category;
-
-        performSearch();
-
-    });
-
-});
-
-/* ==========================================
-   Trending Search Chips
-========================================== */
-
-const searchChips = document.querySelectorAll(".search-chip");
-
-searchChips.forEach(chip => {
-
-    chip.addEventListener("click", () => {
-
-        const keyword = chip.dataset.search;
-
-        searchInput.value = keyword;
-
-        performSearch();
-
-        searchInput.focus();
-
-    });
-
-});
-
-/* ==========================================
-   Clear Search
-========================================== */
-
-clearSearch.addEventListener("click", () => {
-
-    searchInput.value = "";
-
-    currentCategory = "all";
-
-    filterButtons.forEach(btn =>
-        btn.classList.remove("active")
-    );
-
-    document
-        .querySelector('.filter-btn[data-category="all"]')
-        .classList.add("active");
-
-    renderResults(searchData);
-
-    resultTitle.textContent = "All Resources";
-
-    resultCount.textContent =
-        `${searchData.length} resource(s) available`;
+    performSearch();
 
     searchInput.focus();
 
 });
 
 /* ==========================================
-   Search On Enter
+   Render Results
 ========================================== */
 
-searchInput.addEventListener("keydown", e => {
+function renderResults(data){
 
-    if (e.key === "Enter") {
+    searchResults.innerHTML = "";
 
-        performSearch();
+    if(data.length === 0){
+
+        emptyState.style.display = "flex";
+
+        resultCount.textContent = "0 Results Found";
+
+        return;
 
     }
 
-});
+    emptyState.style.display = "none";
 
-/* ==========================================
-   URL Search Support
-========================================== */
+    resultCount.textContent =
+    `${data.length} Result${data.length!==1?"s":""}`;
 
-function initializeURLSearch() {
+    data.forEach(article=>{
 
-    const params = new URLSearchParams(window.location.search);
+        const card=document.createElement("a");
 
-    const query = params.get("q");
+        card.className="search-card";
 
-    if (query) {
+        card.href=article.url || "#";
 
-        searchInput.value = query;
+        card.innerHTML=`
 
-        performSearch();
+        <img
+        src="${article.image || 'images/default.jpg'}"
+        alt="${article.title}">
 
-    } else {
+        <div class="search-category">
 
-        renderResults(searchData);
+        ${article.category || "Space"}
 
-        resultTitle.textContent = "All Resources";
+        </div>
 
-        resultCount.textContent =
-            `${searchData.length} resource(s) available`;
+        <h2>
 
-    }
+        ${article.title}
+
+        </h2>
+
+        <p>
+
+        ${article.description || article.excerpt || ""}
+
+        </p>
+
+        <span>
+
+        Read Article
+
+        <i class="fas fa-arrow-right"></i>
+
+        </span>
+
+        `;
+
+        searchResults.appendChild(card);
+
+    });
 
 }
 
 /* ==========================================
-   Update URL While Searching
+   Search Function
 ========================================== */
 
-function updateSearchURL() {
+function performSearch(){
 
-    const keyword = searchInput.value.trim();
+    const keyword =
+    searchInput.value.trim().toLowerCase();
 
-    const url = new URL(window.location);
+    filteredData = searchData.filter(item=>{
 
-    if (keyword) {
+        const title =
+        (item.title||"").toLowerCase();
 
-        url.searchParams.set("q", keyword);
+        const description =
+        (item.description||"").toLowerCase();
 
-    } else {
+        const excerpt =
+        (item.excerpt||"").toLowerCase();
 
-        url.searchParams.delete("q");
+        const keywords =
+        (item.keywords||"").toLowerCase();
 
-    }
+        const category =
+        (item.category||"").toLowerCase();
 
-    window.history.replaceState({}, "", url);
+        const matchKeyword =
+
+        title.includes(keyword) ||
+
+        description.includes(keyword) ||
+
+        excerpt.includes(keyword) ||
+
+        keywords.includes(keyword) ||
+
+        category.includes(keyword);
+
+        const matchCategory =
+
+        currentCategory==="all" ||
+
+        category===currentCategory.toLowerCase();
+
+        return matchKeyword && matchCategory;
+
+    });
+
+    resultTitle.textContent =
+
+    keyword===""
+    ? "All Resources"
+    : `Results for "${searchInput.value}"`;
+
+    renderResults(filteredData);
 
 }
 
 /* ==========================================
-   Update URL Automatically
+   Live Search
 ========================================== */
 
-searchInput.addEventListener("input", () => {
+searchInput.addEventListener("input",()=>{
 
-    updateSearchURL();
+    performSearch();
 
 });
 
 /* ==========================================
-   Keyboard Shortcut
+   Clear Button
 ========================================== */
 
-document.addEventListener("keydown", e => {
+clearSearch.addEventListener("click",()=>{
 
-    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
+    searchInput.value="";
 
-        e.preventDefault();
+    performSearch();
 
-        searchInput.focus();
-
-        searchInput.select();
-
-    }
-
-});
-
-/* ==========================================
-   Escape Key Clears Search
-========================================== */
-
-document.addEventListener("keydown", e => {
-
-    if (e.key === "Escape") {
-
-        clearSearch.click();
-
-    }
-
-});
-
-/* ==========================================
-   Browser Back / Forward Support
-========================================== */
-
-window.addEventListener("popstate", () => {
-
-    initializeURLSearch();
+    searchInput.focus();
 
 });

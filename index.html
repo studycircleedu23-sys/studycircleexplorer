@@ -48,51 +48,32 @@ as="image">
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
-  "@type":"Organization",
-
+  "@type":"WebSite",
   "name":"Study Circle Explorer",
-
   "url":"https://studycircleedu23-sys.github.io/studycircleexplorer/",
-
-  "logo":"https://studycircleedu23-sys.github.io/studycircleexplorer/studycircle-logo.png",
-
-  "description":"Study Circle Explorer provides NASA, ISRO, astronomy, space science, educational articles, PDFs, quizzes and learning resources.",
-
-  "sameAs":[
-    "https://youtube.com/@studycircleexp-23",
-    "https://www.facebook.com/studycircleexplorer2026",
-    "https://www.instagram.com/studycircle.explorer",
-    "https://t.me/spacestudyhub",
-    "https://whatsapp.com/channel/0029VbBxdL83gvWabpdfyF3c",
-    "https://github.com/studycircleedu23-sys/studycircleexplorer"
-  ]
+  "potentialAction":{
+    "@type":"SearchAction",
+    "target":"https://studycircleedu23-sys.github.io/studycircleexplorer/search.html?q={search_term_string}",
+    "query-input":"required name=search_term_string"
+  }
 }
 </script>
 
 <!-- Website Schema -->
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-
-  "@type":"WebSite",
-
-  "name":"Study Circle Explorer",
-
-  "url":"https://studycircleedu23-sys.github.io/studycircleexplorer/",
-
-  "description":"Explore NASA, ISRO, Space Facts, Astronomy, Black Holes, Exoplanets, Educational Resources, Free PDFs and Learning Materials.",
-
-  "publisher":{
-    "@type":"Organization",
-    "name":"Study Circle Explorer"
-  },
-
-  "inLanguage":"en",
-
-  "potentialAction":{
-    "@type":"SearchAction",
-    "target":"https://studycircleedu23-sys.github.io/studycircleexplorer/search.html?q={search_term_string}",
-    "query-input":"required name=search_term_string"
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://studycircleedu23-sys.github.io/studycircleexplorer/#website",
+  "url": "https://studycircleedu23-sys.github.io/studycircleexplorer/",
+  "name": "Study Circle Explorer",
+  "alternateName": "Study Circle",
+  "description": "Explore NASA, ISRO, Astronomy, Space Science, Black Holes, Galaxies and the latest discoveries.",
+  "inLanguage": "en",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://studycircleedu23-sys.github.io/studycircleexplorer/search.html?q={search_term_string}",
+    "query-input": "required name=search_term_string"
   }
 }
 </script>
@@ -266,14 +247,32 @@ height="450">
 
     </div>
 </section>
-    
-<!-- LATEST ARTICLES -->
-<section class="section latest-articles" id="trending">
+    <!-- Search Section -->
+<section class="section search-section">
 
     <div class="container">
 
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search NASA, ISRO, Black Holes, Galaxies...">
+
+            <button id="searchBtn">🔍</button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- EXPLORE SPACE TOPICS -->
+<section class="section latest-articles" id="explore-topics">
+    <div class="container">
+
         <div class="section-label">
-            📰 LATEST ARTICLES
+            🌠 EXPLORE SPACE TOPICS
         </div>
 
         <h2 class="section-title">
@@ -281,10 +280,16 @@ height="450">
         </h2>
 
         <p class="section-subtitle">
-            Discover the newest NASA, ISRO and Space Science articles published on Study Circle Explorer.
+            Discover the newest NASA, ISRO, Astronomy, Black Holes, Galaxies, Cosmology, and Space Science articles published on Study Circle Explorer.
         </p>
 
-        <div class="articles-grid">
+        <div id="latestArticles" class="article-grid">
+            <!-- Articles will be loaded automatically from content.json -->
+        </div>
+
+    </div>
+
+</section>
 
 <!-- NASA -->
 <article class="article-card">
@@ -806,6 +811,6 @@ aria-label="Back to top">
 
 </button>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

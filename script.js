@@ -406,3 +406,91 @@ card.style.transition=".35s";
 });
 
 });
+
+let allArticles = [];
+
+async function loadLatestArticles() {
+
+    const response = await fetch("content.json");
+    const data = await response.json();
+
+    allArticles = data.articles;
+
+    renderArticles(allArticles.slice(0, 12));
+}
+
+function renderArticles(articles) {
+
+    const container = document.getElementById("latestArticles");
+
+    if (!container) return;
+
+    container.innerHTML = "";
+
+    articles.forEach(article => {
+
+        container.innerHTML += `
+            <article class="article-card">
+                <a href="${article.url}">
+                    <img src="${article.image}" alt="${article.title}" loading="lazy">
+                    <h3>${article.title}</h3>
+                    <p>${article.description}</p>
+                </a>
+            </article>
+        `;
+    });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    loadLatestArticles();
+
+    const searchInput = document.getElementById("searchInput");
+
+    if (searchInput) {
+
+        searchInput.addEventListener("input", function () {
+
+            const keyword = this.value.toLowerCase();
+
+            const filtered = allArticles.filter(article =>
+
+                article.title.toLowerCase().includes(keyword) ||
+
+                article.description.toLowerCase().includes(keyword) ||
+
+                article.category.toLowerCase().includes(keyword) ||
+
+                article.tags.join(" ").toLowerCase().includes(keyword)
+
+            );
+
+            renderArticles(filtered);
+        });
+
+    }
+
+});
+
+const searchInput = document.getElementById("searchInput");
+const searchBtn = document.getElementById("searchBtn");
+
+function performSearch() {
+    const query = searchInput.value.trim();
+
+    if (query) {
+        window.location.href = `search.html?q=${encodeURIComponent(query)}`;
+    }
+}
+
+if (searchBtn) {
+    searchBtn.addEventListener("click", performSearch);
+}
+
+if (searchInput) {
+    searchInput.addEventListener("keypress", function (e) {
+        if (e.key === "Enter") {
+            performSearch();
+        }
+    });
+}
